@@ -1,0 +1,56 @@
+[
+  {
+    "data": "features_10_20",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 3
+  },
+  {
+    "data": "features_10_20",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 4
+  },
+  {
+    "data": "features_10_20",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 5
+  },
+  {
+    "data": "features_10_20",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 6
+  },
+  {
+    "data": "features_10_20",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 7
+  },
+  {
+    "data": "features_10_20",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 8
+  },
+  {
+    "data": "features_10_20",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 9
+  },
+  {
+    "data": "features_10_20",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 10
+  },
+  {
+    "data": "features_10_20",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 11
+  }
+]
