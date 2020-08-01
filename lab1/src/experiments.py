@@ -10,11 +10,13 @@ import pylab as pl
 import seaborn as sns
 import time
 import json
+import csv
 
 
 def run(data, normalized, distance, k):
-    print("Loading data...")
-    X_data, y_data = load_svmlight_file("features/" + data + ".txt")
+    print("# Analysing experiment with > data=", data, " normalized=",
+          normalized, " distance=", distance, " k=", k)
+    X_data, y_data = load_svmlight_file("features/results/" + data + ".txt")
     X_train, X_test, y_train, y_test = train_test_split(
         X_data, y_data, test_size=0.5, random_state=5)
 
@@ -41,20 +43,37 @@ def run(data, normalized, distance, k):
 
     execution_time = end_time - start_time
 
-    fout.write('Accuracy: ' + str(neigh.score(X_test, y_test)))
+    accuracy = str(neigh.score(X_test, y_test))
+    fout.write('Accuracy: ' + accuracy)
     fout.write('\n\nConfusion Matrix: \n\n' +
                str(confusion_matrix(y_test, y_pred)))
     fout.write('\n\nClassification Report: \n\n' + str(classification_report(
         y_test, y_pred, labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9])))
     fout.write('\nExecution Time: ' + str(execution_time))
 
+    print("# Resulted > accuracy=", accuracy, " execution_time=",
+          str(execution_time))
+
+    return accuracy, execution_time
+
 
 if __name__ == "__main__":
     start_time = time.time()
-    json_file = open('experiments/index.json')
-    experiments = json.load(json_file)
+    json_file_experiments = open('experiments/index.json')
+    csv_file_tabulation = open('experiments/tabulation/index.csv', mode='w')
+    experiments = json.load(json_file_experiments)
+
+    tabulation_writer = csv.writer(
+        csv_file_tabulation, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+
+    tabulation_writer.writerow(
+        ['Experiment', 'Normalized', 'Distance', 'K', 'Accuracy', 'Execution Time'])
 
     for experiment in experiments:
-        print(experiment['data'])
-        run(experiment['data'], experiment['normalized'],
-            experiment['distance'], experiment['k'])
+        accuracy, execution_time = run(experiment['data'], experiment['normalized'],
+                                       experiment['distance'], experiment['k'])
+        tabulation_writer.writerow([experiment['data'], experiment['normalized'],
+                                    experiment['distance'], experiment['k'], str(accuracy), str(execution_time)])
+
+    json_file_experiments.close()
+    csv_file_tabulation.close()
