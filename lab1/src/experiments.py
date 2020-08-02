@@ -73,7 +73,7 @@ if __name__ == "__main__":
         csv_file_tabulation, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
     tabulation_writer.writerow(
-        ['Experiment', 'Normalized', 'Distance', 'K', 'Accuracy', 'F1Score' 'Execution Time'])
+        ['Experiment', 'Normalized', 'Distance', 'K', 'Accuracy', 'F1Score', 'Execution Time'])
 
     for experiment in experiments:
         accuracy, f1s, execution_time = run(experiment['data'], experiment['normalized'],
