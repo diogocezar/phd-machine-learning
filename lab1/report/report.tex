@@ -134,13 +134,13 @@ O Código \ref{code:json_experimentos} mostra as opções de entrada para o algo
 
 \section{Resultados}
 
-Foram realizadas \textit{240} execuções para as variações listadas anteriormente. Os \textit{20} melhores resultados (ordenados por Acurácia e F1Score) estão detalhados na Tabela \ref{tab:resultados_melhores}. Já os 20 piores resultados,  (ordenados por Acurácia e F1Score) estão detalhados na Tabela \ref{tab:resultados_piores}
+Foram realizadas \textit{240} execuções para as variações listadas anteriormente. Os \textit{20} melhores resultados (ordenados por Acurácia e F1Score) estão detalhados na Tabela \ref{tab:resultados_melhores}. Já os 20 piores resultados (ordenados por Acurácia e F1Score) estão detalhados na Tabela \ref{tab:resultados_piores}.
 
-Pode-se observar que os melhores resultados foram obtidos a partir das representações que consideraram as \textit{maiores} alturas e larguras das imagens (81x99). Isso acontece pois, no momento em que se realiza a compressão das imagens, características são perdidas. O melhor resultado teve a \textit{Acurácia} de $0,927$ e o \textit{F1Score} de $0,928$ demorando $962$ segundos para execução completa.
+Pode-se observar que os melhores resultados foram obtidos a partir das representações que consideraram as \textit{maiores} alturas e larguras das imagens (99x81). Isso acontece pois, no momento em que se realiza a compressão das imagens, características são perdidas. O melhor resultado teve a \textit{Acurácia} de $0,928$ e o \textit{F1Score} de $0,929$ demorando $2.743$ segundos para execução completa.
 
-Já para nos piores resultados, nota-se que foram obtidos na variação de K: $K=13$, $K=12$, $K=11$. Quanto ao $K$ para os melhores resultados, percebe-se que foram obtidos com $K=1$, seguido de $K=3$ e $K=5$. Isso mostra que a distribuição possui uma particularidade interessante, na qual ao se comparar apenas os vizinhos mais próximos se consegue um melhor resultado. Como já esperado, para os resultados nos quais $K$ tinha um valor par, seus resultados foram menos eficientes.
+Já para nos piores resultados, nota-se que foram obtidos na variação de K: $K=13$, $K=12$, $K=10$. Quanto ao $K$ para os melhores resultados, percebe-se que foram obtidos com $K=1$, seguido de $K=3$ e $K=5$. Isso mostra que a distribuição possui uma particularidade interessante, na qual ao se comparar apenas os vizinhos mais próximos se consegue um melhor resultado. Como já esperado, para os resultados nos quais $K$ tinha um valor par, seus resultados foram menos eficientes.
 
-Em outra análise, a estratégia de obter as médias das alturas e larguras também apresentaram resultados significativos (imagens de dimensão $46x36$), mas ficaram empatadas com a estratégia empírica que utiliza imagens $20x40$. O destaque é para o tempo de execução. Com a \textit{features\_20\_40} conseguiu-se uma Acurácia de $0,925$ e o F1Score de $0,926$ demorando apenas $43$ segundos para execução completa.
+Em outra análise, a estratégia de obter as médias das alturas e larguras também apresentaram resultados significativos (imagens de dimensão $36x46$), mas ficaram abaixo dos resultados da estratégia empírica que utiliza imagens $60x30$. O destaque é para o tempo de execução em \textit{features\_60\_30}, que conseguiu-se uma Acurácia de $0,925$ e o F1Score de $0,926$ demorando apenas $203$ segundos para execução completa.
 
 As normalizações não parecem fazer muita diferença nos resultados, pois estes já se encontram bem distribuídos.
 
@@ -151,26 +151,26 @@ Em geral a alteração da estratégia de medição das distâncias (\textit{eucl
   \begin{tabular}{|c|c|c|c|c|c|c|}
   \hline
   \textbf{Experiment} & \textbf{Normalized} & \textbf{Distance} & \textbf{K} & \textbf{Accuracy} & \textbf{F1Score} & \textbf{Execution Time (s)} \\ \hline
-  features\_81\_99    & 0                   & euclidean         & 1          & 0,927             & 0,928            & 962                     \\ \hline
-  features\_81\_99    & 0                   & manhattan         & 1          & 0,927             & 0,928            & 1.386                   \\ \hline
-  features\_81\_99    & 1                   & euclidean         & 1          & 0,927             & 0,928            & 1.772                   \\ \hline
-  features\_81\_99    & 1                   & manhattan         & 1          & 0,927             & 0,928            & 2.495                   \\ \hline
-  features\_20\_40    & 0                   & euclidean         & 1          & 0,925             & 0,926            & 43                      \\ \hline
-  features\_20\_40    & 0                   & manhattan         & 1          & 0,925             & 0,926            & 86                      \\ \hline
-  features\_20\_40    & 1                   & euclidean         & 1          & 0,925             & 0,926            & 127                     \\ \hline
-  features\_20\_40    & 1                   & manhattan         & 1          & 0,925             & 0,926            & 170                     \\ \hline
-  features\_46\_36    & 0                   & euclidean         & 1          & 0,925             & 0,926            & 597                     \\ \hline
-  features\_46\_36    & 0                   & manhattan         & 1          & 0,925             & 0,926            & 686                     \\ \hline
-  features\_46\_36    & 1                   & euclidean         & 1          & 0,925             & 0,926            & 771                     \\ \hline
-  features\_46\_36    & 1                   & manhattan         & 1          & 0,925             & 0,926            & 859                     \\ \hline
-  features\_30\_60    & 0                   & euclidean         & 1          & 0,924             & 0,924            & 214                     \\ \hline
-  features\_30\_60    & 0                   & manhattan         & 1          & 0,924             & 0,924            & 314                     \\ \hline
-  features\_30\_60    & 1                   & euclidean         & 1          & 0,924             & 0,924            & 406                     \\ \hline
-  features\_30\_60    & 1                   & manhattan         & 1          & 0,924             & 0,924            & 504                     \\ \hline
-  features\_20\_40    & 0                   & euclidean         & 3          & 0,920             & 0,921            & 46                      \\ \hline
-  features\_20\_40    & 0                   & manhattan         & 3          & 0,920             & 0,921            & 89                      \\ \hline
-  features\_20\_40    & 1                   & euclidean         & 3          & 0,920             & 0,921            & 131                     \\ \hline
-  features\_20\_40    & 1                   & manhattan         & 3          & 0,920             & 0,921            & 173                     \\ \hline
+  features\_99\_81    & 0                   & euclidean         & 1          & 0,928             & 0,929            & 2.743                       \\ \hline
+  features\_99\_81    & 0                   & manhattan         & 1          & 0,928             & 0,929            & 3.161                       \\ \hline
+  features\_99\_81    & 1                   & euclidean         & 1          & 0,928             & 0,929            & 3.550                       \\ \hline
+  features\_99\_81    & 1                   & manhattan         & 1          & 0,928             & 0,929            & 3.961                       \\ \hline
+  features\_60\_30    & 0                   & euclidean         & 1          & 0,925             & 0,926            & 203                         \\ \hline
+  features\_60\_30    & 0                   & manhattan         & 1          & 0,925             & 0,926            & 293                         \\ \hline
+  features\_60\_30    & 1                   & euclidean         & 1          & 0,925             & 0,926            & 380                         \\ \hline
+  features\_60\_30    & 1                   & manhattan         & 1          & 0,925             & 0,926            & 471                         \\ \hline
+  features\_36\_46    & 0                   & euclidean         & 1          & 0,923             & 0,924            & 558                         \\ \hline
+  features\_36\_46    & 0                   & manhattan         & 1          & 0,923             & 0,924            & 641                         \\ \hline
+  features\_36\_46    & 1                   & euclidean         & 1          & 0,923             & 0,924            & 720                         \\ \hline
+  features\_36\_46    & 1                   & manhattan         & 1          & 0,923             & 0,924            & 804                         \\ \hline
+  features\_36\_46    & 0                   & euclidean         & 3          & 0,919             & 0,921            & 565                         \\ \hline
+  features\_36\_46    & 0                   & manhattan         & 3          & 0,919             & 0,921            & 647                         \\ \hline
+  features\_36\_46    & 1                   & euclidean         & 3          & 0,919             & 0,921            & 727                         \\ \hline
+  features\_36\_46    & 1                   & manhattan         & 3          & 0,919             & 0,921            & 811                         \\ \hline
+  features\_99\_81    & 0                   & euclidean         & 3          & 0,919             & 0,921            & 2.778                       \\ \hline
+  features\_99\_81    & 0                   & manhattan         & 3          & 0,919             & 0,921            & 3.193                       \\ \hline
+  features\_99\_81    & 1                   & euclidean         & 3          & 0,919             & 0,921            & 3.584                       \\ \hline
+  features\_99\_81    & 1                   & manhattan         & 3          & 0,919             & 0,921            & 3.992                       \\ \hline
   \end{tabular}
   \caption{Melhores Resultados}
   \label{tab:resultados_melhores}
@@ -180,27 +180,27 @@ Em geral a alteração da estratégia de medição das distâncias (\textit{eucl
   \centering
   \begin{tabular}{|c|c|c|c|c|c|c|}
   \hline
-  \textbf{Experiment} & \textbf{Normalized} & \textbf{Distance} & \textbf{K} & \textbf{Accuracy} & \textbf{F1Score} & \textbf{Execution Time} \\ \hline
-  features\_20\_40    & 0                   & euclidean         & 13         & 0,872             & 0,875            & 82                      \\ \hline
-  features\_20\_40    & 0                   & manhattan         & 13         & 0,872             & 0,875            & 124                     \\ \hline
-  features\_20\_40    & 1                   & euclidean         & 13         & 0,872             & 0,875            & 166                     \\ \hline
-  features\_20\_40    & 1                   & manhattan         & 13         & 0,872             & 0,875            & 208                     \\ \hline
-  features\_20\_40    & 0                   & euclidean         & 11         & 0,874             & 0,876            & 75                      \\ \hline
-  features\_20\_40    & 0                   & manhattan         & 11         & 0,874             & 0,876            & 117                     \\ \hline
-  features\_20\_40    & 1                   & euclidean         & 11         & 0,874             & 0,876            & 159                     \\ \hline
-  features\_20\_40    & 1                   & manhattan         & 11         & 0,874             & 0,876            & 201                     \\ \hline
-  features\_20\_40    & 0                   & euclidean         & 12         & 0,875             & 0,878            & 79                      \\ \hline
-  features\_20\_40    & 0                   & manhattan         & 12         & 0,875             & 0,878            & 120                     \\ \hline
-  features\_20\_40    & 1                   & euclidean         & 12         & 0,875             & 0,878            & 162                     \\ \hline
-  features\_20\_40    & 1                   & manhattan         & 12         & 0,875             & 0,878            & 204                     \\ \hline
-  features\_46\_36    & 0                   & euclidean         & 13         & 0,877             & 0,880            & 679                     \\ \hline
-  features\_46\_36    & 0                   & manhattan         & 13         & 0,877             & 0,880            & 764                     \\ \hline
-  features\_46\_36    & 1                   & euclidean         & 13         & 0,877             & 0,880            & 852                     \\ \hline
-  features\_46\_36    & 1                   & manhattan         & 13         & 0,877             & 0,880            & 938                     \\ \hline
-  features\_10\_20    & 0                   & euclidean         & 13         & 0,877             & 0,880            & 10                      \\ \hline
-  features\_10\_20    & 0                   & manhattan         & 13         & 0,877             & 0,880            & 20                      \\ \hline
-  features\_10\_20    & 1                   & euclidean         & 13         & 0,877             & 0,880            & 30                      \\ \hline
-  features\_10\_20    & 1                   & manhattan         & 13         & 0,877             & 0,880            & 40                      \\ \hline
+  \textbf{Experiment} & \textbf{Normalized} & \textbf{Distance} & \textbf{K} & \textbf{Accuracy} & \textbf{F1Score} & \textbf{Execution Time (s)} \\ \hline
+  features\_20\_10    & 1                   & manhattan         & 13         & 0,871             & 0,873            & 40                          \\ \hline
+  features\_20\_10    & 1                   & euclidean         & 13         & 0,871             & 0,873            & 30                          \\ \hline
+  features\_20\_10    & 0                   & manhattan         & 13         & 0,871             & 0,873            & 20                          \\ \hline
+  features\_20\_10    & 0                   & euclidean         & 13         & 0,871             & 0,873            & 10                          \\ \hline
+  features\_20\_10    & 1                   & manhattan         & 12         & 0,874             & 0,876            & 39                          \\ \hline
+  features\_20\_10    & 1                   & euclidean         & 12         & 0,874             & 0,876            & 29                          \\ \hline
+  features\_20\_10    & 0                   & manhattan         & 12         & 0,874             & 0,876            & 19                          \\ \hline
+  features\_20\_10    & 0                   & euclidean         & 12         & 0,874             & 0,876            & 9                           \\ \hline
+  features\_99\_81    & 1                   & manhattan         & 12         & 0,876             & 0,879            & 4.294                       \\ \hline
+  features\_99\_81    & 1                   & euclidean         & 12         & 0,876             & 0,879            & 3.894                       \\ \hline
+  features\_99\_81    & 0                   & manhattan         & 12         & 0,876             & 0,879            & 3.485                       \\ \hline
+  features\_99\_81    & 0                   & euclidean         & 12         & 0,876             & 0,879            & 3.090                       \\ \hline
+  features\_20\_10    & 1                   & manhattan         & 10         & 0,879             & 0,881            & 37                          \\ \hline
+  features\_20\_10    & 1                   & euclidean         & 10         & 0,879             & 0,881            & 27                          \\ \hline
+  features\_20\_10    & 0                   & manhattan         & 10         & 0,879             & 0,881            & 17                          \\ \hline
+  features\_20\_10    & 0                   & euclidean         & 10         & 0,879             & 0,881            & 7                           \\ \hline
+  features\_99\_81    & 1                   & manhattan         & 13         & 0,880             & 0,883            & 4.328                       \\ \hline
+  features\_99\_81    & 1                   & euclidean         & 13         & 0,880             & 0,883            & 3.928                       \\ \hline
+  features\_99\_81    & 0                   & manhattan         & 13         & 0,880             & 0,883            & 3.517                       \\ \hline
+  features\_99\_81    & 0                   & euclidean         & 13         & 0,880             & 0,883            & 3.126                       \\ \hline
   \end{tabular}
   \caption{Piores Resultados}
   \label{tab:resultados_piores}
@@ -212,24 +212,22 @@ Para cada execução, criou-se um arquivo de resultados que também armazena as 
 
 A Tabela \ref{tab:matriz_confusao_melhor} demonstra a matriz de confusão para o melhor resultado, enquanto que a Tabela \ref{tab:matriz_confusao_pior} demonstra a matriz de confusão para o pior resultado.
 
-É possível notar que apesar dos erros persistirem na classificação, como por exemplo em: [[0,2],[1,2],[1,3],[1,4],[1,6],[1,7],[1,8],[1,9], eles diminuram consideravelmente. Como por exemplo, no pior caso, a classificação [1,4] foi classificada erroniamente 11 vezes, enquanto que no melhor caso, o erro ocorreu em 8 vezes.
-
-Isso acontece, pois, aumentar o número de \textit{pixels} analisados nas imagens, geram representações mais precisas, porém, como o método é o mesmo, pôde-se observar que os equívocos continuaram existindo nos mesmos lugares, mesmo que em menor número.
+É possível notar que apesar dos erros persistirem na classificação, como por exemplo em: [0,2],[1,2],[1,3],[1,4],[1,6],[1,7],[1,8],[1,9], eles diminuram consideravelmente. Como por exemplo, no pior caso, a classificação [1,4] foi classificada erroniamente 12 vezes, enquanto que no melhor caso, o erro ocorreu em apenas 8 vezes. Isso acontece, pois, aumentar o número de \textit{pixels} analisados nas imagens, geram representações mais precisas, porém, como o método é o mesmo, pôde-se observar que os equívocos continuaram existindo nos mesmos lugares, mesmo que em menor número.
 
 \begin{table}[!htb]
   \centering
   \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
   \hline
-  94 & 1  & 0   & 0  & 0  & 1  & 1   & 0  & 0  & 0   \\ \hline
+  95 & 0  & 0   & 0  & 0  & 1  & 1   & 0  & 0  & 0   \\ \hline
   0  & 93 & 0   & 0  & 0  & 1  & 0   & 0  & 0  & 1   \\ \hline
-  1  & 1  & 101 & 1  & 0  & 0  & 0   & 4  & 1  & 2   \\ \hline
-  0  & 1  & 0   & 99 & 0  & 1  & 0   & 0  & 2  & 0   \\ \hline
-  0  & 8  & 0   & 0  & 84 & 0  & 1   & 0  & 0  & 2   \\ \hline
+  0  & 1  & 103 & 1  & 0  & 0  & 0   & 4  & 1  & 1   \\ \hline
+  0  & 1  & 0   & 98 & 0  & 1  & 0   & 0  & 3  & 0   \\ \hline
+  0  & 8  & 0   & 0  & 83 & 1  & 1   & 0  & 0  & 2   \\ \hline
   2  & 0  & 0   & 5  & 0  & 89 & 1   & 0  & 0  & 0   \\ \hline
   1  & 5  & 0   & 0  & 0  & 0  & 100 & 0  & 0  & 0   \\ \hline
   0  & 3  & 1   & 0  & 1  & 0  & 0   & 88 & 0  & 4   \\ \hline
   0  & 3  & 0   & 1  & 1  & 2  & 0   & 1  & 79 & 0   \\ \hline
-  0  & 1  & 0   & 0  & 1  & 0  & 0   & 10 & 0  & 100 \\ \hline
+  0  & 1  & 0   & 0  & 2  & 0  & 0   & 9  & 0  & 100 \\ \hline
   \end{tabular}
   \caption{Matriz de Confusão - Melhor Caso}
   \label{tab:matriz_confusao_melhor}
@@ -239,16 +237,16 @@ Isso acontece, pois, aumentar o número de \textit{pixels} analisados nas imagen
   \centering
   \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
   \hline
-  94 & 1  & 0  & 0  & 0  & 2  & 0  & 0  & 0  & 0  \\ \hline
-  0  & 94 & 0  & 1  & 0  & 0  & 0  & 0  & 0  & 0  \\ \hline
-  2  & 8  & 92 & 1  & 1  & 0  & 3  & 4  & 0  & 0  \\ \hline
-  0  & 1  & 1  & 98 & 0  & 0  & 0  & 2  & 1  & 0  \\ \hline
-  0  & 11 & 1  & 0  & 79 & 0  & 1  & 1  & 0  & 2  \\ \hline
-  2  & 1  & 0  & 7  & 0  & 86 & 1  & 0  & 0  & 0  \\ \hline
-  1  & 9  & 0  & 0  & 0  & 0  & 96 & 0  & 0  & 0  \\ \hline
-  0  & 11 & 0  & 0  & 1  & 0  & 0  & 81 & 0  & 4  \\ \hline
-  0  & 7  & 0  & 6  & 0  & 3  & 0  & 3  & 67 & 1  \\ \hline
-  0  & 4  & 0  & 0  & 4  & 0  & 0  & 14 & 0  & 90 \\ \hline
+  95 & 1  & 0  & 0  & 0  & 1  & 0  & 0  & 0  & 0  \\ \hline
+  0  & 95 & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  \\ \hline
+  3  & 9  & 89 & 1  & 0  & 0  & 3  & 6  & 0  & 0  \\ \hline
+  1  & 1  & 1  & 98 & 0  & 0  & 0  & 2  & 0  & 0  \\ \hline
+  0  & 12 & 0  & 0  & 78 & 0  & 1  & 0  & 0  & 4  \\ \hline
+  0  & 1  & 0  & 7  & 0  & 88 & 1  & 0  & 0  & 0  \\ \hline
+  1  & 6  & 0  & 0  & 0  & 0  & 99 & 0  & 0  & 0  \\ \hline
+  0  & 11 & 0  & 0  & 3  & 0  & 0  & 79 & 0  & 4  \\ \hline
+  0  & 5  & 0  & 3  & 1  & 6  & 0  & 5  & 65 & 2  \\ \hline
+  0  & 3  & 0  & 0  & 7  & 0  & 0  & 17 & 0  & 85 \\ \hline
   \end{tabular}
   \caption{Matriz de Confusão - Pior Caso}
   \label{tab:matriz_confusao_pior}
