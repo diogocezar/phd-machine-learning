@@ -31,7 +31,7 @@ def run(data, x, y, avg_x, avg_y, med_x, med_y, max_x, max_y):
     file_name = "features/results/features_" + \
         str(use_x) + "_" + str(use_y) + ".txt"
     fout = open(file_name, "w")
-    load_images('source/images', fout, int(use_x), int(use_y))
+    load_images('source/data', fout, int(use_x), int(use_y))
     file_stats = os.stat(file_name)
     fout.close
     end_time = time.time()
