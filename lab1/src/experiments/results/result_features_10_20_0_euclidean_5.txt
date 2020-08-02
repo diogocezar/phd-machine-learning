@@ -32,4 +32,6 @@ Classification Report:
    macro avg       0.91      0.90      0.90      1000
 weighted avg       0.92      0.90      0.91      1000
 
-Execution Time: 2.2992310523986816
+
+F1Score:0.9055724999103083
+Execution Time: 2.9340028762817383

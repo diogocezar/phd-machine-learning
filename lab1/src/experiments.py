@@ -6,6 +6,7 @@ from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
 from sklearn.datasets import load_svmlight_file
 from sklearn import preprocessing
+from sklearn.metrics import f1_score
 import pylab as pl
 import seaborn as sns
 import time
@@ -43,18 +44,23 @@ def run(data, normalized, distance, k):
 
     execution_time = end_time - start_time
 
+    f1s = str(f1_score(y_test, y_pred, labels=[
+        0, 1, 2, 3, 4, 5, 6, 7, 8, 9], average='weighted'))
+
     accuracy = str(neigh.score(X_test, y_test))
+
     fout.write('Accuracy: ' + accuracy)
     fout.write('\n\nConfusion Matrix: \n\n' +
                str(confusion_matrix(y_test, y_pred)))
     fout.write('\n\nClassification Report: \n\n' + str(classification_report(
         y_test, y_pred, labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9])))
+    fout.write('\n\nF1Score:' + f1s)
     fout.write('\nExecution Time: ' + str(execution_time))
 
     print("# Resulted > accuracy=", accuracy, " execution_time=",
-          str(execution_time))
+          str(execution_time), "fscore=", f1_score)
 
-    return accuracy, execution_time
+    return accuracy, f1s, execution_time
 
 
 if __name__ == "__main__":
@@ -67,13 +73,13 @@ if __name__ == "__main__":
         csv_file_tabulation, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
     tabulation_writer.writerow(
-        ['Experiment', 'Normalized', 'Distance', 'K', 'Accuracy', 'Execution Time'])
+        ['Experiment', 'Normalized', 'Distance', 'K', 'Accuracy', 'F1Score' 'Execution Time'])
 
     for experiment in experiments:
-        accuracy, execution_time = run(experiment['data'], experiment['normalized'],
-                                       experiment['distance'], experiment['k'])
+        accuracy, f1s, execution_time = run(experiment['data'], experiment['normalized'],
+                                            experiment['distance'], experiment['k'])
         tabulation_writer.writerow([experiment['data'], experiment['normalized'],
-                                    experiment['distance'], experiment['k'], str(accuracy), str(execution_time)])
+                                    experiment['distance'], experiment['k'], str(accuracy), str(f1s), str(execution_time)])
 
     json_file_experiments.close()
     csv_file_tabulation.close()
