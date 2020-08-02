@@ -47,7 +47,7 @@ def get_sizes(path_images):
     print('# Extracting avg sizes...')
     for archive in archives:
         image = cv2.imread(path_images + '/' + archive, 0)
-        image_x, image_y = image.shape
+        image_y, image_x = image.shape
         images_x.append(image_x)
         images_y.append(image_y)
     return statistics.mean(images_x), statistics.mean(images_y), statistics.median(images_x), statistics.median(images_y), max(images_x), max(images_y)
@@ -93,7 +93,7 @@ if __name__ == "__main__":
     tabulation_writer.writerow(
         ['X_Source', 'Y_Source', 'X', 'Y', 'File Size', 'Execution Time'])
     features = json.load(json_file)
-    avg_x, avg_y, med_x, med_y, max_x, max_y = get_sizes('source/images')
+    avg_x, avg_y, med_x, med_y, max_x, max_y = get_sizes('source/data')
     for feature in features:
         use_x, use_y, file_size, execution_time = run(feature['data'], feature['x'],
                                                       feature['y'], avg_x, avg_y, med_x, med_y, max_x, max_y)

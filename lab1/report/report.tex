@@ -80,11 +80,11 @@ Após análise dos resultados, notou-se que a média e a mediana retornaram resu
   \begin{tabular}{|c|c|c|c|c|c|}
   \hline
   \textbf{X\_Source} & \textbf{Y\_Source} & \textbf{X} & \textbf{Y} & \textbf{File Size} & \textbf{Execution Time (s)} \\ \hline
-  10                 & 20                 & 10         & 20         & 2180534            & 1.69                    \\ \hline
-  20                 & 40                 & 20         & 40         & 9377970            & 5.44                    \\ \hline
-  30                 & 60                 & 30         & 60         & 22978779           & 12.25                   \\ \hline
-  med\_x             & med\_y             & 46         & 36         & 20962221           & 11.23                   \\ \hline
-  max\_x             & max\_y             & 81         & 99         & 110050116          & 52.76                   \\ \hline
+  20                 & 10                 & 20         & 10         & 2180534            & 1.57                    \\ \hline
+  40                 & 20                 & 40         & 20         & 9377970            & 4.84                    \\ \hline
+  60                 & 30                 & 60         & 30         & 22978779           & 11.04                   \\ \hline
+  med\_x             & med\_y             & 36         & 46         & 20962221           & 10.54                   \\ \hline
+  max\_x             & max\_y             & 99         & 81         & 110050116          & 46.63                   \\ \hline
   \end{tabular}
   \caption{Estratégias de representação}
   \label{tab:estrategias_representacao}
@@ -95,9 +95,9 @@ Para automatização da geração das representações, foram criadas adaptaçõ
 \begin{lstlisting}[caption={JSON para representações},captionpos=b,frame=single,label={code:json_representacao}]
 [
   {
-    "data": "features_10_20",
-    "x": 10,
-    "y": 20
+    "data": "features_20_10",
+    "x": 20,
+    "y": 10
   },
   ...
 ]
@@ -123,7 +123,7 @@ O Código \ref{code:json_experimentos} mostra as opções de entrada para o algo
 \begin{lstlisting}[caption={JSON para experimentos},captionpos=b,frame=single,label={code:json_experimentos}]
 [
   {
-    "data": "features_10_20",
+    "data": "features_20_10",
     "normalized": 0,
     "distance": "euclidean",
     "k": 1
