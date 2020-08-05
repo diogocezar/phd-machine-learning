@@ -73,7 +73,7 @@ Neste ponto, notou-se a possibilidade da primeira exploração. Além do tamanho
   \item Obter os valores máximos entre alturas e larguras;
 \end{enumerate}
 
-Após análise dos resultados, notou-se que a média e a mediana retornaram resultados muitos similares, por isso, optou-se apenas pela utilização da mediana. A Tabela \ref{tab:estrategias_representacao} mostra as coleções utilizadas nos experimentos. Além da médiana (med\_x, med\_y), os maiores valores encontrados para as dimensões (max\_x e max\_y) também foram considerados. E ainda, empiramente os valores de $x,y$ como $[20,40]$ e $[30,60]$.
+Após análise dos resultados, notou-se que a média e a mediana retornaram resultados muitos similares, por isso, optou-se apenas pela utilização da mediana. A Tabela \ref{tab:estrategias_representacao} mostra as coleções utilizadas nos experimentos. Além da médiana (med\_x, med\_y), os maiores valores encontrados para as dimensões (max\_x e max\_y) também foram considerados. E ainda, empiramente os valores de $x,y$ como $[40,60]$ e $[20,30]$.
 
 \begin{table}[!htb]
   \centering
@@ -110,7 +110,7 @@ Neste JSON, \textit{data} é o nome da coleção de representações, $x$ e $y$ 
 Assim como na adaptação do primeiro algoritmo, um sistema de entrada JSON possibilitou a variação de combinações para análise de diferentes resultados.
 
 \begin{itemize}
-  \item O arquivo de representação fonte; as variações testadas foram: [features\_10\_20, features\_20\_40, features\_30\_60, features\_46\_36, features\_81\_99]
+  \item O arquivo de representação fonte; as variações testadas foram: [features\_20\_10, features\_36\_46, features\_40\_20, features\_60\_30, features\_99\_81]
   \item Ativar ou desativar a normalização; as variações testadas foram: [0,1]
   \item Alterar o tipo de distância; as variações testadas foram: [eucledian, manhattan]
   \item Alterar o K; as variações testadas foram: [1,3,4,5,6,7,8,9,10,11,12,13]. Foram considerados os $K$ pares, apenas para efeito de comparações, sabendo-se se sua ineficiência por natureza.
