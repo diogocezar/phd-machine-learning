@@ -55,8 +55,41 @@ def get_tabulation():
     tabulation_writer = csv.writer(
         tabulation_csv_file, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     tabulation_writer.writerow(
-        ['Experiment', 'Normalized', 'Distance', 'K', 'Accuracy', 'F1Score', 'Execution Time'])
+        ['Classifier', 'Start', 'Stop', 'Step', 'Chunk', 'F1Score', 'Accuracy', 'Execution Time (s)'])
     return [tabulation_writer, tabulation_csv_file]
+
+
+def save_tabulation_conf_mat(classifier, i, result_conf_mat):
+    tabulation_csv_file = open(
+        'tabulation/conf_mat/' + str(classifier) + '_' + str(i) + '.csv', mode='w')
+    tabulation_writer = csv.writer(
+        tabulation_csv_file, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    tabulation_writer.writerows(result_conf_mat)
+
+
+def print_result(result_f1_score,
+                 result_accuracy,
+                 result_conf_mat,
+                 result_time):
+    print('F1Score: ' + str(result_f1_score))
+    print('Accuracy: ' + str(result_accuracy))
+    print('Confusion Matrix: \n' + str(result_conf_mat))
+    print('Execution Time(s): ' + str(result_time))
+
+
+def save_result(classifier,
+                start,
+                stop,
+                step,
+                i,
+                result_f1_score,
+                result_accuracy,
+                result_conf_mat,
+                result_time,
+                tabulation_writer):
+    save_tabulation_conf_mat(classifier, i, result_conf_mat)
+    tabulation_writer.writerow(
+        [classifier, start, stop, step, i, result_f1_score, result_accuracy, result_time])
 
 
 def get_time():
@@ -65,17 +98,31 @@ def get_time():
 
 
 def run_orchestrator(orchestrator, start_time, table_writer):
+    print('Starting orchestrator...')
     for experiment in orchestrator:
-        print(experiment)
+        print('Classifier: ' + str(experiment['classifier']))
         start = int(experiment['chunk_start'])
         stop = int(experiment['chunk_stop'])
         step = int(experiment['chunk_step'])
         for i in range(start, stop, step):
+            print('Chunk: ' + str(i))
             if str(experiment['classifier']) == "knn":
                 result_f1_score, result_accuracy, result_conf_mat, result_time = classify_knn(
                     i)
-                print(result_f1_score, result_accuracy,
-                      result_conf_mat, result_time)
+                print_result(result_f1_score,
+                             result_accuracy,
+                             result_conf_mat,
+                             result_time)
+                save_result("knn",
+                            start,
+                            stop,
+                            step,
+                            i,
+                            result_f1_score,
+                            result_accuracy,
+                            result_conf_mat,
+                            result_time,
+                            table_writer)
 
 
 if __name__ == "__main__":
