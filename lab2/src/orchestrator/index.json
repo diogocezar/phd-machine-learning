@@ -2,7 +2,7 @@
   {
     "classifier": "knn",
     "chunk_start": 1000,
-    "chunk_stop": 3000,
+    "chunk_stop": 20000,
     "chunk_step": 1000
   }
 ]
