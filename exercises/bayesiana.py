@@ -1,9 +1,9 @@
 from scipy.stats import norm
 
-p_yes_outlook_rainy = 4/8
+p_yes_outlook_rainy = 4/12
 p_yes_temp_65 = norm(72.9697, 5.2304).pdf(65)
 p_yes_humidity_70 = norm(78.8395, 9.8023).pdf(70)
-p_yes_wind = 4/7
+p_yes_wind = 4/11
 p_yes_class = 0.63
 
 # P(Yes|E)
