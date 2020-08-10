@@ -64,16 +64,23 @@ def get_time():
     return end_time - start_time
 
 
-def run_each(orchestrator, start_time, table_writer):
+def run_orchestrator(orchestrator, start_time, table_writer):
     for experiment in orchestrator:
         print(experiment)
+        start = int(experiment['chunk_start'])
+        stop = int(experiment['chunk_stop'])
+        step = int(experiment['chunk_step'])
+        for i in range(start, stop, step):
+            if str(experiment['classifier']) == "knn":
+                result_f1_score, result_accuracy, result_conf_mat, result_time = classify_knn(
+                    i)
+                print(result_f1_score, result_accuracy,
+                      result_conf_mat, result_time)
 
 
 if __name__ == "__main__":
     start_time = time.time()
-    print(classify_knn(10))
-    # orchestrator = get_orchestrator()
-    # tabulation_writer, tabulation_csv_file = get_tabulation()
-    # #run_each(orchestrator, start_time, tabulation_writer)
-    # print(get_chunk_train(1))
-    # tabulation_csv_file.close()
+    orchestrator = get_orchestrator()
+    tabulation_writer, tabulation_csv_file = get_tabulation()
+    run_orchestrator(orchestrator, start_time, tabulation_writer)
+    tabulation_csv_file.close()
