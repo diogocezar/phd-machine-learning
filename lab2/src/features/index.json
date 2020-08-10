@@ -1,0 +1,27 @@
+[
+  {
+    "data": "features_20_10",
+    "x": 20,
+    "y": 10
+  },
+  {
+    "data": "features_40_20",
+    "x": 40,
+    "y": 20
+  },
+  {
+    "data": "features_60_30",
+    "x": 60,
+    "y": 30
+  },
+  {
+    "data": "features_med",
+    "x": "med_x",
+    "y": "med_y"
+  },
+  {
+    "data": "features_max",
+    "x": "max_x",
+    "y": "max_y"
+  }
+]

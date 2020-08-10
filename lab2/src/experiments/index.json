@@ -1,0 +1,1442 @@
+[
+  {
+    "data": "features_20_10",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 1
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 3
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 4
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 5
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 6
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 7
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 8
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 9
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 10
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 11
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 12
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 13
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 1
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 3
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 4
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 5
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 6
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 7
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 8
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 9
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 10
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 11
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 12
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 13
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 1
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 3
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 4
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 5
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 6
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 7
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 8
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 9
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 10
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 11
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 12
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 13
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 1
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 3
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 4
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 5
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 6
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 7
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 8
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 9
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 10
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 11
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 12
+  },
+  {
+    "data": "features_20_10",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 13
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 1
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 3
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 4
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 5
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 6
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 7
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 8
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 9
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 10
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 11
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 12
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 13
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 1
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 3
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 4
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 5
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 6
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 7
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 8
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 9
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 10
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 11
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 12
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 13
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 1
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 3
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 4
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 5
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 6
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 7
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 8
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 9
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 10
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 11
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 12
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 13
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 1
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 3
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 4
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 5
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 6
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 7
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 8
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 9
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 10
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 11
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 12
+  },
+  {
+    "data": "features_40_20",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 13
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 1
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 3
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 4
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 5
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 6
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 7
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 8
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 9
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 10
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 11
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 12
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 13
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 1
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 3
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 4
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 5
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 6
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 7
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 8
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 9
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 10
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 11
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 12
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 13
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 1
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 3
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 4
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 5
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 6
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 7
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 8
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 9
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 10
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 11
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 12
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 13
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 1
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 3
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 4
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 5
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 6
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 7
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 8
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 9
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 10
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 11
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 12
+  },
+  {
+    "data": "features_60_30",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 13
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 1
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 3
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 4
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 5
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 6
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 7
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 8
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 9
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 10
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 11
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 12
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 13
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 1
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 3
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 4
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 5
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 6
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 7
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 8
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 9
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 10
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 11
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 12
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 13
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 1
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 3
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 4
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 5
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 6
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 7
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 8
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 9
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 10
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 11
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 12
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 13
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 1
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 3
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 4
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 5
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 6
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 7
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 8
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 9
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 10
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 11
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 12
+  },
+  {
+    "data": "features_36_46",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 13
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 1
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 3
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 4
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 5
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 6
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 7
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 8
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 9
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 10
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 11
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 12
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 0,
+    "distance": "euclidean",
+    "k": 13
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 1
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 3
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 4
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 5
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 6
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 7
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 8
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 9
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 10
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 11
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 12
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 0,
+    "distance": "manhattan",
+    "k": 13
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 1
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 3
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 4
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 5
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 6
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 7
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 8
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 9
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 10
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 11
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 12
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 1,
+    "distance": "euclidean",
+    "k": 13
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 1
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 3
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 4
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 5
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 6
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 7
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 8
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 9
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 10
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 11
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 12
+  },
+  {
+    "data": "features_99_81",
+    "normalized": 1,
+    "distance": "manhattan",
+    "k": 13
+  }
+]

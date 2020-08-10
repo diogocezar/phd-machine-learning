@@ -1,0 +1,22 @@
+[
+  {
+    "classifier": "knn",
+    "chunk": 1000
+  },
+  {
+    "classifier": "bayes",
+    "chunk": 1000
+  },
+  {
+    "classifier": "lda",
+    "chunk": 1000
+  },
+  {
+    "classifier": "regression",
+    "chunk": 1000
+  },
+  {
+    "classifier": "perceptron",
+    "chunk": 1000
+  }
+]
