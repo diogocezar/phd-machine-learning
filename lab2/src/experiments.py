@@ -79,7 +79,7 @@ def get_orchestrator():
 
 
 def get_tabulation():
-    tabulation_csv_file = open('tabulation/index.csv', mode='w')
+    tabulation_csv_file = open('results/index.csv', mode='w')
     tabulation_writer = csv.writer(
         tabulation_csv_file, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     tabulation_writer.writerow(
@@ -89,7 +89,7 @@ def get_tabulation():
 
 def save_tabulation_conf_mat(classifier, i, result_conf_mat):
     tabulation_csv_file = open(
-        'tabulation/conf_mat/' + str(classifier) + '_' + str(i) + '.csv', mode='w')
+        'results/conf_mat/' + str(classifier) + '_' + str(i) + '.csv', mode='w')
     tabulation_writer = csv.writer(
         tabulation_csv_file, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     tabulation_writer.writerows(result_conf_mat)
