@@ -1,8 +1,8 @@
 [
   {
     "classifier": "knn",
-    "chunk_start": 1000,
-    "chunk_stop": 20000,
+    "chunk_start": 20000,
+    "chunk_stop": 21000,
     "chunk_step": 1000
   }
 ]
