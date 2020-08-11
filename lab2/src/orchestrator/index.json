@@ -2,31 +2,31 @@
   {
     "classifier": "knn",
     "chunk_start": 1000,
-    "chunk_stop": 2000,
+    "chunk_stop": 21000,
     "chunk_step": 1000
   },
   {
     "classifier": "naive_bayes",
     "chunk_start": 1000,
-    "chunk_stop": 2000,
+    "chunk_stop": 21000,
     "chunk_step": 1000
   },
   {
     "classifier": "lda",
     "chunk_start": 1000,
-    "chunk_stop": 2000,
+    "chunk_stop": 21000,
     "chunk_step": 1000
   },
   {
     "classifier": "logistic_regression",
     "chunk_start": 1000,
-    "chunk_stop": 2000,
+    "chunk_stop": 21000,
     "chunk_step": 1000
   },
   {
     "classifier": "perceptron",
     "chunk_start": 1000,
-    "chunk_stop": 2000,
+    "chunk_stop": 21000,
     "chunk_step": 1000
   }
 ]

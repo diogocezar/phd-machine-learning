@@ -1,6 +1,0 @@
-Classifier;Start;Stop;Step;Chunk;F1Score;Accuracy;Execution Time (s)
-knn;1000;2000;1000;1000;0.776;0.782;31.325
-naive_bayes;1000;2000;1000;1000;0.696;0.674;5.841
-lda;1000;2000;1000;1000;0.787;0.787;4.858
-logistic_regression;1000;2000;1000;1000;0.716;0.729;4.792
-perceptron;1000;2000;1000;1000;0.747;0.756;4.861
