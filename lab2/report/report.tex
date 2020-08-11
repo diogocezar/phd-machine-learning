@@ -29,7 +29,7 @@
 
 \sloppy
 
-\title{Aprendizagem de Máquina (2020/Período Especial) - Impactos da Representação}
+\title{Aprendizagem de Máquina (2020/Período Especial) - Impactos da Base de Aprendizagem}
 
 \author{Diogo C. T. Batista\inst{1}}
 
@@ -42,68 +42,118 @@
 
 \maketitle
 
-\section{Representação}
+\section{Impactos da Base de Aprendizagem}
 
-Esta atividade laboratorial tem como objetivo a investigação exploratória de um algorítmo para a classificação de imagens. As imagens analisadas são representações manuscritas de dígitos de 10 categorias diferentes, que representam os número decimais $0,1,2,3,4,5,6,7,8,9$. A Figura \ref{fig:image_1_digits} demonstra alguns exemplos das imagens que devem ser classificadas.
+Esta atividade laboratorial tem como objetivo a investigação exploratória dos impáctos da base de aprendizagem na performance de diferentes classificadores. Os classificadores a serem analisados neste laboratório são:
 
-\begin{figure}[!htb]
-  \centering
-  \includegraphics[width=15em]{images/image_1_digits.jpg}
-  \caption{Dígitos a serem classificados}
-  \label{fig:image_1_digits}
-\end{figure}
+\begin{itemize}
+  \item KNN
+  \item Naïve Bayes
+  \item Linear Discriminant Analysis
+  \item Logistic Regression
+  \item Perceptron
+\end{itemize}
 
-Além das figuras, um arquivo de texto rotula cada uma das imagens, classificando-a em alguma categoria. Como no exemplo do Código \ref{code:exemplo_rotulos}.
+Os dados estão dispostos em arquivo no formato \textit{svmlight}. Este formato dispõe as informações de categorias e suas respectivas características. O código \ref{code:svmlight} mostra um pequeno trecho desta representação.
 
-\begin{lstlisting}[caption={Exemplo dos Rótulos},captionpos=b,frame=single,label={code:exemplo_rotulos}]
-data/cdf0361_07_13_0.jpg 0
-data/cdf1697_45_29_0.jpg 0
-data/cdf0872_30_6_1.jpg 0
-data/cdf0371_24_4_0.jpg 0
-data/cdf1539_20_17_2.jpg 0
+\begin{lstlisting}[caption={Exemplo do Formato de Entrada},captionpos=b,frame=single,label={code:svmlight}]
+0 1:0.000000 2:0.000000 3:0.001412 4:0.000000 5:0.014124 6:0.000000 ...
 \end{lstlisting}
 
-A atividade se iniciou com base na implementação do programa \textit{digits.py} que extrai uma representação bem simples de cada uma das imagens. Para cada imagem, se gera uma nova imagem no tamanho de $10 x 20$. E para cada pixel, verifica-se o seu valor de intensidade; se esse valor for maior que $128$, a característica é igual a $1$, caso contrário $0$.
+Neste exemplo, podemos notar que o $0$ inicial mostra a qual categoria este dado pertence, na sequência, demonstra-se para cada característica o seu valor. A característica $1$ possui o valor $0.000000$.
 
-Neste ponto, notou-se a possibilidade da primeira exploração. Além do tamanho inicial proposto, uma adaptação no algorítmo realizou uma análise em toda a base de imagens, obtendo outras dimensões para verificação. As estratégias adotadas foram:
+Os dados utilizados neste experimento estão dividos em 2 partições. A primeira partição possui $20.000$ registros, que foi definida para uma base de treinamento. Já a segunda, possui $58.646$ informações, utilizadas para o teste.
 
-\begin{enumerate}
-  \item Obter a média entre todas alturas e larguras;
-  \item Obter a mediana entre todas alturas e larguras;
-  \item Obter os valores máximos entre alturas e larguras;
-\end{enumerate}
+\subsection{Estratégia para Execução do Experimento}
 
-Após análise dos resultados, notou-se que a média e a mediana retornaram resultados muitos similares, por isso, optou-se apenas pela utilização da mediana. A Tabela \ref{tab:estrategias_representacao} mostra as coleções utilizadas nos experimentos. Além da médiana (med\_x, med\_y), os maiores valores encontrados para as dimensões (max\_x e max\_y) também foram considerados. E ainda, empiramente os valores de $x,y$ como $[40,60]$ e $[20,30]$.
+Para automatização da suite de experimentos, foi criado um sistema \textit{orquestrador} no qual é possível definir quais vão ser os experimentos a serem executados. O Código \ref{code:orquestrador} mostra os valores definidos em um arquivo no formato \textit{JSON}.
 
-\begin{table}[!htb]
-  \centering
-  \begin{tabular}{|c|c|c|c|c|c|}
-  \hline
-  \textbf{X\_Source} & \textbf{Y\_Source} & \textbf{X} & \textbf{Y} & \textbf{File Size} & \textbf{Execution Time (s)} \\ \hline
-  20                 & 10                 & 20         & 10         & 2180534            & 1.57                    \\ \hline
-  40                 & 20                 & 40         & 20         & 9377970            & 4.84                    \\ \hline
-  60                 & 30                 & 60         & 30         & 22978779           & 11.04                   \\ \hline
-  med\_x             & med\_y             & 36         & 46         & 20962221           & 10.54                   \\ \hline
-  max\_x             & max\_y             & 99         & 81         & 110050116          & 46.63                   \\ \hline
-  \end{tabular}
-  \caption{Estratégias de representação}
-  \label{tab:estrategias_representacao}
-\end{table}
-
-Para automatização da geração das representações, foram criadas adaptações no código para que fosse possível utilizar como entrada um arquivo do tipo JSON demonstrado no Código \ref{code:json_representacao}:
-
-\begin{lstlisting}[caption={JSON para representações},captionpos=b,frame=single,label={code:json_representacao}]
+\begin{lstlisting}[caption={JSON do Orquestrador},captionpos=b,frame=single,label={code:orquestrador}]
 [
   {
-    "data": "features_20_10",
-    "x": 20,
-    "y": 10
+    "classifier": "knn",
+    "chunk_start": 1000,
+    "chunk_stop": 20000,
+    "chunk_step": 1000
+  },
+  {
+    "classifier": "naive\_bayes",
+    "chunk_start": 1000,
+    "chunk_stop": 20000,
+    "chunk_step": 1000
   },
   ...
 ]
 \end{lstlisting}
 
-Neste JSON, \textit{data} é o nome da coleção de representações, $x$ e $y$ podem ser valores fixos ou terem os valores para obtenção dinâmica de: \textit{avg\_x, avg\_y, med\_x, med\_y, max\_x, max\_y}.
+Neste JSON, \textit{classifier} é o nome do classificador a ser utilizado. Estes, podem variar entre: knn, naive\_bayes, lda, logistic\_regression, e perceptron. Os outros atributos servem parar criar chunks que dividem os testes em função da disponibilidade da base de treinamento. Por exemplo, no primeiro bloco, \textit{chunk\_start} indica o tamanho do bloco inicial, \textit{chunk\_stop} indica a condição de parada, e por fim o \textit{chunk\_step} indica o incremento.
+
+Para os testes, em todos os classificados variou-se a base de treinamento de $1000$ até $20000$, com o intervalo de $1000$.
+
+O script implementado ainda realiza a automação da coleta dos resultados, salvando em arquivo no formato \textit{csv} todos os dados extraídos dos experimentos.
+
+Os dados salvos são: \textit{Classifier}, \textit{Chunk}, \textit{F1Score}, \textit{Accuracy} e \textit{Execution Time (s)}.
+
+\subsection{Parametrização dos Classificadores}
+
+Para este trabalho, foram implementados os parâmetros padrões para todos os classificadores anteriormente descritos. Assim sendo, nenhum ajuste específico foi realizado qualquer um dos classificadores testados.
+
+\subsection{Experimentos}
+
+Foram realizados $100$ experimentos. $20$ variação de $1000~20000$ para cada um dos 5 classificadores. Os $20$ melhores resultados estão demonstrados por ordem de \textit{F1Score} seguidos de \textit{Acurácia} e o \textit{Tempo de Execução} na tabela \ref{tab:resultados_melhores}
+
+\begin{table}[!htb]
+  \centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Classifier} & \textbf{Chunk} & \textbf{F1Score} & \textbf{Accuracy} & \textbf{Execution Time (s)} \\ \hline
+knn                 & 20.000         & 0,939            & 0,939             & 292,836                     \\ \hline
+perceptron          & 11.000         & 0,938            & 0,938             & 5,501                       \\ \hline
+knn                 & 19.000         & 0,938            & 0,938             & 279,718                     \\ \hline
+knn                 & 18.000         & 0,938            & 0,937             & 268,223                     \\ \hline
+knn                 & 16.000         & 0,937            & 0,937             & 251,132                     \\ \hline
+knn                 & 17.000         & 0,937            & 0,937             & 257,359                     \\ \hline
+knn                 & 12.000         & 0,936            & 0,936             & 225,239                     \\ \hline
+knn                 & 13.000         & 0,936            & 0,936             & 237,264                     \\ \hline
+knn                 & 14.000         & 0,936            & 0,936             & 253,580                     \\ \hline
+knn                 & 15.000         & 0,936            & 0,935             & 270,468                     \\ \hline
+perceptron          & 17.000         & 0,935            & 0,935             & 5,710                       \\ \hline
+knn                 & 10.000         & 0,935            & 0,935             & 198,619                     \\ \hline
+knn                 & 11.000         & 0,935            & 0,934             & 210,219                     \\ \hline
+perceptron          & 18.000         & 0,934            & 0,934             & 5,717                       \\ \hline
+knn                 & 9.000          & 0,933            & 0,933             & 178,040                     \\ \hline
+knn                 & 8.000          & 0,930            & 0,929             & 157,567                     \\ \hline
+lda                 & 10.000         & 0,928            & 0,928             & 5,030                       \\ \hline
+perceptron          & 13.000         & 0,928            & 0,928             & 5,337                       \\ \hline
+lda                 & 20.000         & 0,928            & 0,928             & 5,403                       \\ \hline
+perceptron          & 20.000         & 0,926            & 0,927             & 5,677                       \\ \hline
+\end{tabular}
+  \caption{Melhores Resultados}
+  \label{tab:resultados_melhores}
+\end{table}
+
+\subsection{Análises dos Resultados}
+
+A análise dos resultados leva em considerações os quesitos:
+
+\begin{enumerate}
+  \item Comparação do Desempenho dos Classificadores;
+  \item Classificador que tem o melhor desempenho com poucos dados;
+  \item Classificador que tem melhor desempenho com todos os dados;
+  \item Classiticador mais rápido;
+  \item Análise das Matrizes de Confusão;
+\end{enumerate}
+
+\subsubsection{Comparação do Desempenho dos Classificadores}
+
+A figura 
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=30em]{images/image_comparacao_classificadores.png}
+  \caption{Comparação de Desempenho dos Classificadores}
+  \label{fig:comparacao_classificadores}
+\end{figure}
 
 \section{Experimentos}
 
@@ -146,35 +196,7 @@ As normalizações não parecem fazer muita diferença nos resultados, pois este
 
 Em geral a alteração da estratégia de medição das distâncias (\textit{euclidean} e \textit{manhattan}) não influenciaram em uma melhoria da \textit{Acurácia} ou do \textit{F1Score}. O que se pode notar, foi que nos testes executados a estratégia \textit{manhattan} impacta negativamente no tempo de execução.
 
-\begin{table}[!htb]
-  \centering
-  \begin{tabular}{|c|c|c|c|c|c|c|}
-  \hline
-  \textbf{Experiment} & \textbf{Normalized} & \textbf{Distance} & \textbf{K} & \textbf{Accuracy} & \textbf{F1Score} & \textbf{Execution Time (s)} \\ \hline
-  features\_99\_81    & 0                   & euclidean         & 1          & 0,928             & 0,929            & 2.743                       \\ \hline
-  features\_99\_81    & 0                   & manhattan         & 1          & 0,928             & 0,929            & 3.161                       \\ \hline
-  features\_99\_81    & 1                   & euclidean         & 1          & 0,928             & 0,929            & 3.550                       \\ \hline
-  features\_99\_81    & 1                   & manhattan         & 1          & 0,928             & 0,929            & 3.961                       \\ \hline
-  features\_60\_30    & 0                   & euclidean         & 1          & 0,925             & 0,926            & 203                         \\ \hline
-  features\_60\_30    & 0                   & manhattan         & 1          & 0,925             & 0,926            & 293                         \\ \hline
-  features\_60\_30    & 1                   & euclidean         & 1          & 0,925             & 0,926            & 380                         \\ \hline
-  features\_60\_30    & 1                   & manhattan         & 1          & 0,925             & 0,926            & 471                         \\ \hline
-  features\_36\_46    & 0                   & euclidean         & 1          & 0,923             & 0,924            & 558                         \\ \hline
-  features\_36\_46    & 0                   & manhattan         & 1          & 0,923             & 0,924            & 641                         \\ \hline
-  features\_36\_46    & 1                   & euclidean         & 1          & 0,923             & 0,924            & 720                         \\ \hline
-  features\_36\_46    & 1                   & manhattan         & 1          & 0,923             & 0,924            & 804                         \\ \hline
-  features\_36\_46    & 0                   & euclidean         & 3          & 0,919             & 0,921            & 565                         \\ \hline
-  features\_36\_46    & 0                   & manhattan         & 3          & 0,919             & 0,921            & 647                         \\ \hline
-  features\_36\_46    & 1                   & euclidean         & 3          & 0,919             & 0,921            & 727                         \\ \hline
-  features\_36\_46    & 1                   & manhattan         & 3          & 0,919             & 0,921            & 811                         \\ \hline
-  features\_99\_81    & 0                   & euclidean         & 3          & 0,919             & 0,921            & 2.778                       \\ \hline
-  features\_99\_81    & 0                   & manhattan         & 3          & 0,919             & 0,921            & 3.193                       \\ \hline
-  features\_99\_81    & 1                   & euclidean         & 3          & 0,919             & 0,921            & 3.584                       \\ \hline
-  features\_99\_81    & 1                   & manhattan         & 3          & 0,919             & 0,921            & 3.992                       \\ \hline
-  \end{tabular}
-  \caption{Melhores Resultados}
-  \label{tab:resultados_melhores}
-\end{table}
+
 
 \begin{table}[!htb]
   \centering
