@@ -146,136 +146,44 @@ A análise dos resultados leva em considerações os quesitos:
 
 \subsubsection{Comparação do Desempenho dos Classificadores}
 
-A figura 
+A o gráfico da Figura \ref{fig:comparacao_classificadores} mostra dispõe no eixo X a variação dos chunks testados. O eixo Y é composto pela variação dos resultados obtidos por F1Score.
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=30em]{images/image_comparacao_classificadores.png}
-  \caption{Comparação de Desempenho dos Classificadores}
+  \caption{Comparação dos Classificadores}
   \label{fig:comparacao_classificadores}
 \end{figure}
 
-\section{Experimentos}
+Destaca-se o comportamento do classificador \textit{perceptron}, que apesar da tendência crescente, mostra uma variação de resultados de F1Score durante todos os experimentos. Isso acontece por sua por sua característica natual chamada de \textit{Cathastrophic Forgetting}, que acaba esquecendo os resultados anteriores quando não são frequentemente revisitados nos cálculos. Nota-se ainda que ao relizar treinamentos com chunks maiores, entre 15.000 e 20.000, as variações são menores e os resultados são melhores.
 
-Assim como na adaptação do primeiro algoritmo, um sistema de entrada JSON possibilitou a variação de combinações para análise de diferentes resultados.
+Em geral para os classificadores \textit{logistic\_regression}, \textit{naive\_bayes}, \textit{lda} e \textit{knn} a estabilização na melhora do F1Score aconteceu nos testes com chunk de 10.000.
 
-\begin{itemize}
-  \item O arquivo de representação fonte; as variações testadas foram: [features\_20\_10, features\_36\_46, features\_40\_20, features\_60\_30, features\_99\_81]
-  \item Ativar ou desativar a normalização; as variações testadas foram: [0,1]
-  \item Alterar o tipo de distância; as variações testadas foram: [eucledian, manhattan]
-  \item Alterar o K; as variações testadas foram: [1,3,4,5,6,7,8,9,10,11,12,13]. Foram considerados os $K$ pares, apenas para efeito de comparações, sabendo-se se sua ineficiência por natureza.
-\end{itemize}
+\subsubsection{Classificador que tem o melhor desempenho com poucos dados}
 
-\newpage
+Ainda analisando o gráfico da Figura \ref{fig:comparacao_classificadores}, pode-se notar que o classificador que obteve melhor desempenho com poucos dados foi o \textit{perceptron}, seguido do \textit{lda} e \textit{knn}.
 
-O Código \ref{code:json_experimentos} mostra as opções de entrada para o algorítmo, podendo variar:
+\subsubsection{Classificador que tem melhor desempenho com todos os dados}
 
-\begin{lstlisting}[caption={JSON para experimentos},captionpos=b,frame=single,label={code:json_experimentos}]
-[
-  {
-    "data": "features_20_10",
-    "normalized": 0,
-    "distance": "euclidean",
-    "k": 1
-  },
-  ...
-]
-\end{lstlisting}
+O classificador \textit{knn} conseguiu o melhor resultado com todos os dados, conseguindo um F1Score e Acurácia de 0,939, utilizando os 20.000 dados de treinamento.
 
-\section{Resultados}
+\subsubsection{Classiticador mais rápido}
 
-Foram realizadas \textit{240} execuções para as variações listadas anteriormente. Os \textit{20} melhores resultados (ordenados por Acurácia e F1Score) estão detalhados na Tabela \ref{tab:resultados_melhores}. Já os 20 piores resultados (ordenados por Acurácia e F1Score) estão detalhados na Tabela \ref{tab:resultados_piores}.
+O classificador mais rápido foi o \textit{perceptron}, que com em apenas 5,5s conseguiu obter F1Score e Acurácia de 0,938.
 
-Pode-se observar que os melhores resultados foram obtidos a partir das representações que consideraram as \textit{maiores} alturas e larguras das imagens (99x81). Isso acontece pois, no momento em que se realiza a compressão das imagens, características são perdidas. O melhor resultado teve a \textit{Acurácia} de $0,928$ e o \textit{F1Score} de $0,929$ demorando $2.743$ segundos para execução completa.
+\subsection{Análise das Matrizes de Confusão}
 
-Já para nos piores resultados, nota-se que foram obtidos na variação de K: $K=13$, $K=12$, $K=10$. Quanto ao $K$ para os melhores resultados, percebe-se que foram obtidos com $K=1$, seguido de $K=3$ e $K=5$. Isso mostra que a distribuição possui uma particularidade interessante, na qual ao se comparar apenas os vizinhos mais próximos se consegue um melhor resultado. Como já esperado, para os resultados nos quais $K$ tinha um valor par, seus resultados foram menos eficientes.
+As matrizes de confusão da Figura \ref{fig:comparacao_conf_mat} mostram os resultados obtidos nos experimentos que utilizaram todos os dados. É possível notar que...
 
-Em outra análise, a estratégia de obter as médias das alturas e larguras também apresentaram resultados significativos (imagens de dimensão $36x46$), mas ficaram abaixo dos resultados da estratégia empírica que utiliza imagens $60x30$. O destaque é para o tempo de execução em \textit{features\_60\_30}, que conseguiu-se uma Acurácia de $0,925$ e o F1Score de $0,926$ demorando apenas $203$ segundos para execução completa.
-
-As normalizações não parecem fazer muita diferença nos resultados, pois estes já se encontram bem distribuídos.
-
-Em geral a alteração da estratégia de medição das distâncias (\textit{euclidean} e \textit{manhattan}) não influenciaram em uma melhoria da \textit{Acurácia} ou do \textit{F1Score}. O que se pode notar, foi que nos testes executados a estratégia \textit{manhattan} impacta negativamente no tempo de execução.
-
-
-
-\begin{table}[!htb]
+\begin{figure}[!htb]
   \centering
-  \begin{tabular}{|c|c|c|c|c|c|c|}
-  \hline
-  \textbf{Experiment} & \textbf{Normalized} & \textbf{Distance} & \textbf{K} & \textbf{Accuracy} & \textbf{F1Score} & \textbf{Execution Time (s)} \\ \hline
-  features\_20\_10    & 1                   & manhattan         & 13         & 0,871             & 0,873            & 40                          \\ \hline
-  features\_20\_10    & 1                   & euclidean         & 13         & 0,871             & 0,873            & 30                          \\ \hline
-  features\_20\_10    & 0                   & manhattan         & 13         & 0,871             & 0,873            & 20                          \\ \hline
-  features\_20\_10    & 0                   & euclidean         & 13         & 0,871             & 0,873            & 10                          \\ \hline
-  features\_20\_10    & 1                   & manhattan         & 12         & 0,874             & 0,876            & 39                          \\ \hline
-  features\_20\_10    & 1                   & euclidean         & 12         & 0,874             & 0,876            & 29                          \\ \hline
-  features\_20\_10    & 0                   & manhattan         & 12         & 0,874             & 0,876            & 19                          \\ \hline
-  features\_20\_10    & 0                   & euclidean         & 12         & 0,874             & 0,876            & 9                           \\ \hline
-  features\_99\_81    & 1                   & manhattan         & 12         & 0,876             & 0,879            & 4.294                       \\ \hline
-  features\_99\_81    & 1                   & euclidean         & 12         & 0,876             & 0,879            & 3.894                       \\ \hline
-  features\_99\_81    & 0                   & manhattan         & 12         & 0,876             & 0,879            & 3.485                       \\ \hline
-  features\_99\_81    & 0                   & euclidean         & 12         & 0,876             & 0,879            & 3.090                       \\ \hline
-  features\_20\_10    & 1                   & manhattan         & 10         & 0,879             & 0,881            & 37                          \\ \hline
-  features\_20\_10    & 1                   & euclidean         & 10         & 0,879             & 0,881            & 27                          \\ \hline
-  features\_20\_10    & 0                   & manhattan         & 10         & 0,879             & 0,881            & 17                          \\ \hline
-  features\_20\_10    & 0                   & euclidean         & 10         & 0,879             & 0,881            & 7                           \\ \hline
-  features\_99\_81    & 1                   & manhattan         & 13         & 0,880             & 0,883            & 4.328                       \\ \hline
-  features\_99\_81    & 1                   & euclidean         & 13         & 0,880             & 0,883            & 3.928                       \\ \hline
-  features\_99\_81    & 0                   & manhattan         & 13         & 0,880             & 0,883            & 3.517                       \\ \hline
-  features\_99\_81    & 0                   & euclidean         & 13         & 0,880             & 0,883            & 3.126                       \\ \hline
-  \end{tabular}
-  \caption{Piores Resultados}
-  \label{tab:resultados_piores}
-\end{table}
+  \includegraphics[width=30em]{images/image_comparacao_conf_mat.png}
+  \caption{Comparação das Matrizes de Confusão}
+  \label{fig:comparacao_conf_mat}
+\end{figure}
 
-\section{Comparação das Matrizes de Confusão}
+\subsection{Código Fonte}
 
-Para cada execução, criou-se um arquivo de resultados que também armazena as matrizes de confusão.
-
-A Tabela \ref{tab:matriz_confusao_melhor} demonstra a matriz de confusão para o melhor resultado, enquanto que a Tabela \ref{tab:matriz_confusao_pior} demonstra a matriz de confusão para o pior resultado.
-
-É possível notar que apesar dos erros persistirem na classificação, como por exemplo em: [0,2],[1,2],[1,3],[1,4],[1,6],[1,7],[1,8],[1,9], eles diminuram consideravelmente. Como por exemplo, no pior caso, a classificação [1,4] foi classificada erroniamente 12 vezes, enquanto que no melhor caso, o erro ocorreu em apenas 8 vezes. Isso acontece, pois, aumentar o número de \textit{pixels} analisados nas imagens, geram representações mais precisas, porém, como o método é o mesmo, pôde-se observar que os equívocos continuaram existindo nos mesmos lugares, mesmo que em menor número.
-
-\begin{table}[!htb]
-  \centering
-  \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-  \hline
-  95 & 0  & 0   & 0  & 0  & 1  & 1   & 0  & 0  & 0   \\ \hline
-  0  & 93 & 0   & 0  & 0  & 1  & 0   & 0  & 0  & 1   \\ \hline
-  0  & 1  & 103 & 1  & 0  & 0  & 0   & 4  & 1  & 1   \\ \hline
-  0  & 1  & 0   & 98 & 0  & 1  & 0   & 0  & 3  & 0   \\ \hline
-  0  & 8  & 0   & 0  & 83 & 1  & 1   & 0  & 0  & 2   \\ \hline
-  2  & 0  & 0   & 5  & 0  & 89 & 1   & 0  & 0  & 0   \\ \hline
-  1  & 5  & 0   & 0  & 0  & 0  & 100 & 0  & 0  & 0   \\ \hline
-  0  & 3  & 1   & 0  & 1  & 0  & 0   & 88 & 0  & 4   \\ \hline
-  0  & 3  & 0   & 1  & 1  & 2  & 0   & 1  & 79 & 0   \\ \hline
-  0  & 1  & 0   & 0  & 2  & 0  & 0   & 9  & 0  & 100 \\ \hline
-  \end{tabular}
-  \caption{Matriz de Confusão - Melhor Caso}
-  \label{tab:matriz_confusao_melhor}
-\end{table}
-
-\begin{table}[!htb]
-  \centering
-  \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-  \hline
-  95 & 1  & 0  & 0  & 0  & 1  & 0  & 0  & 0  & 0  \\ \hline
-  0  & 95 & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  \\ \hline
-  3  & 9  & 89 & 1  & 0  & 0  & 3  & 6  & 0  & 0  \\ \hline
-  1  & 1  & 1  & 98 & 0  & 0  & 0  & 2  & 0  & 0  \\ \hline
-  0  & 12 & 0  & 0  & 78 & 0  & 1  & 0  & 0  & 4  \\ \hline
-  0  & 1  & 0  & 7  & 0  & 88 & 1  & 0  & 0  & 0  \\ \hline
-  1  & 6  & 0  & 0  & 0  & 0  & 99 & 0  & 0  & 0  \\ \hline
-  0  & 11 & 0  & 0  & 3  & 0  & 0  & 79 & 0  & 4  \\ \hline
-  0  & 5  & 0  & 3  & 1  & 6  & 0  & 5  & 65 & 2  \\ \hline
-  0  & 3  & 0  & 0  & 7  & 0  & 0  & 17 & 0  & 85 \\ \hline
-  \end{tabular}
-  \caption{Matriz de Confusão - Pior Caso}
-  \label{tab:matriz_confusao_pior}
-\end{table}
-
-\section{Código Fonte}
-
-Os códigos preparados podem ser analisados através do repositório: https://github.com/diogocezar/machine-learning/tree/master/lab1/src
+Os códigos preparados podem ser analisados através do repositório: https://github.com/diogocezar/machine-learning/tree/master/lab2/src
 
 \end{document}
