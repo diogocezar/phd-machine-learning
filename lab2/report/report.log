@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.12.13)  12 AUG 2020 18:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.12.13)  13 AUG 2020 17:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -181,19 +181,19 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
 (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 41.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 42.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -301,87 +301,91 @@ e
 ))
 \c@lstlisting=\count110
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <16> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 44.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 44.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 43.
+(Font)              <12> on input line 44.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 43.
+(Font)              <8> on input line 44.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 43.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 43.
+(Font)              <6> on input line 44.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 44.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 50.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 46.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 51.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 61.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 51.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 62.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 61.
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 73.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 62.
  [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<images/image_comparacao_classificadores.png, id=15, 1257.69875pt x 777.90625pt
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 76.
+ [2]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 111.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 113.
+<images/image_comparacao_classificadores.png, id=19, 1257.69875pt x 777.90625pt
 >
 File: images/image_comparacao_classificadores.png Graphic file (type png)
 <use images/image_comparacao_classificadores.png>
 Package pdftex.def Info: images/image_comparacao_classificadores.png  used on i
-nput line 153.
+nput line 157.
 (pdftex.def)             Requested size: 360.0pt x 222.66704pt.
- [2]
-Underfull \vbox (badness 1237) has occurred while \output is active []
-
- [3 <./images/image_comparacao_classificadores.png>]
+ [3]
 <images/image_comparacao_conf_mat.png, id=24, 1175.39125pt x 815.045pt>
 File: images/image_comparacao_conf_mat.png Graphic file (type png)
 <use images/image_comparacao_conf_mat.png>
 Package pdftex.def Info: images/image_comparacao_conf_mat.png  used on input li
-ne 180.
+ne 190.
 (pdftex.def)             Requested size: 360.0pt x 249.62682pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--188
+Underfull \hbox (badness 10000) in paragraph at lines 197--198
 \OT1/ptm/m/n/12 Os c[]odigos pre-pa-ra-dos po-dem ser ana-li-sa-dos atrav[]es d
 o re-po-sit[]orio:
  []
 
-[4 <./images/image_comparacao_conf_mat.png>] [5] (./report.aux) ) 
+[4 <./images/image_comparacao_classificadores.png>] [5 <./images/image_comparac
+ao_conf_mat.png>] (./report.aux) ) 
 Here is how much of TeX's memory you used:
  6038 strings out of 492649
- 87757 string characters out of 6129621
- 187954 words of memory out of 5000000
+ 87751 string characters out of 6129621
+ 185958 words of memory out of 5000000
  9830 multiletter control sequences out of 15000+600000
- 22831 words of font info for 47 fonts, out of 8000000 for 9000
+ 22615 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,8n,40p,839b,1618s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/te
-xlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/
-fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/ty
-pe1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw
-/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utm
-r8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (5 pages, 451455 bytes).
+ 43i,8n,40p,839b,1103s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc
+/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/courier/ucrr8a.pf
+b></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/tex
+live/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/
+texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on report.pdf (5 pages, 461840 bytes).
 PDF statistics:
- 62 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
+ 66 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

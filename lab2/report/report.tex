@@ -14,14 +14,15 @@
 	numbers=left,
 	stepnumber=1,
 	firstnumber=1,
-	numberstyle=\tiny,
+	numberstyle=\scriptsize,
 	extendedchars=true,
 	breaklines=true,
 	frame=single,
 	showstringspaces=false,
+  aboveskip=1.5em,
 	xleftmargin=2.5em,
 	framexleftmargin=2em,
-	basicstyle=\small,
+	basicstyle=\scriptsize,
 }
 
 \renewcommand{\lstlistingname}{Código}
@@ -47,11 +48,11 @@
 Esta atividade laboratorial tem como objetivo a investigação exploratória dos impáctos da base de aprendizagem na performance de diferentes classificadores. Os classificadores a serem analisados neste laboratório são:
 
 \begin{itemize}
-  \item KNN
-  \item Naïve Bayes
-  \item Linear Discriminant Analysis
-  \item Logistic Regression
-  \item Perceptron
+  \item KNN;
+  \item Naïve Bayes;
+  \item Linear Discriminant Analysis;
+  \item Logistic Regression;
+  \item Perceptron.
 \end{itemize}
 
 Os dados estão dispostos em arquivo no formato \textit{svmlight}. Este formato dispõe as informações de categorias e suas respectivas características. O código \ref{code:svmlight} mostra um pequeno trecho desta representação.
@@ -60,13 +61,15 @@ Os dados estão dispostos em arquivo no formato \textit{svmlight}. Este formato 
 0 1:0.000000 2:0.000000 3:0.001412 4:0.000000 5:0.014124 6:0.000000 ...
 \end{lstlisting}
 
-Neste exemplo, podemos notar que o $0$ inicial mostra a qual categoria este dado pertence, na sequência, demonstra-se para cada característica o seu valor. A característica $1$ possui o valor $0.000000$.
+Neste exemplo, pode-se notar que o $0$ inicial mostra a qual categoria este dado pertence, na sequência, demonstra-se para cada característica o seu valor. A característica $1$ possui o valor $0.000000$.
 
-Os dados utilizados neste experimento estão dividos em 2 partições. A primeira partição possui $20.000$ registros, que foi definida para uma base de treinamento. Já a segunda, possui $58.646$ informações, utilizadas para o teste.
+Os dados utilizados neste experimento estão dividos em 2 partições. A primeira partição possui $20.000$ registros, que foi definida para uma base de treinamento. Já a segunda, possui $58.646$, utilizados para o teste dos classificadores.
 
-\subsection{Estratégia para Execução do Experimento}
+\newpage
 
-Para automatização da suite de experimentos, foi criado um sistema \textit{orquestrador} no qual é possível definir quais vão ser os experimentos a serem executados. O Código \ref{code:orquestrador} mostra os valores definidos em um arquivo no formato \textit{JSON}.
+\subsection{Estratégia para execução do experimento}
+
+Para automatização dos experimentos, foi criado um sistema \textit{orquestrador} no qual é possível definir as instruções para a execução de todo o fluxo para os 5 diferentes classificadores. O Código \ref{code:orquestrador} mostra os valores definidos em um arquivo no formato \textit{JSON}.
 
 \begin{lstlisting}[caption={JSON do Orquestrador},captionpos=b,frame=single,label={code:orquestrador}]
 [
@@ -86,13 +89,11 @@ Para automatização da suite de experimentos, foi criado um sistema \textit{orq
 ]
 \end{lstlisting}
 
-Neste JSON, \textit{classifier} é o nome do classificador a ser utilizado. Estes, podem variar entre: knn, naive\_bayes, lda, logistic\_regression, e perceptron. Os outros atributos servem parar criar chunks que dividem os testes em função da disponibilidade da base de treinamento. Por exemplo, no primeiro bloco, \textit{chunk\_start} indica o tamanho do bloco inicial, \textit{chunk\_stop} indica a condição de parada, e por fim o \textit{chunk\_step} indica o incremento.
+Neste JSON, \textit{classifier} é o nome do classificador que deve ser utilizado. Estes, podem variar entre: \textit{knn}, \textit{naive\_bayes}, \textit{lda}, \textit{logistic\_regression}, e \textit{perceptron}. Os outros atributos servem parar criar partes (\textit{chunks}) que dividem os testes em função da disponibilidade da base de treinamento. Por exemplo, no primeiro bloco, \textit{chunk\_start} indica o tamanho do bloco inicial, \textit{chunk\_stop} indica a condição de parada, e por fim o \textit{chunk\_step} indica o incremento a cada passo.
 
 Para os testes, em todos os classificados variou-se a base de treinamento de $1000$ até $20000$, com o intervalo de $1000$.
 
-O script implementado ainda realiza a automação da coleta dos resultados, salvando em arquivo no formato \textit{csv} todos os dados extraídos dos experimentos.
-
-Os dados salvos são: \textit{Classifier}, \textit{Chunk}, \textit{F1Score}, \textit{Accuracy} e \textit{Execution Time (s)}.
+O \textit{script} implementado ainda realiza a automação da coleta dos resultados, salvando arquivos no formato \textit{csv} todos os dados extraídos dos experimentos. Uma tabela armazena os resultados de todos os experimentos, tabulando: \textit{Classifier}, \textit{Chunk}, \textit{F1Score}, \textit{Accuracy} e \textit{Execution Time (s)}. Além disso, para cada uma das execuções é criado um arquivo separado com a sua matriz de confusão.
 
 \subsection{Parametrização dos Classificadores}
 
@@ -100,10 +101,13 @@ Para este trabalho, foram implementados os parâmetros padrões para todos os cl
 
 \subsection{Experimentos}
 
-Foram realizados $100$ experimentos. $20$ variação de $1000~20000$ para cada um dos 5 classificadores. Os $20$ melhores resultados estão demonstrados por ordem de \textit{F1Score} seguidos de \textit{Acurácia} e o \textit{Tempo de Execução} na tabela \ref{tab:resultados_melhores}
+Foram realizados $100$ experimentos. $20$ variações (entre $1000~20000$) para cada um dos $5$ classificadores. Os $20$ melhores resultados estão demonstrados por ordem de \textit{F1Score} seguidos de \textit{Acurácia} e o \textit{Tempo de Execução} na Tabela \ref{tab:resultados_melhores}.
+
+\newpage
 
 \begin{table}[!htb]
   \centering
+  \scriptsize
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 \textbf{Classifier} & \textbf{Chunk} & \textbf{F1Score} & \textbf{Accuracy} & \textbf{Execution Time (s)} \\ \hline
@@ -137,16 +141,16 @@ perceptron          & 20.000         & 0,926            & 0,927             & 5,
 A análise dos resultados leva em considerações os quesitos:
 
 \begin{enumerate}
-  \item Comparação do Desempenho dos Classificadores;
+  \item Comparação do desempenho dos classificadores;
   \item Classificador que tem o melhor desempenho com poucos dados;
   \item Classificador que tem melhor desempenho com todos os dados;
   \item Classiticador mais rápido;
-  \item Análise das Matrizes de Confusão;
+  \item Análise das matrizes de confusão;
 \end{enumerate}
 
-\subsubsection{Comparação do Desempenho dos Classificadores}
+\subsubsection{Comparação do desempenho dos classificadores}
 
-A o gráfico da Figura \ref{fig:comparacao_classificadores} mostra dispõe no eixo X a variação dos chunks testados. O eixo Y é composto pela variação dos resultados obtidos por F1Score.
+O gráfico da Figura \ref{fig:comparacao_classificadores} dispõe no eixo $X$ a variação dos \textit{chunks} testados. O eixo $Y$ é formado pela variação dos resultados obtidos por F1Score. E as linhas representam os 5 diferentes classificadores.
 
 \begin{figure}[!htb]
   \centering
@@ -155,9 +159,9 @@ A o gráfico da Figura \ref{fig:comparacao_classificadores} mostra dispõe no ei
   \label{fig:comparacao_classificadores}
 \end{figure}
 
-Destaca-se o comportamento do classificador \textit{perceptron}, que apesar da tendência crescente, mostra uma variação de resultados de F1Score durante todos os experimentos. Isso acontece por sua por sua característica natual chamada de \textit{Cathastrophic Forgetting}, que acaba esquecendo os resultados anteriores quando não são frequentemente revisitados nos cálculos. Nota-se ainda que ao relizar treinamentos com chunks maiores, entre 15.000 e 20.000, as variações são menores e os resultados são melhores.
+Destaca-se o comportamento do classificador \textit{perceptron}, que apesar da tendência crescente, mostra uma variação de resultados durante todos os experimentos. Isso acontece por sua por sua característica natual chamada de \textit{Cathastrophic Forgetting}, que acaba ``esquecendo'' os resultados anteriores quando não são frequentemente revisitados nos cálculos. Nota-se ainda, que ao relizar treinamentos com \textit{chunks} maiores, entre $15.000$ e $20.000$, as variações são menores e os resultados são melhores.
 
-Em geral para os classificadores \textit{logistic\_regression}, \textit{naive\_bayes}, \textit{lda} e \textit{knn} a estabilização na melhora do F1Score aconteceu nos testes com chunk de 10.000.
+Em geral para os classificadores \textit{logistic\_regression}, \textit{naive\_bayes}, \textit{lda} e \textit{knn} a estabilização na melhora dos resultaods aconteceu nos testes com $10.000$ registros usados para o treinamento.
 
 \subsubsection{Classificador que tem o melhor desempenho com poucos dados}
 
@@ -165,15 +169,21 @@ Ainda analisando o gráfico da Figura \ref{fig:comparacao_classificadores}, pode
 
 \subsubsection{Classificador que tem melhor desempenho com todos os dados}
 
-O classificador \textit{knn} conseguiu o melhor resultado com todos os dados, conseguindo um F1Score e Acurácia de 0,939, utilizando os 20.000 dados de treinamento.
+O classificador \textit{knn} conseguiu o melhor resultado com todos os dados, conseguindo um F1Score e Acurácia de $0,939$, utilizando os $20.000$ dados de treinamento.
 
 \subsubsection{Classiticador mais rápido}
 
-O classificador mais rápido foi o \textit{perceptron}, que com em apenas 5,5s conseguiu obter F1Score e Acurácia de 0,938.
+O classificador mais rápido foi o \textit{perceptron}, que com em apenas $5,5s$ conseguiu obter F1Score e Acurácia de $0,938$.
 
-\subsection{Análise das Matrizes de Confusão}
+\subsection{Análise das matrizes de confusão}
 
-As matrizes de confusão da Figura \ref{fig:comparacao_conf_mat} mostram os resultados obtidos nos experimentos que utilizaram todos os dados. É possível notar que...
+Para a análise das matrizes de confusão, foram consideradas as matrizes que tiveram o treinamento com toda a base ($20.000$ registros). Excluindo a diagonal com os acertos, criou-se os gráficos da Figura \ref{fig:comparacao_conf_mat}, no qual a variação de cor das células é definida por seu valor.
+
+Com isso, é possível observar que vários pontos de erros são compartilhados entre os classificadores. Como por exemplo o elemento $3,5$ que possui um alto índice de falhas nos classificadores \textit{knn}, \textit{lda} e \textit{logistic\_regression}, mas menos expressivo nos classificadores \textit{naive\_bayes} e \textit{perceptron}.
+
+Como destaques pode-se observar que o \textit{knn} é o que apresenta as falhas de forma distribuída.
+
+Outro destaque é o classificador \textit{perceptron} que possui os erros distruídos de forma esparçada, com muitos erros do mesmo tipo.
 
 \begin{figure}[!htb]
   \centering
