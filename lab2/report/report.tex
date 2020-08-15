@@ -177,9 +177,9 @@ O classificador mais rápido foi o \textit{perceptron}, que com em apenas $5,5s$
 
 \subsection{Análise das matrizes de confusão}
 
-Para a análise das matrizes de confusão, foram consideradas as matrizes que tiveram o treinamento com toda a base ($20.000$ registros). Excluindo a diagonal com os acertos, criou-se os gráficos da Figura \ref{fig:comparacao_conf_mat}, no qual a variação de cor das células é definida por seu valor.
+Para a análise das matrizes de confusão, foram consideradas as matrizes que tiveram o treinamento com toda a base ($20.000$ registros). Excluindo a diagonal com os acertos, criou-se os gráficos da Figura \ref{fig:comparacao_conf_mat}, no qual a variação de cor das células (em uma escala de azul) é definida por seu valor.
 
-Com isso, é possível observar que vários pontos de erros são compartilhados entre os classificadores. Como por exemplo o elemento $3,5$ que possui um alto índice de falhas nos classificadores \textit{knn}, \textit{lda} e \textit{logistic\_regression}, mas menos expressivo nos classificadores \textit{naive\_bayes} e \textit{perceptron}.
+As imagens analisadas são representações manuscritas de dígitos de 10 categorias diferentes, que representam os número decimais $0,1,2,3,4,5,6,7,8,9$. Com isso, observa-se que em várias células os erros são compartilhados entre os classificadores. Isso se deve pois, as confusões são encontradas em números com o formato semelhante, como por exemplo, a confusão entre $(3,5)$ que possui um alto índice de falhas nos classificadores \textit{knn}, \textit{lda} e \textit{logistic\_regression}, mas menos expressivo nos classificadores \textit{naive\_bayes} e \textit{perceptron}.
 
 Como destaques pode-se observar que o \textit{knn} é o que apresenta as falhas de forma distribuída.
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.12.13)  13 AUG 2020 17:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.12.13)  14 AUG 2020 15:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -364,10 +364,10 @@ o re-po-sit[]orio:
 [4 <./images/image_comparacao_classificadores.png>] [5 <./images/image_comparac
 ao_conf_mat.png>] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 6038 strings out of 492649
- 87751 string characters out of 6129621
+ 6039 strings out of 492649
+ 87759 string characters out of 6129621
  185958 words of memory out of 5000000
- 9830 multiletter control sequences out of 15000+600000
+ 9831 multiletter control sequences out of 15000+600000
  22615 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,8n,40p,839b,1103s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -382,7 +382,7 @@ b></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr
 /local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/tex
 live/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/
 texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (5 pages, 461840 bytes).
+Output written on report.pdf (5 pages, 462653 bytes).
 PDF statistics:
  66 PDF objects out of 1000 (max. 8388607)
  44 compressed objects within 1 object stream
