@@ -1,8 +1,9 @@
 import csv
 import lib.util as util
+import collections
 
-FILE_CSV_INPUT = 'data/credit.csv'
-FILE_SVMLIGHT_OUTPUT = 'data/credit.svmlight'
+FILE_CSV_INPUT = 'data/credit_sample.csv'
+FILE_SVMLIGHT_OUTPUT = 'data/credit_sample.svmlight'
 
 start_time = 0
 
@@ -14,13 +15,20 @@ def convert_data(file_csv_input, file_svmlight_output):
         line_count = 0
         for row in csv_reader:
             line = ""
-            if line_count > 0:
-                line = row["Y"] + " "
-                for v in row:
-                    if v != "ID" and v != "Y":
-                        line += v + ":" + row[v] + " "
-                output_file.write(line)
-                output_file.write("\n")
+            line = row["Y"] + " "
+            values = {}
+            for v in row:
+                if v != "ID" and v != "Y":
+                    index = int(v.replace("v", ""))
+                    value = row[v]
+                    if value == "NA":
+                        value = -1000000000
+                    values[index] = value
+            values = collections.OrderedDict(sorted(values.items()))
+            for v, k in values.items():
+                line += str(v) + ":" + str(k) + " "
+            output_file.write(line)
+            output_file.write("\n")
             line_count += 1
             print(f'Line {line_count} of 219984')
         print(f'Processed {line_count} lines.')
