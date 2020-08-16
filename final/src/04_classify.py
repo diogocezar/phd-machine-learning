@@ -4,6 +4,7 @@ import lib.svmlight_utils as svmlight_utils
 import lib.classifiers as classifiers
 import time
 import numpy
+from sklearn.datasets import load_svmlight_file
 
 FILE_SVMLIGHT_TRAIN_INPUT = 'data/train/credit_sample.svmlight'
 FILE_SVMLIGHT_VALIDATION_INPUT = 'data/validation/credit_sample.svmlight'
@@ -28,11 +29,11 @@ def print_result(result_f1_score,
 
 def run_orchestrator(orchestrator, start_time, table_writer):
     print('Starting orchestrator...')
-    x_train, y_train = svmlight_utils.load_svm_file(FILE_SVMLIGHT_TRAIN_INPUT)
-    x_test, y_test = svmlight_utils.load_svm_file(FILE_SVMLIGHT_TEST_INPUT)
+    x_train, y_train = load_svmlight_file(FILE_SVMLIGHT_TRAIN_INPUT)
+    x_test, y_test = load_svmlight_file(FILE_SVMLIGHT_TEST_INPUT)
     x_train = x_train.toarray()
     x_test = x_test.toarray()
-    labels = numpy.arange(705)
+    labels = numpy.arange(706)
     for experiment in orchestrator:
         classifier = str(experiment['classifier'])
         print('Classifier: ' + classifier)
