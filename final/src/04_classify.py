@@ -15,11 +15,15 @@ start_time = 0
 def print_result(classifier,
                  result_f1_score,
                  result_accuracy,
+                 result_precision,
+                 result_recall,
                  result_conf_mat,
                  result_time):
     print('Classifier: ' + classifier)
     print('F1Score: ' + str(result_f1_score))
     print('Accuracy: ' + str(result_accuracy))
+    print('Precision: ' + str(result_precision))
+    print('Recall: ' + str(result_recall))
     print('Confusion Matrix: \n' + str(result_conf_mat))
     print('Execution Time(s): ' + str(result_time))
     print('\n---\n')
@@ -28,6 +32,8 @@ def print_result(classifier,
 def save_result(classifier,
                 result_f1_score,
                 result_accuracy,
+                result_precision,
+                result_recall,
                 result_conf_mat,
                 result_time,
                 tabulation_writer,
@@ -35,12 +41,14 @@ def save_result(classifier,
     print_result(classifier,
                  result_f1_score,
                  result_accuracy,
+                 result_precision,
+                 result_recall,
                  result_conf_mat,
                  result_time)
     tabulation.save_tabulation_conf_mat(
         path_conf_mat, classifier, result_conf_mat)
     tabulation_writer.writerow(
-        [classifier, result_f1_score, result_accuracy, result_time])
+        [classifier, result_f1_score, result_accuracy, result_precision, result_recall, result_time])
 
 
 def run_orchestrator(configs, experiments, start_time, table_writer):
@@ -56,26 +64,28 @@ def run_orchestrator(configs, experiments, start_time, table_writer):
         classifier = str(experiment['classifier'])
         start_time = time.time()
         if classifier == "knn":
-            result_f1_score, result_accuracy, result_conf_mat, result_time = classifiers.classify_knn(
+            result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_knn(
                 start_time, x_train, y_train, x_test, y_test)
         if classifier == "naive_bayes":
-            result_f1_score, result_accuracy, result_conf_mat, result_time = classifiers.classify_naive_bayes(
+            result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_naive_bayes(
                 start_time, x_train, y_train, x_test, y_test)
         if classifier == "lda":
-            result_f1_score, result_accuracy, result_conf_mat, result_time = classifiers.classify_lda(
+            result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_lda(
                 start_time, x_train, y_train, x_test, y_test)
         if classifier == "logistic_regression":
-            result_f1_score, result_accuracy, result_conf_mat, result_time = classifiers.classify_logistic_regression(
+            result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_logistic_regression(
                 start_time, x_train, y_train, x_test, y_test)
         if classifier == "perceptron":
-            result_f1_score, result_accuracy, result_conf_mat, result_time = classifiers.classify_perceptron(
+            result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_perceptron(
                 start_time, x_train, y_train, x_test, y_test)
         if classifier == "svm":
-            result_f1_score, result_accuracy, result_conf_mat, result_time = classifiers.classify_svm(
+            result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_svm(
                 start_time, x_train, y_train, x_test, y_test)
         save_result(classifier,
                     result_f1_score,
                     result_accuracy,
+                    result_precision,
+                    result_recall,
                     result_conf_mat,
                     result_time,
                     table_writer,
@@ -83,7 +93,8 @@ def run_orchestrator(configs, experiments, start_time, table_writer):
 
 
 if __name__ == "__main__":
-    header = ['Classifier', 'F1Score', 'Accuracy', 'Execution Time (s)']
+    header = ['Classifier', 'F1Score', 'Accuracy',
+              'Precision', 'Recall', 'Execution Time (s)']
     orchestrator = orchestrator.get_orchestrator(FILE_ORCHESTRATOR)
     configs = orchestrator["configs"]
     experiments = orchestrator["experiments"]
