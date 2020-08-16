@@ -37,7 +37,8 @@ def save_result(classifier,
                 result_conf_mat,
                 result_time,
                 tabulation_writer,
-                path_conf_mat):
+                path_conf_mat,
+                folder):
     print_result(classifier,
                  result_f1_score,
                  result_accuracy,
@@ -46,12 +47,12 @@ def save_result(classifier,
                  result_conf_mat,
                  result_time)
     tabulation.save_tabulation_conf_mat(
-        path_conf_mat, classifier, result_conf_mat)
+        path_conf_mat, classifier, result_conf_mat, folder)
     tabulation_writer.writerow(
         [classifier, result_f1_score, result_accuracy, result_precision, result_recall, result_time])
 
 
-def run_orchestrator(configs, experiments, start_time, table_writer):
+def run_orchestrator(configs, experiments, start_time, table_writer, folder):
     start_time = time.time()
     print('Starting loading files')
     x_train, y_train = load_svmlight_file(configs["svmlight_train_input"])
@@ -89,7 +90,8 @@ def run_orchestrator(configs, experiments, start_time, table_writer):
                     result_conf_mat,
                     result_time,
                     table_writer,
-                    configs["result_conf_mat"])
+                    configs["result_conf_mat"],
+                    folder)
 
 
 if __name__ == "__main__":
@@ -98,7 +100,11 @@ if __name__ == "__main__":
     orchestrator = orchestrator.get_orchestrator(FILE_ORCHESTRATOR)
     configs = orchestrator["configs"]
     experiments = orchestrator["experiments"]
+    folder = str(utils.round_float(utils.get_time()))
+    save_tabulation = configs["result_classifiers"].replace(
+        "{timestamp}", folder)
     tabulation_writer, tabulation_file = tabulation.get_tabulation(
-        configs["result_clssifiers"], header)
-    run_orchestrator(configs, experiments, start_time, tabulation_writer)
+        save_tabulation, header)
+    run_orchestrator(configs, experiments, start_time,
+                     tabulation_writer, folder)
     tabulation_file.close()

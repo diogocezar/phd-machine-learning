@@ -1,0 +1,2 @@
+Classifier,F1Score,Accuracy,Precision,Recall,Execution Time (s)
+naive_bayes,0.244,0.249,0.78,0.143,0.015

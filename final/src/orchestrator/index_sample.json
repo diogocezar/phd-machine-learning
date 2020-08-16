@@ -1,8 +1,8 @@
 {
   "configs": {
-    "svmlight_train_input": "data/train/credit.svmlight",
-    "svmlight_validation_input": "data/validation/credit.svmlight",
-    "svmlight_test_input": "data/test/credit.svmlight",
+    "svmlight_train_input": "data/train/credit_sample.svmlight",
+    "svmlight_validation_input": "data/validation/credit_sample.svmlight",
+    "svmlight_test_input": "data/test/credit_sample.svmlight",
     "result_classifiers": "result/classify/tabulation_{timestamp}.csv",
     "result_conf_mat": "result/conf_mat/"
   },
