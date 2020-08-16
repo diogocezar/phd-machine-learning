@@ -1,0 +1,10 @@
+[
+  {
+    "classifier": "knn",
+    "parameters": {
+      "k": 3
+    },
+    "input_train": "data/train/credit_sample_normalized.svmlight",
+    "input_test": "data/test/credit_sample_normalized.svmlight"
+  }
+]

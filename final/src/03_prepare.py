@@ -17,7 +17,7 @@ start_time = 0
 
 if __name__ == "__main__":
     header = ['Type', 'Time']
-    tabulation_writer = tabulation.get_tabulation(
+    tabulation_writer, tabulation_file = tabulation.get_tabulation(
         FILE_RESULT_NORMALIZE, header)
 
     start_time = utils.get_time()
@@ -45,3 +45,5 @@ if __name__ == "__main__":
     print(f'Normalizing Executed in {diff_time} seconds.')
     tabulation.save_tabulation_row(tabulation_writer, ['Test', diff_time])
     normalizer.save_normalized_data(x, y, FILE_SVMLIGHT_TEST_OUTPUT)
+
+    tabulation_file.close()

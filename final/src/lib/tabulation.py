@@ -2,11 +2,11 @@ import csv
 
 
 def get_tabulation(file, header, delimiter=','):
-    tabulation_csv_file = open(file, mode='w')
+    tabulation_file = open(file, mode='w')
     tabulation_writer = csv.writer(
-        tabulation_csv_file, delimiter=delimiter, quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        tabulation_file, delimiter=delimiter, quotechar='"', quoting=csv.QUOTE_MINIMAL)
     tabulation_writer.writerow(header)
-    return tabulation_writer
+    return [tabulation_writer, tabulation_file]
 
 
 def save_tabulation_row(tabulation_writer, row):

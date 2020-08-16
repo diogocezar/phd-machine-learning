@@ -15,7 +15,7 @@ start_time = 0
 
 def save_split_results(x_train, x_validation, x_test, y_train, y_validation, y_test):
     header = ['Type', 'Length']
-    tabulation_writer = tabulation.get_tabulation(
+    tabulation_writer, tabulation_file = tabulation.get_tabulation(
         FILE_RESULT_SPLIT, header)
     print(f'Saving train file on {FILE_SVMLIGHT_TRAIN_OUTPUT}.')
     split.save_splited_data(x_train, y_train, FILE_SVMLIGHT_TRAIN_OUTPUT)
@@ -30,6 +30,8 @@ def save_split_results(x_train, x_validation, x_test, y_train, y_validation, y_t
     split.save_splited_data(x_test, y_test, FILE_SVMLIGHT_TEST_OUTPUT)
     tabulation.save_tabulation_row(
         tabulation_writer, ['Validation', len(x_test)])
+
+    tabulation_file.close()
 
 
 if __name__ == "__main__":
