@@ -1,0 +1,13 @@
+import csv
+
+
+def get_tabulation(file, header, delimiter=','):
+    tabulation_csv_file = open(file, mode='w')
+    tabulation_writer = csv.writer(
+        tabulation_csv_file, delimiter=delimiter, quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    tabulation_writer.writerow(header)
+    return tabulation_writer
+
+
+def save_tabulation_row(tabulation_writer, row):
+    tabulation_writer.writerow(row)

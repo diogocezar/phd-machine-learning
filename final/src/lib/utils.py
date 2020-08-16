@@ -12,3 +12,7 @@ def get_time_diff(start_time):
 
 def round_float(value):
     return float("{:.3f}".format(value))
+
+
+def get_num_rows(file):
+    return sum(1 for line in open(file))
