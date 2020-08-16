@@ -1,0 +1,2 @@
+Classifier,F1Score,Accuracy,Execution Time (s)
+knn,0.715,0.743,2635.283

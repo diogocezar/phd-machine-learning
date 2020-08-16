@@ -2,8 +2,8 @@ import csv
 import lib.utils as utils
 import collections
 
-FILE_CSV_INPUT = 'data/credit_sample.csv'
-FILE_SVMLIGHT_OUTPUT = 'data/credit_sample.svmlight'
+FILE_CSV_INPUT = 'data/credit.csv'
+FILE_SVMLIGHT_OUTPUT = 'data/credit.svmlight'
 
 start_time = 0
 

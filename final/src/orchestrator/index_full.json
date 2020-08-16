@@ -8,7 +8,19 @@
   },
   "experiments": [
     {
-      "classifier": "svm"
+      "classifier": "naive_bayes"
+    },
+    {
+      "classifier": "lda"
+    },
+    {
+      "classifier": "logistic_regression"
+    },
+    {
+      "classifier": "perceptron"
+    },
+    {
+      "classifier": "knn"
     }
   ]
 }

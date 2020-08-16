@@ -2,11 +2,11 @@ import lib.split as split
 import lib.utils as utils
 import lib.tabulation as tabulation
 
-FILE_SVMLIGHT_INPUT = 'data/credit_sample.svmlight'
+FILE_SVMLIGHT_INPUT = 'data/credit.svmlight'
 
-FILE_SVMLIGHT_TRAIN_OUTPUT = 'data/train/credit_sample.svmlight'
-FILE_SVMLIGHT_VALIDATION_OUTPUT = 'data/validation/credit_sample.svmlight'
-FILE_SVMLIGHT_TEST_OUTPUT = 'data/test/credit_sample.svmlight'
+FILE_SVMLIGHT_TRAIN_OUTPUT = 'data/train/credit.svmlight'
+FILE_SVMLIGHT_VALIDATION_OUTPUT = 'data/validation/credit.svmlight'
+FILE_SVMLIGHT_TEST_OUTPUT = 'data/test/credit.svmlight'
 
 FILE_RESULT_SPLIT = 'result/split/tabulation.csv'
 
@@ -29,7 +29,7 @@ def save_split_results(x_train, x_validation, x_test, y_train, y_validation, y_t
     print(f'Saving train file on {FILE_SVMLIGHT_TEST_OUTPUT}.')
     split.save_splited_data(x_test, y_test, FILE_SVMLIGHT_TEST_OUTPUT)
     tabulation.save_tabulation_row(
-        tabulation_writer, ['Validation', len(x_test)])
+        tabulation_writer, ['Test', len(x_test)])
 
     tabulation_file.close()
 

@@ -1,2 +1,8 @@
 data/credit.csv
 data/credit.svmlight
+data/train/credit.svmlight
+data/train/credit_normalized.svmlight
+data/validation/credit.svmlight
+data/validation/credit_normalized.svmlight
+data/test/credit.svmlight
+data/test/credit_normalized.svmlight
