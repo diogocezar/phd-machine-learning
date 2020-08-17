@@ -3,6 +3,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.linear_model import LogisticRegression
 from sklearn.linear_model import Perceptron
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import f1_score
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import precision_score
@@ -78,4 +79,9 @@ def classify_logistic_regression(start_time, x_train, y_train, x_test, y_test):
 
 def classify_perceptron(start_time, x_train, y_train, x_test, y_test):
     classificator = Perceptron()
+    return classify_generic(classificator, x_train, y_train, x_test, y_test, start_time)
+
+
+def classify_tree(start_time, x_train, y_train, x_test, y_test):
+    classificator = DecisionTreeClassifier()
     return classify_generic(classificator, x_train, y_train, x_test, y_test, start_time)

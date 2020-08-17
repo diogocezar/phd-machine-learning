@@ -3,13 +3,13 @@ import lib.normalizer as normalizer
 import lib.tabulation as tabulation
 from sklearn.datasets import load_svmlight_file
 
-FILE_SVMLIGHT_TRAIN_INPUT = 'data/train/credit.svmlight'
-FILE_SVMLIGHT_VALIDATION_INPUT = 'data/validation/credit.svmlight'
-FILE_SVMLIGHT_TEST_INPUT = 'data/test/credit.svmlight'
+FILE_SVMLIGHT_TRAIN_INPUT = 'data/train/credit_sample.svmlight'
+FILE_SVMLIGHT_VALIDATION_INPUT = 'data/validation/credit_sample.svmlight'
+FILE_SVMLIGHT_TEST_INPUT = 'data/test/credit_sample.svmlight'
 
-FILE_SVMLIGHT_TRAIN_OUTPUT = 'data/train/credit_normalized.svmlight'
-FILE_SVMLIGHT_VALIDATION_OUTPUT = 'data/validation/credit_normalized.svmlight'
-FILE_SVMLIGHT_TEST_OUTPUT = 'data/test/credit_normalized.svmlight'
+FILE_SVMLIGHT_TRAIN_OUTPUT = 'data/train/credit_sample_normalized.svmlight'
+FILE_SVMLIGHT_VALIDATION_OUTPUT = 'data/validation/credit_sample_normalized.svmlight'
+FILE_SVMLIGHT_TEST_OUTPUT = 'data/test/credit_sample_normalized.svmlight'
 
 FILE_RESULT_NORMALIZE = 'result/normalize/tabulation.csv'
 

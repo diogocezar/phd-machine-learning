@@ -82,6 +82,9 @@ def run_orchestrator(configs, experiments, start_time, table_writer, folder):
         if classifier == "svm":
             result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_svm(
                 start_time, x_train, y_train, x_test, y_test)
+        if classifier == "tree":
+            result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_tree(
+                start_time, x_train, y_train, x_test, y_test)
         save_result(classifier,
                     result_f1_score,
                     result_accuracy,

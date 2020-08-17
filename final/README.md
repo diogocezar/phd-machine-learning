@@ -27,3 +27,10 @@ Resultados alcançados na base de teste
 Data de entrega:
 
 A data de entrega assim como o cronograma das apresentações serão definidos em breve.
+
+---
+
+Dúvidas:
+
+- MinMaxScaler does not support sparse input. Consider using MaxAbsScaler instead.
+-

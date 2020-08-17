@@ -1,29 +1,14 @@
 {
   "configs": {
-    "svmlight_train_input": "data/train/credit_normalized.svmlight",
-    "svmlight_validation_input": "data/validation/credit_normalized.svmlight",
-    "svmlight_test_input": "data/test/credit_normalized.svmlight",
+    "svmlight_train_input": "data/train/credit.svmlight",
+    "svmlight_validation_input": "data/validation/credit.svmlight",
+    "svmlight_test_input": "data/test/credit.svmlight",
     "result_classifiers": "result/classify/tabulation_{timestamp}.csv",
     "result_conf_mat": "result/conf_mat/"
   },
   "experiments": [
     {
-      "classifier": "naive_bayes"
-    },
-    {
-      "classifier": "lda"
-    },
-    {
-      "classifier": "logistic_regression"
-    },
-    {
-      "classifier": "perceptron"
-    },
-    {
-      "classifier": "knn"
-    },
-    {
-      "classifier": "svm"
+      "classifier": "tree"
     }
   ]
 }
