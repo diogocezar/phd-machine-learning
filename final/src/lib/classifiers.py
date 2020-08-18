@@ -83,5 +83,5 @@ def classify_perceptron(start_time, x_train, y_train, x_test, y_test):
 
 
 def classify_tree(start_time, x_train, y_train, x_test, y_test):
-    classificator = DecisionTreeClassifier()
+    classificator = DecisionTreeClassifier(criterion="entropy", max_depth=7)
     return classify_generic(classificator, x_train, y_train, x_test, y_test, start_time)
