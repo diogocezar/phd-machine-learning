@@ -66,25 +66,25 @@ def run_orchestrator(configs, experiments, start_time, table_writer, folder):
         start_time = time.time()
         if classifier == "knn":
             result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_knn(
-                start_time, x_train, y_train, x_test, y_test)
+                folder, start_time, x_train, y_train, x_test, y_test)
         if classifier == "naive_bayes":
             result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_naive_bayes(
-                start_time, x_train, y_train, x_test, y_test)
+                folder, start_time, x_train, y_train, x_test, y_test)
         if classifier == "lda":
             result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_lda(
-                start_time, x_train, y_train, x_test, y_test)
+                folder, start_time, x_train, y_train, x_test, y_test)
         if classifier == "logistic_regression":
             result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_logistic_regression(
-                start_time, x_train, y_train, x_test, y_test)
+                folder, start_time, x_train, y_train, x_test, y_test)
         if classifier == "perceptron":
             result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_perceptron(
-                start_time, x_train, y_train, x_test, y_test)
+                folder, start_time, x_train, y_train, x_test, y_test)
         if classifier == "svm":
             result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_svm(
-                start_time, x_train, y_train, x_test, y_test)
+                folder, start_time, x_train, y_train, x_test, y_test)
         if classifier == "tree":
             result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_tree(
-                start_time, x_train, y_train, x_test, y_test)
+                folder, start_time, x_train, y_train, x_test, y_test)
         save_result(classifier,
                     result_f1_score,
                     result_accuracy,

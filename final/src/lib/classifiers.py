@@ -12,9 +12,10 @@ from sklearn.metrics import accuracy_score
 from sklearn import svm
 import numpy
 from . import utils
+from . import roc
 
 
-def classify_generic(classificator, x_train, y_train, x_test, y_test, start_time):
+def classify_generic(name, folder, classificator, x_train, y_train, x_test, y_test, start_time):
     print(f'\tRunning: {classificator}')
 
     print(f'\tStarting fit ({utils.get_time_diff(start_time)}s)')
@@ -47,41 +48,46 @@ def classify_generic(classificator, x_train, y_train, x_test, y_test, start_time
     result_conf_mat = confusion_matrix(y_test, predict.round())
     print(f'\tFinishing conf_mat ({utils.get_time_diff(start_time)}s)\n')
 
+    print(f'\tStarting saving roc graph ({utils.get_time_diff(start_time)}s)')
+    roc.save_roc(folder, name, y_test, predict)
+    print(
+        f'\tFinishing saving roc graph ({utils.get_time_diff(start_time)}s)\n')
+
     result_time = utils.round_float(utils.get_time_diff(start_time))
 
     return[result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time]
 
 
-def classify_svm(start_time, x_train, y_train, x_test, y_test):
+def classify_svm(folder, start_time, x_train, y_train, x_test, y_test):
     classificator = svm.LinearSVC()
-    return classify_generic(classificator, x_train, y_train, x_test, y_test, start_time)
+    return classify_generic("svm", folder, classificator, x_train, y_train, x_test, y_test, start_time)
 
 
-def classify_knn(start_time, x_train, y_train, x_test, y_test):
+def classify_knn(folder, start_time, x_train, y_train, x_test, y_test):
     classificator = KNeighborsClassifier(n_neighbors=5)
-    return classify_generic(classificator, x_train, y_train, x_test, y_test, start_time)
+    return classify_generic("knn", folder, classificator, x_train, y_train, x_test, y_test, start_time)
 
 
-def classify_naive_bayes(start_time, x_train, y_train, x_test, y_test):
+def classify_naive_bayes(folder, start_time, x_train, y_train, x_test, y_test):
     classificator = GaussianNB()
-    return classify_generic(classificator, x_train, y_train, x_test, y_test, start_time)
+    return classify_generic("naive_bayes", folder, classificator, x_train, y_train, x_test, y_test, start_time)
 
 
-def classify_lda(start_time, x_train, y_train, x_test, y_test):
+def classify_lda(folder, start_time, x_train, y_train, x_test, y_test):
     classificator = LinearDiscriminantAnalysis()
-    return classify_generic(classificator, x_train, y_train, x_test, y_test, start_time)
+    return classify_generic("lda", folder, classificator, x_train, y_train, x_test, y_test, start_time)
 
 
-def classify_logistic_regression(start_time, x_train, y_train, x_test, y_test):
+def classify_logistic_regression(folder, start_time, x_train, y_train, x_test, y_test):
     classificator = LogisticRegression(max_iter=500)
-    return classify_generic(classificator, x_train, y_train, x_test, y_test, start_time)
+    return classify_generic("logistic_regression", folder, classificator, x_train, y_train, x_test, y_test, start_time)
 
 
-def classify_perceptron(start_time, x_train, y_train, x_test, y_test):
+def classify_perceptron(folder, start_time, x_train, y_train, x_test, y_test):
     classificator = Perceptron()
-    return classify_generic(classificator, x_train, y_train, x_test, y_test, start_time)
+    return classify_generic("perceptron", folder, classificator, x_train, y_train, x_test, y_test, start_time)
 
 
-def classify_tree(start_time, x_train, y_train, x_test, y_test):
+def classify_tree(folder, start_time, x_train, y_train, x_test, y_test):
     classificator = DecisionTreeClassifier(criterion="entropy", max_depth=7)
-    return classify_generic(classificator, x_train, y_train, x_test, y_test, start_time)
+    return classify_generic("tree", folder, classificator, x_train, y_train, x_test, y_test, start_time)
