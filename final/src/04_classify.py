@@ -85,6 +85,9 @@ def run_orchestrator(configs, experiments, start_time, table_writer, folder):
         if classifier == "tree":
             result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_tree(
                 folder, start_time, x_train, y_train, x_test, y_test)
+        if classifier == "mlp":
+            result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_mlp(
+                folder, start_time, x_train, y_train, x_test, y_test)
         save_result(classifier,
                     result_f1_score,
                     result_accuracy,

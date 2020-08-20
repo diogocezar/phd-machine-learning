@@ -4,6 +4,7 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.linear_model import LogisticRegression
 from sklearn.linear_model import Perceptron
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import f1_score
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import precision_score
@@ -13,6 +14,7 @@ from sklearn import svm
 import numpy
 from . import utils
 from . import roc
+from . import conf_mat
 
 
 def classify_generic(name, folder, classificator, x_train, y_train, x_test, y_test, start_time):
@@ -53,6 +55,11 @@ def classify_generic(name, folder, classificator, x_train, y_train, x_test, y_te
     print(
         f'\tFinishing saving roc graph ({utils.get_time_diff(start_time)}s)\n')
 
+    print(f'\tStarting saving mat conf ({utils.get_time_diff(start_time)}s)')
+    conf_mat.save_conf_mat(folder, classificator, x_test, y_test)
+    print(
+        f'\tFinishing saving mat conf ({utils.get_time_diff(start_time)}s)\n')
+
     result_time = utils.round_float(utils.get_time_diff(start_time))
 
     return[result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time]
@@ -91,3 +98,9 @@ def classify_perceptron(folder, start_time, x_train, y_train, x_test, y_test):
 def classify_tree(folder, start_time, x_train, y_train, x_test, y_test):
     classificator = DecisionTreeClassifier(criterion="entropy", max_depth=7)
     return classify_generic("tree", folder, classificator, x_train, y_train, x_test, y_test, start_time)
+
+
+def classify_mlp(folder, start_time, x_train, y_train, x_test, y_test):
+    # normalizar com z-score
+    classificator = MLPClassifier(random_state=1, max_iter=200)
+    return classify_generic("mlp", folder, classificator, x_train, y_train, x_test, y_test, start_time)
