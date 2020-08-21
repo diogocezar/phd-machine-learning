@@ -34,3 +34,8 @@ Dúvidas:
 
 - MinMaxScaler does not support sparse input. Consider using MaxAbsScaler instead.
 -
+
+TODO:
+
+Params no JSON;
+Salvar Quantidades de Classes Nos Splits;
