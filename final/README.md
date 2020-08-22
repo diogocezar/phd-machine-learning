@@ -32,10 +32,17 @@ A data de entrega assim como o cronograma das apresentações serão definidos e
 
 Dúvidas:
 
-- MinMaxScaler does not support sparse input. Consider using MaxAbsScaler instead.
--
+- MinMaxScaler does not support sparse input. Consider using MaxAbsScaler instead. - OK;
 
 TODO:
 
-Params no JSON;
-Salvar Quantidades de Classes Nos Splits;
+- Params no JSON; [OK]
+- Refactor de Código; [OK]
+- Salvar Imagens das Matrizes de Confluência por Nome; [OK]
+- Salvar ROC Geral de todos os testes; [OK]
+- Salvar ROC de cada teste; [OK]
+- Salvar Quantidades de Classes Nos Splits; [OK]
+
+```
+grep '^0' dados.txt | wc -l
+```

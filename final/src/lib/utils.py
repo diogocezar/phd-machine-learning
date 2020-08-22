@@ -16,3 +16,7 @@ def round_float(value):
 
 def get_num_rows(file):
     return sum(1 for line in open(file))
+
+
+def generate_hash():
+    return f"{get_time():.0f}"

@@ -6,111 +6,83 @@ import lib.utils as utils
 import time
 
 from sklearn.datasets import load_svmlight_file
+from rich.console import Console
+from rich.table import Table
 
 FILE_ORCHESTRATOR = 'orchestrator/index.json'
 
-start_time = 0
+experiment_hash = utils.generate_hash()
+
+console = Console()
+
+output_table = {}
 
 
-def print_result(classifier,
-                 result_f1_score,
-                 result_accuracy,
-                 result_precision,
-                 result_recall,
-                 result_conf_mat,
-                 result_time):
-    print('Classifier: ' + classifier)
-    print('F1Score: ' + str(result_f1_score))
-    print('Accuracy: ' + str(result_accuracy))
-    print('Precision: ' + str(result_precision))
-    print('Recall: ' + str(result_recall))
-    print('Confusion Matrix: \n' + str(result_conf_mat))
-    print('Execution Time(s): ' + str(result_time))
-    print('\n---\n')
+def print_result(classifier, result):
+    execution_time = result["time"]
+    table_results = Table(show_header=True, header_style="bold magenta")
+    table_results.add_column("Type")
+    table_results.add_column("Score")
+    table_results.add_row("F1Score", str(result["f1_score"]))
+    table_results.add_row("Accuracy", str(result["accuracy"]))
+    table_results.add_row("Precision", str(result["precision"]))
+    table_results.add_row("Recall", str(result["recall"]))
+    console.print("\n")
+    console.print(result["creport"])
+    console.print("\n")
+    console.print(table_results)
+    console.print("\n")
+    console.print(result["conf_mat"])
+    console.print("\n")
+    console.print(
+        f"[bold red]Execution Time(s): ([white]{execution_time}[red])")
 
 
-def save_result(classifier,
-                result_f1_score,
-                result_accuracy,
-                result_precision,
-                result_recall,
-                result_conf_mat,
-                result_time,
-                tabulation_writer,
-                path_conf_mat,
-                folder):
-    print_result(classifier,
-                 result_f1_score,
-                 result_accuracy,
-                 result_precision,
-                 result_recall,
-                 result_conf_mat,
-                 result_time)
+def save_result(configs, classifier, result):
     tabulation.save_tabulation_conf_mat(
-        path_conf_mat, classifier, result_conf_mat, folder)
-    tabulation_writer.writerow(
-        [classifier, result_f1_score, result_accuracy, result_precision, result_recall, result_time])
+        configs["result_conf_mat"], classifier, result["conf_mat"], experiment_hash)
+    output_table["tabulation_writer"].writerow(
+        [classifier, result["f1_score"], result["accuracy"], result["precision"], result["recall"], result["time"]])
 
 
-def run_orchestrator(configs, experiments, start_time, table_writer, folder):
+def run_orchestrator(configs, experiments):
     start_time = time.time()
-    print('Starting loading files')
+    console.print(
+        f"[bold red]Starting Classifier ([white]Hash: {experiment_hash}[red])\n\n")
+    console.print("[yellow]Starting Loading Files\n")
     x_train, y_train = load_svmlight_file(configs["svmlight_train_input"])
     x_test, y_test = load_svmlight_file(configs["svmlight_test_input"])
     x_train = x_train.toarray()
     x_test = x_test.toarray()
-    print(f'Finishing loading files ({utils.get_time_diff(start_time)}s)')
-    print('Starting experiments: \n')
+    console.print(
+        f"[yellow]Finishing Loading Input Files [white bold]({utils.get_time_diff(start_time)}s)\n")
+    console.print(
+        f"[green]Starting Experiment\n")
     for experiment in experiments:
-        classifier = str(experiment['classifier'])
+        classifier = experiment['classifier']
+        classifier_method = 'classify_' + classifier
+        method_to_call = getattr(classifiers, classifier_method)
+        data = {
+            'parameters': experiment['parameters'],
+            'experiment_hash': experiment_hash,
+            'start_time': start_time,
+            'x_train': x_train,
+            'y_train': y_train,
+            'x_test': x_test,
+            'y_test': y_test
+        }
+        result = method_to_call(data)
         start_time = time.time()
-        if classifier == "knn":
-            result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_knn(
-                folder, start_time, x_train, y_train, x_test, y_test)
-        if classifier == "naive_bayes":
-            result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_naive_bayes(
-                folder, start_time, x_train, y_train, x_test, y_test)
-        if classifier == "lda":
-            result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_lda(
-                folder, start_time, x_train, y_train, x_test, y_test)
-        if classifier == "logistic_regression":
-            result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_logistic_regression(
-                folder, start_time, x_train, y_train, x_test, y_test)
-        if classifier == "perceptron":
-            result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_perceptron(
-                folder, start_time, x_train, y_train, x_test, y_test)
-        if classifier == "svm":
-            result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_svm(
-                folder, start_time, x_train, y_train, x_test, y_test)
-        if classifier == "tree":
-            result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_tree(
-                folder, start_time, x_train, y_train, x_test, y_test)
-        if classifier == "mlp":
-            result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time = classifiers.classify_mlp(
-                folder, start_time, x_train, y_train, x_test, y_test)
-        save_result(classifier,
-                    result_f1_score,
-                    result_accuracy,
-                    result_precision,
-                    result_recall,
-                    result_conf_mat,
-                    result_time,
-                    table_writer,
-                    configs["result_conf_mat"],
-                    folder)
+        print_result(classifier, result)
+        save_result(configs, classifier, result)
+    console.print(
+        f"\n[green]Finishing Experiments")
 
 
 if __name__ == "__main__":
-    header = ['Classifier', 'F1Score', 'Accuracy',
-              'Precision', 'Recall', 'Execution Time (s)']
     orchestrator = orchestrator.get_orchestrator(FILE_ORCHESTRATOR)
     configs = orchestrator["configs"]
+    output_table = tabulation.get_output_table(configs, experiment_hash)
     experiments = orchestrator["experiments"]
-    folder = str(utils.round_float(utils.get_time()))
-    save_tabulation = configs["result_classifiers"].replace(
-        "{timestamp}", folder)
-    tabulation_writer, tabulation_file = tabulation.get_tabulation(
-        save_tabulation, header)
-    run_orchestrator(configs, experiments, start_time,
-                     tabulation_writer, folder)
-    tabulation_file.close()
+    run_orchestrator(configs, experiments)
+    output_table["tabulation_file"].close()

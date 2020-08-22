@@ -15,6 +15,19 @@ def save_tabulation_row(tabulation_writer, row):
     tabulation_writer.writerow(row)
 
 
+def get_output_table(configs, experiment_hash):
+    header = ['Classifier', 'F1Score', 'Accuracy',
+              'Precision', 'Recall', 'Execution Time (s)']
+    file_name = configs["result_classifiers"].replace(
+        "{timestamp}", experiment_hash)
+    tabulation_writer, tabulation_file = get_tabulation(file_name, header)
+    result = {
+        'tabulation_writer': tabulation_writer,
+        'tabulation_file': tabulation_file,
+    }
+    return result
+
+
 def save_tabulation_conf_mat(path, classifier, result_conf_mat, folder):
     mk_folder = path + "/" + folder
     if not os.path.exists(mk_folder):

@@ -5,102 +5,140 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.linear_model import Perceptron
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neural_network import MLPClassifier
-from sklearn.metrics import f1_score
+from sklearn.metrics import f1_score as sklearn_f1_score
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 from sklearn.metrics import accuracy_score
+from sklearn.metrics import classification_report
 from sklearn import svm
+from rich.console import Console
 import numpy
 from . import utils
-from . import roc
-from . import conf_mat
+from . import generate_roc
+from . import generate_conf_mat
+
+console = Console()
 
 
-def classify_generic(name, folder, classificator, x_train, y_train, x_test, y_test, start_time):
-    print(f'\tRunning: {classificator}')
+def log(type, name, start_time):
+    if type == 'start':
+        console.print(
+            f"[white]Starting [blue]{name} -> [white]({utils.get_time_diff(start_time)}s)")
+    else:
+        console.print(
+            f"[yellow]Finishing [blue]{name} -> [white]({utils.get_time_diff(start_time)}s)")
 
-    print(f'\tStarting fit ({utils.get_time_diff(start_time)}s)')
+
+def classify_generic(classificator, data):
+    start_time = data["start_time"]
+
+    x_test = data["x_test"]
+    y_test = data["y_test"]
+    x_train = data["x_train"]
+    y_train = data["y_train"]
+
+    experiment_hash = data["experiment_hash"]
+
+    name = classificator.__class__.__name__
+
+    console.print(
+        f"\n[yellow]Classificator: [blue]{classificator}\n")
+
+    log('start', 'fit', start_time)
     classificator.fit(x_train, y_train)
-    print(f'\tFinishing fit ({utils.get_time_diff(start_time)}s)')
+    log('end', 'fit', start_time)
 
-    print(f'\tStarting predict ({utils.get_time_diff(start_time)}s)')
+    log('start', 'predict', start_time)
     predict = classificator.predict(x_test)
-    print(f'\tFinishing predict ({utils.get_time_diff(start_time)}s)')
+    log('end', 'predict', start_time)
 
-    print(f'\tStarting f1_score ({utils.get_time_diff(start_time)}s)')
-    result_f1_score = utils.round_float(f1_score(
+    log('start', 'f1_score', start_time)
+    f1_score = utils.round_float(sklearn_f1_score(
         y_test, predict, labels=numpy.unique(predict), average='weighted'))
-    print(f'\tFinishing f1_score ({utils.get_time_diff(start_time)}s)')
+    log('end', 'f1_score', start_time)
 
-    print(f'\tStarting accuracy ({utils.get_time_diff(start_time)}s)')
-    result_accuracy = utils.round_float(accuracy_score(y_test, predict))
-    print(f'\tFinishing accuracy ({utils.get_time_diff(start_time)}s)')
+    log('start', 'accuracy', start_time)
+    accuracy = utils.round_float(accuracy_score(y_test, predict))
+    log('end', 'accuracy', start_time)
 
-    print(f'\tStarting precision ({utils.get_time_diff(start_time)}s)')
-    result_precision = utils.round_float(precision_score(
+    log('start', 'precision', start_time)
+    precision = utils.round_float(precision_score(
         y_test, predict))
-    print(f'\tFinishing precision ({utils.get_time_diff(start_time)}s)')
+    log('end', 'precision', start_time)
 
-    print(f'\tStarting recall ({utils.get_time_diff(start_time)}s)')
-    result_recall = utils.round_float(recall_score(y_test, predict))
-    print(f'\tFinishing recall ({utils.get_time_diff(start_time)}s)')
+    log('start', 'recall', start_time)
+    recall = utils.round_float(recall_score(y_test, predict))
+    log('end', 'recall', start_time)
 
-    print(f'\tStarting conf_mat ({utils.get_time_diff(start_time)}s)')
-    result_conf_mat = confusion_matrix(y_test, predict.round())
-    print(f'\tFinishing conf_mat ({utils.get_time_diff(start_time)}s)\n')
+    log('start', 'conf_mat', start_time)
+    conf_mat = confusion_matrix(y_test, predict.round())
+    log('end', 'conf_mat', start_time)
 
-    print(f'\tStarting saving roc graph ({utils.get_time_diff(start_time)}s)')
-    roc.save_roc(folder, name, y_test, predict)
-    print(
-        f'\tFinishing saving roc graph ({utils.get_time_diff(start_time)}s)\n')
+    log('start', 'save_roc', start_time)
+    generate_roc.save_roc(experiment_hash, name, y_test, predict)
+    log('end', 'save_roc', start_time)
 
-    print(f'\tStarting saving mat conf ({utils.get_time_diff(start_time)}s)')
-    conf_mat.save_conf_mat(folder, classificator, x_test, y_test)
-    print(
-        f'\tFinishing saving mat conf ({utils.get_time_diff(start_time)}s)\n')
+    log('start', 'save_conf_mat', start_time)
+    generate_conf_mat.save_conf_mat(
+        experiment_hash, classificator, name, x_test, y_test)
+    log('end', 'save_conf_mat', start_time)
 
-    result_time = utils.round_float(utils.get_time_diff(start_time))
+    log('start', 'classification_report', start_time)
+    creport = classification_report(y_test, predict, labels=[0, 1])
+    log('end', 'save_conf_mat', start_time)
 
-    return[result_f1_score, result_accuracy, result_precision, result_recall, result_conf_mat, result_time]
+    time = utils.round_float(utils.get_time_diff(start_time))
 
+    result = {
+        'f1_score': f1_score,
+        'accuracy': accuracy,
+        'precision': precision,
+        'recall': recall,
+        'conf_mat': conf_mat,
+        'creport': creport,
+        'time': time
+    }
 
-def classify_svm(folder, start_time, x_train, y_train, x_test, y_test):
-    classificator = svm.LinearSVC()
-    return classify_generic("svm", folder, classificator, x_train, y_train, x_test, y_test, start_time)
-
-
-def classify_knn(folder, start_time, x_train, y_train, x_test, y_test):
-    classificator = KNeighborsClassifier(n_neighbors=5)
-    return classify_generic("knn", folder, classificator, x_train, y_train, x_test, y_test, start_time)
-
-
-def classify_naive_bayes(folder, start_time, x_train, y_train, x_test, y_test):
-    classificator = GaussianNB()
-    return classify_generic("naive_bayes", folder, classificator, x_train, y_train, x_test, y_test, start_time)
+    return result
 
 
-def classify_lda(folder, start_time, x_train, y_train, x_test, y_test):
-    classificator = LinearDiscriminantAnalysis()
-    return classify_generic("lda", folder, classificator, x_train, y_train, x_test, y_test, start_time)
+def classify_svm(data):
+    classificator = svm.LinearSVC(**data['parameters'])
+    return classify_generic(classificator, data)
 
 
-def classify_logistic_regression(folder, start_time, x_train, y_train, x_test, y_test):
-    classificator = LogisticRegression(max_iter=500)
-    return classify_generic("logistic_regression", folder, classificator, x_train, y_train, x_test, y_test, start_time)
+def classify_knn(data):
+    classificator = KNeighborsClassifier(**data['parameters'])
+    return classify_generic(classificator, data)
 
 
-def classify_perceptron(folder, start_time, x_train, y_train, x_test, y_test):
-    classificator = Perceptron()
-    return classify_generic("perceptron", folder, classificator, x_train, y_train, x_test, y_test, start_time)
+def classify_naive_bayes(data):
+    classificator = GaussianNB(**data['parameters'])
+    return classify_generic(classificator, data)
 
 
-def classify_tree(folder, start_time, x_train, y_train, x_test, y_test):
-    classificator = DecisionTreeClassifier(criterion="entropy", max_depth=7)
-    return classify_generic("tree", folder, classificator, x_train, y_train, x_test, y_test, start_time)
+def classify_lda(data):
+    classificator = LinearDiscriminantAnalysis(**data['parameters'])
+    return classify_generic(classificator, data)
 
 
-def classify_mlp(folder, start_time, x_train, y_train, x_test, y_test):
+def classify_logistic_regression(data):
+    classificator = LogisticRegression(**data['parameters'])
+    return classify_generic(classificator, data)
+
+
+def classify_perceptron(data):
+    classificator = Perceptron(**data['parameters'])
+    return classify_generic(classificator, data)
+
+
+def classify_tree(data):
+    classificator = DecisionTreeClassifier(**data['parameters'])
+    return classify_generic(classificator, data)
+
+
+def classify_mlp(data):
     # normalizar com z-score
-    classificator = MLPClassifier(random_state=1, max_iter=200)
-    return classify_generic("mlp", folder, classificator, x_train, y_train, x_test, y_test, start_time)
+    classificator = MLPClassifier(**data['parameters'])
+    return classify_generic(classificator, data)
