@@ -1,0 +1,3 @@
+Classifier,F1Score,Accuracy,Precision,Recall,Execution Time (s)
+tree,0.617,0.617,0.61,0.645,14.737
+mlp,0.602,0.603,0.607,0.575,285.995

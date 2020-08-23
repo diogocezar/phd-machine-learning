@@ -15,11 +15,24 @@
       }
     },
     {
-      "classifier": "mlp",
-      "parameters": {
-        "random_state": 1,
-        "max_iter": 200
-      }
+      "classifier": "naive_bayes",
+      "parameters": {}
+    },
+    {
+      "classifier": "lda",
+      "parameters": {}
+    },
+    {
+      "classifier": "logistic_regression",
+      "parameters": {}
+    },
+    {
+      "classifier": "perceptron",
+      "parameters": {}
+    },
+    {
+      "classifier": "svm",
+      "parameters": {}
     }
   ]
 }
