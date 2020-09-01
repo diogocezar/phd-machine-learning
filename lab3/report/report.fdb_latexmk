@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1598964511 "/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.tex" "/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.pdf" "report" 1598964512
-  "/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.aux" 1598964512 2047 fc8f20d7ddd43b529d9054400672c5b4 ""
-  "/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.tex" 1598964510 6119 fafd4f1cdc0b25b52a63aa8ba3f72497 ""
+["pdflatex"] 1598986337 "/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.tex" "/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.pdf" "report" 1598986338
+  "/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.aux" 1598986338 2457 2c199fc4b9fba54905d935f87db19d27 ""
+  "/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.tex" 1598986337 10838 dc840cf9ce4bf7b98af07d6ca20d5b6c ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1480098688 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -81,12 +81,12 @@
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
   "images/image_lenet.jpeg" 1598962811 79387 9a6b8493926345b077c43f7172858487 ""
   "images/image_months.png" 1598961836 46386 4e12561afb02a11305b8076c51eee3eb ""
-  "report.aux" 1598964512 2047 fc8f20d7ddd43b529d9054400672c5b4 ""
-  "report.tex" 1598964510 6119 fafd4f1cdc0b25b52a63aa8ba3f72497 ""
+  "report.aux" 1598986338 2457 2c199fc4b9fba54905d935f87db19d27 ""
+  "report.tex" 1598986337 10838 dc840cf9ce4bf7b98af07d6ca20d5b6c ""
   "sbc-template.sty" 1598961330 6074 ecc54df5124d8db4ac67c42cc728f3a5 ""
   (generated)
-  "report.log"
   "/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.log"
+  "report.log"
   "report.aux"
-  "/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.pdf"
   "report.pdf"
+  "/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.pdf"

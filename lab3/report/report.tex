@@ -45,7 +45,7 @@
 
 \section{Introdução}
 
-Neste laboratório, foi considerada uma base de dados com os meses do ano. As imagens são representações manuscritas das palavras que compreendem os meses: Janeiro, Fevereiro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro e Dezembro. Por tanto, temos 12 classes. A Figura \ref{fig:image_months} demostra alguns exemplos dessas imagens.
+Neste laboratório, foi considerada uma base de dados com os meses do ano. As imagens são representações manuscritas das palavras que compreendem os meses: Janeiro, Fevereiro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro e Dezembro. Portanto, são 12 classes. A Figura \ref{fig:image_months} demostra alguns exemplos dessas imagens.
 
 \begin{figure}[!htb]
   \centering
@@ -126,23 +126,98 @@ Os resultados obtidos foram:
 
 \section{Implementação de Data Augmentation}
 
-Neste passo dos experimentos, foram implementadas técnicas para a realização de Data Augmentation. Forma implementadas funções específicas para cada uma das transformações, como pode ser Analisado no Código \ref{data_autmentation}
+Neste passo do experimento, foram implementadas técnicas para a realização de Data Augmentation. Para isso, foram implementadas funções específicas para a realização de pequenas variações nas imagens da base de treinamento original. O Código \ref{code:data_autmentation} mostra quais foram as funções utilizadas para a realização destas transformações.
 
 \begin{lstlisting}[caption={Funções de Transformação das Imagens},captionpos=b,frame=single,label={code:data_autmentation}]
-flip_rotation_brightness_zoom(...params)
-random_zoom(...params)
-random_brightness(...params)
-random_rotation(...params)
-horizontal_vertical_flip(...params)
-horizontal_vertical_shift(...params)
+flip_rotation_brightness_zoom(path, zoom=[0.5, 1.0], brightness=[0.2, 1.0], rotation=90, flip_horizontal=False,
+flip_vertical=False, subdir="zoom")
+
+random_zoom(path, zoom=[0.5, 1.0], subdir="zoom")
+
+random_brightness(path, brightness=[0.2, 1.0], subdir="brightness")
+
+random_rotation(path, rotation=90, subdir="rotation")
+
+horizontal_vertical_flip(path, flip_horizontal=False, flip_vertical=False, subdir="flip")
+
+orizontal_vertical_shift(path, size=0.5, bool_width=True, subdir="shift")
 \end{lstlisting}
 
-Para
+A função \textbf{flip\_rotation\_brightness\_zoom} realiza transformações de rotação, brilho e zoom na imagem. A função \textbf{random\_zoom} realiza a transformação de zoom da imagem. A função \textbf{random\_brightness} realiza a transformação de brilho da imagem. A função \textbf{random\_rotation} realiza a transformação de rotacão da imagem. A função \textbf{horizontal\_vertical\_flip} realiza a transformação de flip vertical. A função \textbf{horizontal\_vertical\_shift} realiza a transformação de shift. Todas as funções possuem parâmetros.
+
+Para imagem da base de treinamento foram realizadas as operações descritas no Código \ref{code:data_autmentation_executed}
+
+\begin{lstlisting}[caption={Funções Executadas},captionpos=b,frame=single,label={code:data_autmentation_executed}]
+horizontal_vertical_flip(image_path, flip_horizontal=True, flip_vertical=False)
+horizontal_vertical_flip(image_path, flip_horizontal=False, flip_vertical=True)
+horizontal_vertical_flip(image_path, flip_horizontal=True, flip_vertical=True)
+horizontal_vertical_flip(image_path, flip_horizontal=False, flip_vertical=False)
+horizontal_vertical_shift(image_path, bool_width=True)
+horizontal_vertical_shift(image_path, bool_width=False)
+random_rotation(image_path, rotation=10)
+random_rotation(image_path, rotation=20)
+random_rotation(image_path, rotation=30)
+random_rotation(image_path, rotation=45)
+random_brightness(image_path)
+random_brightness(image_path, brightness=[0.1, 0.2])
+random_brightness(image_path, brightness=[0.3, 0.4])
+random_brightness(image_path, brightness=[0.4, 0.5])
+random_zoom(image_path)
+random_zoom(image_path, zoom=[0.1, 0.5])
+random_zoom(image_path, zoom=[0.1, 0.2])
+random_zoom(image_path, zoom=[0.1, 0.3])
+flip_rotation_brightness_zoom(image_path, rotation=30)
+flip_rotation_brightness_zoom(image_path, zoom=[0.1, 0.5], brightness=[0.1, 0.5])
+flip_rotation_brightness_zoom(image_path, zoom=[0.1, 0.5], brightness=[0.1, 0.5])
+flip_rotation_brightness_zoom(image_path, zoom=[0.1, 0.5], brightness=[0.1, 0.5], rotation=30)
+flip_rotation_brightness_zoom(image_path, zoom=[0.1, 0.5], brightness=[0.1, 0.5], rotation=30)
+flip_rotation_brightness_zoom(image_path, zoom=[0.1, 0.5], brightness=[0.1, 0.5], rotation=30)
+flip_rotation_brightness_zoom(image_path, zoom=[0.1, 0.8], brightness=[0.1, 0.8], rotation=45)
+flip_rotation_brightness_zoom(image_path, zoom=[0.1, 0.8], brightness=[0.1, 0.8], rotation=45)
+flip_rotation_brightness_zoom(image_path, zoom=[0.1, 0.2], brightness=[0.1, 0.2], rotation=30)
+flip_rotation_brightness_zoom(image_path, zoom=[0.1, 0.2], brightness=[0.1, 0.2], rotation=45)
+flip_rotation_brightness_zoom(image_path, zoom=[0.9, 1], brightness=[0.9, 1], rotation=30)
+flip_rotation_brightness_zoom(image_path, zoom=[0.9, 1], brightness=[0.9, 1], rotation=45)
+  \end{lstlisting}
+
+A base inicial de treinamento, é composta por 1578 imagens. Após execução do script, obteve-se o total de X imagens.
 
 \section{Execução do Modelo LeNet5 com Data Augmentation}
+
+Na sequência, foram utilizados os novos dados para nova execução do modelo LetNet5.
+
+Quanto ao tamanho das imagens de entrada, utilizou-se o mesmo tamanho de 32 por 32 pixels, assim como o modelo prevê.
+
+Os números de épocas, utilizou-se experimentos com as seguintes variações: 32, 64 e 128.
+
+Também se mediu os tempos de execuções em cada um dos experimentos.
+
+Dessa vez, os resultados obtidos foram:
+
 \section{Execução de um Modelo Personalizado com Data Augmentation}
+
+Na sequência repetiu-se os mesmos passos, mas neste caso, com outro modelo de treinamento.
+
+Os resultados obtidos foram:
+
 \section{Extração de Características}
+
+Na sequência dos experimentos, utilizou-se um modelo pré-treinado da imagenet para a extração das características das imagens, como demonstrado no Código \ref{code:imagenet_inception}.
+
+\begin{lstlisting}[caption={ImageNet - InceptionV3},captionpos=b,frame=single,label={code:imagenet_inception}]
+model = InceptionV3(weights='imagenet', include_top=False)
+\end{lstlisting}
+
+Para isso, criou-se um arquivo no formato SVM como no exemplo descrito no Código \ref{code:svmlight}.
+
+\begin{lstlisting}[caption={Exemplo do Formato de Entrada},captionpos=b,frame=single,label={code:svmlight}]
+0 1:0.000000 2:0.000000 3:0.001412 4:0.000000 5:0.014124 6:0.000000 ...
+\end{lstlisting}
+
 \section{Implementação do SVM com as Características Extraídas}
+
+Utilizando os arquivos gerados de treinamento e teste, aplicou-se o classificador SVM, obtendo os resultados:
+
 \section{Discussão dos Resultados}
 
 \end{document}
