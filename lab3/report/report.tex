@@ -118,11 +118,231 @@ Os passos para a execução foram:
 
 Após a execução, foi possível observar os resultados:
 
+\subsection{Execução com 32 Épocas}
+
+Para a execução do experimento com 32 épocas, obteve-se o gráfico de evolução da acurácia (Figura \ref{fig:experiment_lenet5_noaug_32_accuracy}), o gráfico de perda durante o treinamento (Figura \ref{fig:experiment_lenet5_noaug_32_loss}) e a representação da matrix de confusão (Figura \ref{fig:experiment_lenet5_noaug_32_confusion_matrix}). A Tabela \ref{tab:experiment_lenet5_noaug_32_reults} sumariza os resultados obtidos.
+
+\begin{figure}[!htb]
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/lenet5_noaug_32/accuracy.png}
+    \caption{Accurácia}\label{fig:experiment_lenet5_noaug_32_accuracy}
+  \end{minipage}\hfill
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/lenet5_noaug_32/loss.png}
+    \caption{Loss}\label{fig:experiment_lenet5_noaug_32_loss}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=18em]{experiments/lenet5_noaug_32/confusion_matrix.png}
+  \caption{Matrix de Confusão}
+  \label{fig:experiment_lenet5_noaug_32_confusion_matrix}
+\end{figure}
+
+\begin{table}[!htb]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Experimento} & \textbf{Loss} & \textbf{Acurácia} & \textbf{Tempo de Execução (s)} \\ \hline
+    lenet5\_noaug\_32    & 1.00          & 0.66              & 5.78                           \\ \hline
+  \end{tabular}
+  \caption{Resultados Obtidos}
+  \label{tab:experiment_lenet5_noaug_32_reults}
+\end{table}
+
+\newpage
+
+\subsection{Execução com 64 Épocas}
+
+Para a execução do experimento com 64 épocas, obteve-se o gráfico de evolução da acurácia (Figura \ref{fig:experiment_lenet5_noaug_64_accuracy}), o gráfico de perda durante o treinamento (Figura \ref{fig:experiment_lenet5_noaug_64_loss}) e a representação da matrix de confusão (Figura \ref{fig:experiment_lenet5_noaug_64_confusion_matrix}). A Tabela \ref{tab:experiment_lenet5_noaug_64_reults} sumariza os resultados obtidos.
+
+\begin{figure}[!htb]
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/lenet5_noaug_64/accuracy.png}
+    \caption{Accurácia}\label{fig:experiment_lenet5_noaug_64_accuracy}
+  \end{minipage}\hfill
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/lenet5_noaug_64/loss.png}
+    \caption{Loss}\label{fig:experiment_lenet5_noaug_64_loss}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=18em]{experiments/lenet5_noaug_64/confusion_matrix.png}
+  \caption{Matrix de Confusão}
+  \label{fig:experiment_lenet5_noaug_64_confusion_matrix}
+\end{figure}
+
+\begin{table}[!htb]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Experimento} & \textbf{Loss} & \textbf{Acurácia} & \textbf{Tempo de Execução (s)} \\ \hline
+    lenet5\_noaug\_64    & 0.88          & 0.70              & 9.51                           \\ \hline
+  \end{tabular}
+  \caption{Resultados Obtidos}
+  \label{tab:experiment_lenet5_noaug_64_reults}
+\end{table}
+
+\newpage
+
+\subsection{Execução com 128 Épocas}
+
+Para a execução do experimento com 128 épocas, obteve-se o gráfico de evolução da acurácia (Figura \ref{fig:experiment_lenet5_noaug_128_accuracy}), o gráfico de perda durante o treinamento (Figura \ref{fig:experiment_lenet5_noaug_128_loss}) e a representação da matrix de confusão (Figura \ref{fig:experiment_lenet5_noaug_128_confusion_matrix}). A Tabela \ref{tab:experiment_lenet5_noaug_128_reults} sumariza os resultados obtidos.
+
+\begin{figure}[!htb]
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/lenet5_noaug_128/accuracy.png}
+    \caption{Accurácia}\label{fig:experiment_lenet5_noaug_128_accuracy}
+  \end{minipage}\hfill
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/lenet5_noaug_128/loss.png}
+    \caption{Loss}\label{fig:experiment_lenet5_noaug_128_loss}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=18em]{experiments/lenet5_noaug_128/confusion_matrix.png}
+  \caption{Matrix de Confusão}
+  \label{fig:experiment_lenet5_noaug_128_confusion_matrix}
+\end{figure}
+
+\begin{table}[!htb]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Experimento} & \textbf{Loss} & \textbf{Acurácia} & \textbf{Tempo de Execução (s)} \\ \hline
+    lenet5\_noaug\_128   & 0.80          & 0.74              & 16.44                          \\ \hline
+  \end{tabular}
+  \caption{Resultados Obtidos}
+  \label{tab:experiment_lenet5_noaug_128_reults}
+\end{table}
+
+\newpage
+
 \section{Execução de um Modelo Personalizado sem Data Augmentation}
 
 Na sequência repetiu-se os mesmos passos, mas neste caso, com outro modelo de treinamento.
 
-Os resultados obtidos foram:
+\subsection{Execução com 32 Épocas}
+
+Para a execução do experimento com 32 épocas, obteve-se o gráfico de evolução da acurácia (Figura \ref{fig:experiment_default_noaug_32_accuracy}), o gráfico de perda durante o treinamento (Figura \ref{fig:experiment_default_noaug_32_loss}) e a representação da matrix de confusão (Figura \ref{fig:experiment_default_noaug_32_confusion_matrix}). A Tabela \ref{tab:experiment_default_noaug_32_reults} sumariza os resultados obtidos.
+
+\begin{figure}[!htb]
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/default_noaug_32/accuracy.png}
+    \caption{Accurácia}\label{fig:experiment_default_noaug_32_accuracy}
+  \end{minipage}\hfill
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/default_noaug_32/loss.png}
+    \caption{Loss}\label{fig:experiment_default_noaug_32_loss}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=18em]{experiments/default_noaug_32/confusion_matrix.png}
+  \caption{Matrix de Confusão}
+  \label{fig:experiment_default_noaug_32_confusion_matrix}
+\end{figure}
+
+\begin{table}[!htb]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Experimento} & \textbf{Loss} & \textbf{Acurácia} & \textbf{Tempo de Execução (s)} \\ \hline
+    default\_noaug\_32   & 0.83          & 0.71              & 12.37                          \\ \hline
+  \end{tabular}
+  \caption{Resultados Obtidos}
+  \label{tab:experiment_default_noaug_32_reults}
+\end{table}
+
+\newpage
+
+\subsection{Execução com 64 Épocas}
+
+Para a execução do experimento com 64 épocas, obteve-se o gráfico de evolução da acurácia (Figura \ref{fig:experiment_default_noaug_64_accuracy}), o gráfico de perda durante o treinamento (Figura \ref{fig:experiment_default_noaug_64_loss}) e a representação da matrix de confusão (Figura \ref{fig:experiment_default_noaug_64_confusion_matrix}). A Tabela \ref{tab:experiment_default_noaug_64_reults} sumariza os resultados obtidos.
+
+\begin{figure}[!htb]
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/default_noaug_64/accuracy.png}
+    \caption{Accurácia}\label{fig:experiment_default_noaug_64_accuracy}
+  \end{minipage}\hfill
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/default_noaug_64/loss.png}
+    \caption{Loss}\label{fig:experiment_default_noaug_64_loss}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=18em]{experiments/default_noaug_64/confusion_matrix.png}
+  \caption{Matrix de Confusão}
+  \label{fig:experiment_default_noaug_64_confusion_matrix}
+\end{figure}
+
+\begin{table}[!htb]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Experimento} & \textbf{Loss} & \textbf{Acurácia} & \textbf{Tempo de Execução (s)} \\ \hline
+    default\_noaug\_64   & 0.71          & 0.77              & 21.38                          \\ \hline
+  \end{tabular}
+  \caption{Resultados Obtidos}
+  \label{tab:experiment_default_noaug_64_reults}
+\end{table}
+
+\newpage
+
+\subsection{Execução com 128 Épocas}
+
+Para a execução do experimento com 128 épocas, obteve-se o gráfico de evolução da acurácia (Figura \ref{fig:experiment_default_noaug_128_accuracy}), o gráfico de perda durante o treinamento (Figura \ref{fig:experiment_default_noaug_128_loss}) e a representação da matrix de confusão (Figura \ref{fig:experiment_default_noaug_128_confusion_matrix}). A Tabela \ref{tab:experiment_default_noaug_128_reults} sumariza os resultados obtidos.
+
+\begin{figure}[!htb]
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/default_noaug_128/accuracy.png}
+    \caption{Accurácia}\label{fig:experiment_default_noaug_128_accuracy}
+  \end{minipage}\hfill
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/default_noaug_128/loss.png}
+    \caption{Loss}\label{fig:experiment_default_noaug_128_loss}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=18em]{experiments/default_noaug_128/confusion_matrix.png}
+  \caption{Matrix de Confusão}
+  \label{fig:experiment_default_noaug_128_confusion_matrix}
+\end{figure}
+
+\begin{table}[!htb]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Experimento} & \textbf{Loss} & \textbf{Acurácia} & \textbf{Tempo de Execução (s)} \\ \hline
+    default\_noaug\_128  & 1.03          & 0.76              & 40.14                          \\ \hline
+  \end{tabular}
+  \caption{Resultados Obtidos}
+  \label{tab:experiment_default_noaug_128_reults}
+\end{table}
+
+\newpage
 
 \section{Implementação de Data Augmentation}
 
@@ -180,7 +400,7 @@ flip_rotation_brightness_zoom(image_path, zoom=[0.9, 1], brightness=[0.9, 1], ro
 flip_rotation_brightness_zoom(image_path, zoom=[0.9, 1], brightness=[0.9, 1], rotation=45)
   \end{lstlisting}
 
-A base inicial de treinamento, é composta por 1578 imagens. Após execução do script, obteve-se o total de X imagens.
+A base inicial de treinamento, é composta por 1578 imagens. Após execução do script, obteve-se o total de 27558 imagens.
 
 \section{Execução do Modelo LeNet5 com Data Augmentation}
 
@@ -194,11 +414,231 @@ Também se mediu os tempos de execuções em cada um dos experimentos.
 
 Dessa vez, os resultados obtidos foram:
 
+\newpage
+
+\subsection{Execução com 32 Épocas}
+
+Para a execução do experimento com 32 épocas, obteve-se o gráfico de evolução da acurácia (Figura \ref{fig:experiment_lenet5_aug_32_accuracy}), o gráfico de perda durante o treinamento (Figura \ref{fig:experiment_lenet5_aug_32_loss}) e a representação da matrix de confusão (Figura \ref{fig:experiment_lenet5_aug_32_confusion_matrix}). A Tabela \ref{tab:experiment_lenet5_aug_32_reults} sumariza os resultados obtidos.
+
+\begin{figure}[!htb]
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/lenet5_aug_32/accuracy.png}
+    \caption{Accurácia}\label{fig:experiment_lenet5_aug_32_accuracy}
+  \end{minipage}\hfill
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/lenet5_aug_32/loss.png}
+    \caption{Loss}\label{fig:experiment_lenet5_aug_32_loss}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=18em]{experiments/lenet5_aug_32/confusion_matrix.png}
+  \caption{Matrix de Confusão}
+  \label{fig:experiment_lenet5_aug_32_confusion_matrix}
+\end{figure}
+
+\begin{table}[!htb]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Experimento} & \textbf{Loss} & \textbf{Acurácia} & \textbf{Tempo de Execução (s)} \\ \hline
+    lenet5\_aug\_32      & 0.80          & 0.73              & 63.91                          \\ \hline
+  \end{tabular}
+  \caption{Resultados Obtidos}
+  \label{tab:experiment_lenet5_aug_32_reults}
+\end{table}
+
+\newpage
+
+\subsection{Execução com 64 Épocas}
+
+Para a execução do experimento com 64 épocas, obteve-se o gráfico de evolução da acurácia (Figura \ref{fig:experiment_lenet5_aug_64_accuracy}), o gráfico de perda durante o treinamento (Figura \ref{fig:experiment_lenet5_aug_64_loss}) e a representação da matrix de confusão (Figura \ref{fig:experiment_lenet5_aug_64_confusion_matrix}). A Tabela \ref{tab:experiment_lenet5_aug_64_reults} sumariza os resultados obtidos.
+
+\begin{figure}[!htb]
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/lenet5_aug_64/accuracy.png}
+    \caption{Accurácia}\label{fig:experiment_lenet5_aug_64_accuracy}
+  \end{minipage}\hfill
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/lenet5_aug_64/loss.png}
+    \caption{Loss}\label{fig:experiment_lenet5_aug_64_loss}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=18em]{experiments/lenet5_aug_64/confusion_matrix.png}
+  \caption{Matrix de Confusão}
+  \label{fig:experiment_lenet5_aug_64_confusion_matrix}
+\end{figure}
+
+\begin{table}[!htb]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Experimento} & \textbf{Loss} & \textbf{Acurácia} & \textbf{Tempo de Execução (s)} \\ \hline
+    lenet5\_aug\_64      & 0.84          & 0.72              & 105.89                         \\ \hline
+  \end{tabular}
+  \caption{Resultados Obtidos}
+  \label{tab:experiment_lenet5_aug_64_reults}
+\end{table}
+
+\newpage
+
+\subsection{Execução com 128 Épocas}
+
+Para a execução do experimento com 128 épocas, obteve-se o gráfico de evolução da acurácia (Figura \ref{fig:experiment_lenet5_aug_128_accuracy}), o gráfico de perda durante o treinamento (Figura \ref{fig:experiment_lenet5_aug_128_loss}) e a representação da matrix de confusão (Figura \ref{fig:experiment_lenet5_aug_128_confusion_matrix}). A Tabela \ref{tab:experiment_lenet5_aug_128_reults} sumariza os resultados obtidos.
+
+\begin{figure}[!htb]
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/lenet5_aug_128/accuracy.png}
+    \caption{Accurácia}\label{fig:experiment_lenet5_aug_128_accuracy}
+  \end{minipage}\hfill
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/lenet5_aug_128/loss.png}
+    \caption{Loss}\label{fig:experiment_lenet5_aug_128_loss}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=18em]{experiments/lenet5_aug_128/confusion_matrix.png}
+  \caption{Matrix de Confusão}
+  \label{fig:experiment_lenet5_aug_128_confusion_matrix}
+\end{figure}
+
+\begin{table}[!htb]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Experimento} & \textbf{Loss} & \textbf{Acurácia} & \textbf{Tempo de Execução (s)} \\ \hline
+    lenet5\_aug\_128     & 1.01          & 0.72              & 193.93                         \\ \hline
+  \end{tabular}
+  \caption{Resultados Obtidos}
+  \label{tab:experiment_lenet5_aug_128_reults}
+\end{table}
+
 \section{Execução de um Modelo Personalizado com Data Augmentation}
 
 Na sequência repetiu-se os mesmos passos, mas neste caso, com outro modelo de treinamento.
 
 Os resultados obtidos foram:
+
+\subsection{Execução com 32 Épocas}
+
+Para a execução do experimento com 32 épocas, obteve-se o gráfico de evolução da acurácia (Figura \ref{fig:experiment_default_aug_32_accuracy}), o gráfico de perda durante o treinamento (Figura \ref{fig:experiment_default_aug_32_loss}) e a representação da matrix de confusão (Figura \ref{fig:experiment_default_aug_32_confusion_matrix}). A Tabela \ref{tab:experiment_default_aug_32_reults} sumariza os resultados obtidos.
+
+\begin{figure}[!htb]
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/default_aug_32/accuracy.png}
+    \caption{Accurácia}\label{fig:experiment_default_aug_32_accuracy}
+  \end{minipage}\hfill
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/default_aug_32/loss.png}
+    \caption{Loss}\label{fig:experiment_default_aug_32_loss}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=18em]{experiments/default_aug_32/confusion_matrix.png}
+  \caption{Matrix de Confusão}
+  \label{fig:experiment_default_aug_32_confusion_matrix}
+\end{figure}
+
+\begin{table}[!htb]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Experimento} & \textbf{Loss} & \textbf{Acurácia} & \textbf{Tempo de Execução (s)} \\ \hline
+    default\_aug\_32     & 0.63          & 0.78              & 159.49                         \\ \hline
+  \end{tabular}
+  \caption{Resultados Obtidos}
+  \label{tab:experiment_default_aug_32_reults}
+\end{table}
+
+\newpage
+
+\subsection{Execução com 64 Épocas}
+
+Para a execução do experimento com 64 épocas, obteve-se o gráfico de evolução da acurácia (Figura \ref{fig:experiment_default_aug_64_accuracy}), o gráfico de perda durante o treinamento (Figura \ref{fig:experiment_default_aug_64_loss}) e a representação da matrix de confusão (Figura \ref{fig:experiment_default_aug_64_confusion_matrix}). A Tabela \ref{tab:experiment_default_aug_64_reults} sumariza os resultados obtidos.
+
+\begin{figure}[!htb]
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/default_aug_64/accuracy.png}
+    \caption{Accurácia}\label{fig:experiment_default_aug_64_accuracy}
+  \end{minipage}\hfill
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/default_aug_64/loss.png}
+    \caption{Loss}\label{fig:experiment_default_aug_64_loss}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=18em]{experiments/default_aug_64/confusion_matrix.png}
+  \caption{Matrix de Confusão}
+  \label{fig:experiment_default_aug_64_confusion_matrix}
+\end{figure}
+
+\begin{table}[!htb]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Experimento} & \textbf{Loss} & \textbf{Acurácia} & \textbf{Tempo de Execução (s)} \\ \hline
+    default\_aug\_64     & 0.96          & 0.76              & 297.53                         \\ \hline
+  \end{tabular}
+  \caption{Resultados Obtidos}
+  \label{tab:experiment_default_aug_64_reults}
+\end{table}
+
+\newpage
+
+\subsection{Execução com 128 Épocas}
+
+Para a execução do experimento com 128 épocas, obteve-se o gráfico de evolução da acurácia (Figura \ref{fig:experiment_lenet5_aug_128_accuracy}), o gráfico de perda durante o treinamento (Figura \ref{fig:experiment_lenet5_aug_128_loss}) e a representação da matrix de confusão (Figura \ref{fig:experiment_lenet5_aug_128_confusion_matrix}). A Tabela \ref{tab:experiment_lenet5_aug_128_reults} sumariza os resultados obtidos.
+
+\begin{figure}[!htb]
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/lenet5_aug_128/accuracy.png}
+    \caption{Accurácia}\label{fig:experiment_lenet5_aug_128_accuracy}
+  \end{minipage}\hfill
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/lenet5_aug_128/loss.png}
+    \caption{Loss}\label{fig:experiment_lenet5_aug_128_loss}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=18em]{experiments/lenet5_aug_128/confusion_matrix.png}
+  \caption{Matrix de Confusão}
+  \label{fig:experiment_lenet5_aug_128_confusion_matrix}
+\end{figure}
+
+\begin{table}[!htb]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Experimento} & \textbf{Loss} & \textbf{Acurácia} & \textbf{Tempo de Execução (s)} \\ \hline
+    default\_aug\_128    & 1.26          & 0.76              & 557.75                         \\ \hline
+  \end{tabular}
+  \caption{Resultados Obtidos}
+  \label{tab:experiment_lenet_aug_128_reults}
+\end{table}
 
 \section{Extração de Características}
 
@@ -219,5 +659,7 @@ Para isso, criou-se um arquivo no formato SVM como no exemplo descrito no Códig
 Utilizando os arquivos gerados de treinamento e teste, aplicou-se o classificador SVM, obtendo os resultados:
 
 \section{Discussão dos Resultados}
+
+A tabela geral dos resultados pode ser vista em:
 
 \end{document}
