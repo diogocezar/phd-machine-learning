@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1599143361 "/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.tex" "/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.pdf" "report" 1599143364
-  "/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.aux" 1599143364 12509 3a9716adcacc4a162adbd338a4168b49 ""
-  "/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.tex" 1599143361 34628 2979ea45df04280507a62e5d680cb721 ""
+["pdflatex"] 1599164189 "/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.tex" "/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.pdf" "report" 1599164191
+  "/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.aux" 1599164191 12019 7c9a05927a606275bfbfa41a48dd8b63 ""
+  "/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.tex" 1599164188 37852 a5c864904a658e8680fcbbc6fc21f6b5 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1480098688 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -123,12 +123,12 @@
   "images/image_lenet.jpeg" 1598962811 79387 9a6b8493926345b077c43f7172858487 ""
   "images/image_months.png" 1598961836 46386 4e12561afb02a11305b8076c51eee3eb ""
   "images/image_months_wrong.png" 1599142916 26399 fce2274e72b4a2be91c603f60bdd6023 ""
-  "report.aux" 1599143364 12509 3a9716adcacc4a162adbd338a4168b49 ""
-  "report.tex" 1599143361 34628 2979ea45df04280507a62e5d680cb721 ""
+  "report.aux" 1599164191 12019 7c9a05927a606275bfbfa41a48dd8b63 ""
+  "report.tex" 1599164188 37852 a5c864904a658e8680fcbbc6fc21f6b5 ""
   "sbc-template.sty" 1598961330 6074 ecc54df5124d8db4ac67c42cc728f3a5 ""
   (generated)
   "report.log"
-  "/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.log"
-  "/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.pdf"
-  "report.pdf"
   "report.aux"
+  "/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.pdf"
+  "/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.log"
+  "report.pdf"
