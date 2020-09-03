@@ -70,7 +70,7 @@ Na definição das funções auxiliares, a ideia foi definir possíveis componen
 
 \section{Definição dos Modelos}
 
-Definiu-se também os modelos como funções. O primeiro modelo utilizado foi o LeNet 5, suas camadas estão representadas na Figura \ref{fig:image_lenet}
+Definiu-se também os modelos como funções. O primeiro modelo utilizado foi o LeNet 5, suas camadas estão representadas na Figura \ref{fig:image_lenet}.
 
 \begin{figure}[!htb]
   \centering
@@ -79,7 +79,9 @@ Definiu-se também os modelos como funções. O primeiro modelo utilizado foi o 
   \label{fig:image_lenet}
 \end{figure}
 
-O segundo modelo, é o mesmo utilizado nas demonstrações em aula e  implementa as seguintes as camadas detalhadas no Código \ref{code:modelo_personalizado}.
+LeNet-5 foi usado em grande escala para classificar automaticamente dígitos escritos à mão em cheques bancários nos Estados Unidos. Possui apenas 7 camadas, entre as quais existem 3 camadas convolucionais (C1, C3 e C5), 2 camadas de subamostragem (agrupamento) (S2 e S4) e 1 camada totalmente conectada (F6), que são seguidas pela saída camada. Camadas convolucionais usam 5 por 5 convoluções com passo 1. As camadas de subamostragem são 2 por 2 camadas de pooling médias. As ativações sigmóides de Tanh são usadas em toda a rede. Existem várias opções arquitetônicas interessantes feitas no LeNet-5 que não são muito comuns na era moderna de aprendizado profundo.
+
+O segundo modelo, é o mesmo utilizado nas demonstrações em aula e implementa as seguintes as camadas detalhadas no Código \ref{code:modelo_personalizado}.
 
 \begin{lstlisting}[caption={Modelo Personalizado},captionpos=b,frame=single,label={code:modelo_personalizado}]
 model = Sequential()
@@ -92,6 +94,9 @@ model.add(Dense(128, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(num_classes, activation='softmax'))
 \end{lstlisting}
+
+Neste modelo, também simplificado, temos 2 convoluções iniciais do tipo \textit{Relu}.
+Seguida das operações de \textit{MaxPooling2D}, \textit{Dropout}, \textit{Flatten}, \textit{Dense}, \textit{Dropout} e \textit{Dense}.
 
 \section{Execução do Modelo LeNet5 sem Data Augmentation}
 
@@ -658,8 +663,91 @@ Para isso, criou-se um arquivo no formato SVM como no exemplo descrito no Códig
 
 Utilizando os arquivos gerados de treinamento e teste, aplicou-se o classificador SVM, obtendo os resultados:
 
+\begin{figure}[!htb]
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/svm_aug/confusion_matrix.png}
+    \caption{Sem Augmentation}\label{fig:experiment_svm_aug}
+  \end{minipage}\hfill
+  \begin{minipage}{.47\textwidth}
+    \centering
+    \includegraphics[width=1.1\linewidth]{experiments/svm_noaug/confusion_matrix.png}
+    \caption{Com Augmentation}\label{fig:experiment_svm_noaug}
+  \end{minipage}
+\end{figure}
+
+\begin{table}[!htb]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Experimento} & \textbf{F1Score} & \textbf{Acurácia} & \textbf{Tempo de Execução (s)} \\ \hline
+    svm\_aug             & 0.616            & 0.621             & 1992.622                       \\ \hline
+    svm\_noaug           & 0.615            & 0.621             & 12.658                         \\ \hline
+  \end{tabular}
+  \caption{Resultados Obtidos}
+  \label{tab:experiment_svm}
+\end{table}
+
+\newpage
+
 \section{Discussão dos Resultados}
 
-A tabela geral dos resultados pode ser vista em:
+A Tabela \ref{tab:summary} mostra a sumarização de todos os resultados obtidos nos experimentos.
+
+\begin{table}[!htb]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Experimento} & \textbf{Loss} & \textbf{Acurácia} & \textbf{Tempo de Execução (s)} \\ \hline
+    lenet5\_noaug\_32    & 1.00          & 0.66              & 5.78                           \\ \hline
+    lenet5\_noaug\_64    & 0.88          & 0.70              & 9.51                           \\ \hline
+    lenet5\_noaug\_128   & 0.80          & 0.74              & 16.44                          \\ \hline
+    default\_noaug\_32   & 0.83          & 0.71              & 12.37                          \\ \hline
+    default\_noaug\_64   & 0.71          & 0.77              & 21.38                          \\ \hline
+    default\_noaug\_128  & 1.03          & 0.76              & 40.14                          \\ \hline
+    lenet5\_aug\_32      & 0.80          & 0.73              & 63.91                          \\ \hline
+    lenet5\_aug\_64      & 0.84          & 0.72              & 105.89                         \\ \hline
+    lenet5\_aug\_128     & 1.01          & 0.72              & 193.93                         \\ \hline
+    default\_aug\_32     & 0.63          & 0.78              & 159.49                         \\ \hline
+    default\_aug\_64     & 0.96          & 0.76              & 297.53                         \\ \hline
+    default\_aug\_128    & 1.26          & 0.76              & 557.75                         \\ \hline
+  \end{tabular}
+  \caption{Sumários dos Obtidos}
+  \label{tab:summary}
+\end{table}
+
+Nos experimentos realizados o foco não foi a otimização dos resultados de Accurácia, por este motivo, não foram exploradas alternativas ou ajustes de parâmetros.
+
+Na implementação de Data Augmentation, é possível notar em algumas imagens, que o resultado gerado podem não corresponder exatamente a uma informação que ajude com características verdadeiras de uma determinada classo. Isso pode ter influenciado diretamente na melhoria dos resultados.
+
+Por exemplo, é possível observar algumas anomalidas destacadas na Figura \ref{fig:image_months_wrong}.
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=35em]{images/image_months_wrong.png}
+  \caption{Exemplos sem características verdadeiras}
+  \label{fig:image_months_wrong}
+\end{figure}
+
+É possível notar que o melhor resultado foi obtido pelo experimento \textit{default\_aug\_32} com o valor de Accurácia = 0.78 e Loss = 0.63.
+
+O pior resultado foi obtido pelo experimento \textit{lenet5\_noaug\_32} com o valor de Accurácia = 0.66 e Loss = 1.
+
+Nas matrizes de confusão apresentadas ao final de cada experimento,
+
+Quanto aos gráficos de Acurácia e Loss
+
+E finalmente, para o último experimento, notou-se que aplicar ou não a técnica de augmentation não ajudou na classificação pelo SVM.
+
+\newpage
+
+\section{Código Fonte}
+
+Os códigos fonte podem ser encontrados em:
+
+\begin{itemize}
+  \item GitHub: https://github.com/diogocezar/phd-machine-learning-lab3
+  \item Google Colab: https://bit.ly/3gR739z
+\end{itemize}
 
 \end{document}

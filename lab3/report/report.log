@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.12.13)  2 SEP 2020 14:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.12.13)  3 SEP 2020 11:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -300,332 +300,371 @@ Package pdftex.def Info: images/image_lenet.jpeg  used on input line 77.
  [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/diogocezar/phd/phd-machine-learning/lab3/report/images/image_months.png (PNG copy)>] [2 </Users/diogocezar/phd/phd-machine-learning/lab3/report/images/image_lenet.jpeg>]
-<experiments/lenet5_noaug_32/accuracy.png, id=16, 708.6475pt x 538.01pt>
+<experiments/lenet5_noaug_32/accuracy.png, id=17, 708.6475pt x 538.01pt>
 File: experiments/lenet5_noaug_32/accuracy.png Graphic file (type png)
 <use experiments/lenet5_noaug_32/accuracy.png>
-Package pdftex.def Info: experiments/lenet5_noaug_32/accuracy.png  used on input line 128.
+Package pdftex.def Info: experiments/lenet5_noaug_32/accuracy.png  used on input line 133.
 (pdftex.def)             Requested size: 220.65291pt x 167.52022pt.
-
-Overfull \hbox (20.06046pt too wide) in paragraph at lines 128--129
- [][] 
- []
-
-<experiments/lenet5_noaug_32/loss.png, id=18, 709.65125pt x 538.01pt>
-File: experiments/lenet5_noaug_32/loss.png Graphic file (type png)
-<use experiments/lenet5_noaug_32/loss.png>
-Package pdftex.def Info: experiments/lenet5_noaug_32/loss.png  used on input line 133.
-(pdftex.def)             Requested size: 220.65291pt x 167.28214pt.
 
 Overfull \hbox (20.06046pt too wide) in paragraph at lines 133--134
  [][] 
  []
 
-<experiments/lenet5_noaug_32/confusion_matrix.png, id=19, 571.13374pt x 565.11125pt>
+<experiments/lenet5_noaug_32/loss.png, id=19, 709.65125pt x 538.01pt>
+File: experiments/lenet5_noaug_32/loss.png Graphic file (type png)
+<use experiments/lenet5_noaug_32/loss.png>
+Package pdftex.def Info: experiments/lenet5_noaug_32/loss.png  used on input line 138.
+(pdftex.def)             Requested size: 220.65291pt x 167.28214pt.
+
+Overfull \hbox (20.06046pt too wide) in paragraph at lines 138--139
+ [][] 
+ []
+
+<experiments/lenet5_noaug_32/confusion_matrix.png, id=20, 571.13374pt x 565.11125pt>
 File: experiments/lenet5_noaug_32/confusion_matrix.png Graphic file (type png)
 <use experiments/lenet5_noaug_32/confusion_matrix.png>
-Package pdftex.def Info: experiments/lenet5_noaug_32/confusion_matrix.png  used on input line 140.
+Package pdftex.def Info: experiments/lenet5_noaug_32/confusion_matrix.png  used on input line 145.
 (pdftex.def)             Requested size: 216.0pt x 213.71837pt.
-[3 </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_noaug_32/accuracy.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_noaug_32/loss.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_noaug_32/confusion_matrix.png>]
+[3 </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_noaug_32/accuracy.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_noaug_32/loss.png>]
 <experiments/lenet5_noaug_64/accuracy.png, id=26, 708.6475pt x 538.01pt>
 File: experiments/lenet5_noaug_64/accuracy.png Graphic file (type png)
 <use experiments/lenet5_noaug_64/accuracy.png>
-Package pdftex.def Info: experiments/lenet5_noaug_64/accuracy.png  used on input line 165.
+Package pdftex.def Info: experiments/lenet5_noaug_64/accuracy.png  used on input line 170.
 (pdftex.def)             Requested size: 220.65291pt x 167.52022pt.
 
-Overfull \hbox (20.06046pt too wide) in paragraph at lines 165--166
+Overfull \hbox (20.06046pt too wide) in paragraph at lines 170--171
  [][] 
  []
 
 <experiments/lenet5_noaug_64/loss.png, id=27, 715.67375pt x 538.01pt>
 File: experiments/lenet5_noaug_64/loss.png Graphic file (type png)
 <use experiments/lenet5_noaug_64/loss.png>
-Package pdftex.def Info: experiments/lenet5_noaug_64/loss.png  used on input line 170.
+Package pdftex.def Info: experiments/lenet5_noaug_64/loss.png  used on input line 175.
 (pdftex.def)             Requested size: 220.65291pt x 165.87013pt.
 
-Overfull \hbox (20.06046pt too wide) in paragraph at lines 170--171
+Overfull \hbox (20.06046pt too wide) in paragraph at lines 175--176
  [][] 
  []
 
 <experiments/lenet5_noaug_64/confusion_matrix.png, id=28, 571.13374pt x 565.11125pt>
 File: experiments/lenet5_noaug_64/confusion_matrix.png Graphic file (type png)
 <use experiments/lenet5_noaug_64/confusion_matrix.png>
-Package pdftex.def Info: experiments/lenet5_noaug_64/confusion_matrix.png  used on input line 177.
+Package pdftex.def Info: experiments/lenet5_noaug_64/confusion_matrix.png  used on input line 182.
 (pdftex.def)             Requested size: 216.0pt x 213.71837pt.
-[4 </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_noaug_64/accuracy.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_noaug_64/loss.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_noaug_64/confusion_matrix.png>]
+[4 </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_noaug_32/confusion_matrix.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_noaug_64/accuracy.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_noaug_64/loss.png>]
 <experiments/lenet5_noaug_128/accuracy.png, id=35, 708.6475pt x 538.01pt>
 File: experiments/lenet5_noaug_128/accuracy.png Graphic file (type png)
 <use experiments/lenet5_noaug_128/accuracy.png>
-Package pdftex.def Info: experiments/lenet5_noaug_128/accuracy.png  used on input line 202.
+Package pdftex.def Info: experiments/lenet5_noaug_128/accuracy.png  used on input line 207.
 (pdftex.def)             Requested size: 220.65291pt x 167.52022pt.
 
-Overfull \hbox (20.06046pt too wide) in paragraph at lines 202--203
+Overfull \hbox (20.06046pt too wide) in paragraph at lines 207--208
  [][] 
  []
 
 <experiments/lenet5_noaug_128/loss.png, id=36, 709.65125pt x 538.01pt>
 File: experiments/lenet5_noaug_128/loss.png Graphic file (type png)
 <use experiments/lenet5_noaug_128/loss.png>
-Package pdftex.def Info: experiments/lenet5_noaug_128/loss.png  used on input line 207.
+Package pdftex.def Info: experiments/lenet5_noaug_128/loss.png  used on input line 212.
 (pdftex.def)             Requested size: 220.65291pt x 167.28214pt.
 
-Overfull \hbox (20.06046pt too wide) in paragraph at lines 207--208
+Overfull \hbox (20.06046pt too wide) in paragraph at lines 212--213
  [][] 
  []
 
 <experiments/lenet5_noaug_128/confusion_matrix.png, id=37, 571.13374pt x 565.11125pt>
 File: experiments/lenet5_noaug_128/confusion_matrix.png Graphic file (type png)
 <use experiments/lenet5_noaug_128/confusion_matrix.png>
-Package pdftex.def Info: experiments/lenet5_noaug_128/confusion_matrix.png  used on input line 214.
+Package pdftex.def Info: experiments/lenet5_noaug_128/confusion_matrix.png  used on input line 219.
 (pdftex.def)             Requested size: 216.0pt x 213.71837pt.
-[5 </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_noaug_128/accuracy.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_noaug_128/loss.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_noaug_128/confusion_matrix.png>]
+[5 </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_noaug_64/confusion_matrix.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_noaug_128/accuracy.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_noaug_128/loss.png>]
 <experiments/default_noaug_32/accuracy.png, id=44, 708.6475pt x 538.01pt>
 File: experiments/default_noaug_32/accuracy.png Graphic file (type png)
 <use experiments/default_noaug_32/accuracy.png>
-Package pdftex.def Info: experiments/default_noaug_32/accuracy.png  used on input line 243.
+Package pdftex.def Info: experiments/default_noaug_32/accuracy.png  used on input line 248.
 (pdftex.def)             Requested size: 220.65291pt x 167.52022pt.
 
-Overfull \hbox (20.06046pt too wide) in paragraph at lines 243--244
+Overfull \hbox (20.06046pt too wide) in paragraph at lines 248--249
  [][] 
  []
 
 <experiments/default_noaug_32/loss.png, id=45, 715.67375pt x 538.01pt>
 File: experiments/default_noaug_32/loss.png Graphic file (type png)
 <use experiments/default_noaug_32/loss.png>
-Package pdftex.def Info: experiments/default_noaug_32/loss.png  used on input line 248.
+Package pdftex.def Info: experiments/default_noaug_32/loss.png  used on input line 253.
 (pdftex.def)             Requested size: 220.65291pt x 165.87013pt.
 
-Overfull \hbox (20.06046pt too wide) in paragraph at lines 248--249
+Overfull \hbox (20.06046pt too wide) in paragraph at lines 253--254
  [][] 
  []
 
 <experiments/default_noaug_32/confusion_matrix.png, id=46, 571.13374pt x 565.11125pt>
 File: experiments/default_noaug_32/confusion_matrix.png Graphic file (type png)
 <use experiments/default_noaug_32/confusion_matrix.png>
-Package pdftex.def Info: experiments/default_noaug_32/confusion_matrix.png  used on input line 255.
+Package pdftex.def Info: experiments/default_noaug_32/confusion_matrix.png  used on input line 260.
 (pdftex.def)             Requested size: 216.0pt x 213.71837pt.
-[6 </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_noaug_32/accuracy.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_noaug_32/loss.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_noaug_32/confusion_matrix.png>]
+[6 </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_noaug_128/confusion_matrix.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_noaug_32/accuracy.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_noaug_32/loss.png>]
 <experiments/default_noaug_64/accuracy.png, id=53, 708.6475pt x 538.01pt>
 File: experiments/default_noaug_64/accuracy.png Graphic file (type png)
 <use experiments/default_noaug_64/accuracy.png>
-Package pdftex.def Info: experiments/default_noaug_64/accuracy.png  used on input line 280.
-(pdftex.def)             Requested size: 220.65291pt x 167.52022pt.
-
-Overfull \hbox (20.06046pt too wide) in paragraph at lines 280--281
- [][] 
- []
-
-<experiments/default_noaug_64/loss.png, id=54, 708.6475pt x 538.01pt>
-File: experiments/default_noaug_64/loss.png Graphic file (type png)
-<use experiments/default_noaug_64/loss.png>
-Package pdftex.def Info: experiments/default_noaug_64/loss.png  used on input line 285.
+Package pdftex.def Info: experiments/default_noaug_64/accuracy.png  used on input line 285.
 (pdftex.def)             Requested size: 220.65291pt x 167.52022pt.
 
 Overfull \hbox (20.06046pt too wide) in paragraph at lines 285--286
  [][] 
  []
 
+<experiments/default_noaug_64/loss.png, id=54, 708.6475pt x 538.01pt>
+File: experiments/default_noaug_64/loss.png Graphic file (type png)
+<use experiments/default_noaug_64/loss.png>
+Package pdftex.def Info: experiments/default_noaug_64/loss.png  used on input line 290.
+(pdftex.def)             Requested size: 220.65291pt x 167.52022pt.
+
+Overfull \hbox (20.06046pt too wide) in paragraph at lines 290--291
+ [][] 
+ []
+
 <experiments/default_noaug_64/confusion_matrix.png, id=55, 571.13374pt x 569.12625pt>
 File: experiments/default_noaug_64/confusion_matrix.png Graphic file (type png)
 <use experiments/default_noaug_64/confusion_matrix.png>
-Package pdftex.def Info: experiments/default_noaug_64/confusion_matrix.png  used on input line 292.
+Package pdftex.def Info: experiments/default_noaug_64/confusion_matrix.png  used on input line 297.
 (pdftex.def)             Requested size: 216.0pt x 215.2368pt.
-[7 </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_noaug_64/accuracy.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_noaug_64/loss.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_noaug_64/confusion_matrix.png>]
+[7 </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_noaug_32/confusion_matrix.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_noaug_64/accuracy.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_noaug_64/loss.png>]
 <experiments/default_noaug_128/accuracy.png, id=63, 708.6475pt x 538.01pt>
 File: experiments/default_noaug_128/accuracy.png Graphic file (type png)
 <use experiments/default_noaug_128/accuracy.png>
-Package pdftex.def Info: experiments/default_noaug_128/accuracy.png  used on input line 317.
+Package pdftex.def Info: experiments/default_noaug_128/accuracy.png  used on input line 322.
 (pdftex.def)             Requested size: 220.65291pt x 167.52022pt.
 
-Overfull \hbox (20.06046pt too wide) in paragraph at lines 317--318
+Overfull \hbox (20.06046pt too wide) in paragraph at lines 322--323
  [][] 
  []
 
 <experiments/default_noaug_128/loss.png, id=64, 709.65125pt x 538.01pt>
 File: experiments/default_noaug_128/loss.png Graphic file (type png)
 <use experiments/default_noaug_128/loss.png>
-Package pdftex.def Info: experiments/default_noaug_128/loss.png  used on input line 322.
+Package pdftex.def Info: experiments/default_noaug_128/loss.png  used on input line 327.
 (pdftex.def)             Requested size: 220.65291pt x 167.28214pt.
 
-Overfull \hbox (20.06046pt too wide) in paragraph at lines 322--323
+Overfull \hbox (20.06046pt too wide) in paragraph at lines 327--328
  [][] 
  []
 
 <experiments/default_noaug_128/confusion_matrix.png, id=65, 571.13374pt x 565.11125pt>
 File: experiments/default_noaug_128/confusion_matrix.png Graphic file (type png)
 <use experiments/default_noaug_128/confusion_matrix.png>
-Package pdftex.def Info: experiments/default_noaug_128/confusion_matrix.png  used on input line 329.
+Package pdftex.def Info: experiments/default_noaug_128/confusion_matrix.png  used on input line 334.
 (pdftex.def)             Requested size: 216.0pt x 213.71837pt.
-[8 </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_noaug_128/accuracy.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_noaug_128/loss.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_noaug_128/confusion_matrix.png>] [9] [10]
-<experiments/lenet5_aug_32/accuracy.png, id=78, 708.6475pt x 538.01pt>
+[8 </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_noaug_64/confusion_matrix.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_noaug_128/accuracy.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_noaug_128/loss.png>] [9 </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_noaug_128/confusion_matrix.png>] [10]
+<experiments/lenet5_aug_32/accuracy.png, id=79, 708.6475pt x 538.01pt>
 File: experiments/lenet5_aug_32/accuracy.png Graphic file (type png)
 <use experiments/lenet5_aug_32/accuracy.png>
-Package pdftex.def Info: experiments/lenet5_aug_32/accuracy.png  used on input line 426.
+Package pdftex.def Info: experiments/lenet5_aug_32/accuracy.png  used on input line 431.
 (pdftex.def)             Requested size: 220.65291pt x 167.52022pt.
-
-Overfull \hbox (20.06046pt too wide) in paragraph at lines 426--427
- [][] 
- []
-
-<experiments/lenet5_aug_32/loss.png, id=79, 709.65125pt x 538.01pt>
-File: experiments/lenet5_aug_32/loss.png Graphic file (type png)
-<use experiments/lenet5_aug_32/loss.png>
-Package pdftex.def Info: experiments/lenet5_aug_32/loss.png  used on input line 431.
-(pdftex.def)             Requested size: 220.65291pt x 167.28214pt.
 
 Overfull \hbox (20.06046pt too wide) in paragraph at lines 431--432
  [][] 
  []
 
-<experiments/lenet5_aug_32/confusion_matrix.png, id=80, 571.13374pt x 565.11125pt>
-File: experiments/lenet5_aug_32/confusion_matrix.png Graphic file (type png)
-<use experiments/lenet5_aug_32/confusion_matrix.png>
-Package pdftex.def Info: experiments/lenet5_aug_32/confusion_matrix.png  used on input line 438.
-(pdftex.def)             Requested size: 216.0pt x 213.71837pt.
-[11 </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_aug_32/accuracy.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_aug_32/loss.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_aug_32/confusion_matrix.png>]
-<experiments/lenet5_aug_64/accuracy.png, id=87, 708.6475pt x 538.01pt>
-File: experiments/lenet5_aug_64/accuracy.png Graphic file (type png)
-<use experiments/lenet5_aug_64/accuracy.png>
-Package pdftex.def Info: experiments/lenet5_aug_64/accuracy.png  used on input line 463.
-(pdftex.def)             Requested size: 220.65291pt x 167.52022pt.
+<experiments/lenet5_aug_32/loss.png, id=80, 709.65125pt x 538.01pt>
+File: experiments/lenet5_aug_32/loss.png Graphic file (type png)
+<use experiments/lenet5_aug_32/loss.png>
+Package pdftex.def Info: experiments/lenet5_aug_32/loss.png  used on input line 436.
+(pdftex.def)             Requested size: 220.65291pt x 167.28214pt.
 
-Overfull \hbox (20.06046pt too wide) in paragraph at lines 463--464
+Overfull \hbox (20.06046pt too wide) in paragraph at lines 436--437
  [][] 
  []
 
-<experiments/lenet5_aug_64/loss.png, id=88, 715.67375pt x 538.01pt>
-File: experiments/lenet5_aug_64/loss.png Graphic file (type png)
-<use experiments/lenet5_aug_64/loss.png>
-Package pdftex.def Info: experiments/lenet5_aug_64/loss.png  used on input line 468.
-(pdftex.def)             Requested size: 220.65291pt x 165.87013pt.
+<experiments/lenet5_aug_32/confusion_matrix.png, id=81, 571.13374pt x 565.11125pt>
+File: experiments/lenet5_aug_32/confusion_matrix.png Graphic file (type png)
+<use experiments/lenet5_aug_32/confusion_matrix.png>
+Package pdftex.def Info: experiments/lenet5_aug_32/confusion_matrix.png  used on input line 443.
+(pdftex.def)             Requested size: 216.0pt x 213.71837pt.
+[11 </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_aug_32/accuracy.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_aug_32/loss.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_aug_32/confusion_matrix.png>]
+<experiments/lenet5_aug_64/accuracy.png, id=88, 708.6475pt x 538.01pt>
+File: experiments/lenet5_aug_64/accuracy.png Graphic file (type png)
+<use experiments/lenet5_aug_64/accuracy.png>
+Package pdftex.def Info: experiments/lenet5_aug_64/accuracy.png  used on input line 468.
+(pdftex.def)             Requested size: 220.65291pt x 167.52022pt.
 
 Overfull \hbox (20.06046pt too wide) in paragraph at lines 468--469
  [][] 
  []
 
-<experiments/lenet5_aug_64/confusion_matrix.png, id=89, 571.13374pt x 569.12625pt>
-File: experiments/lenet5_aug_64/confusion_matrix.png Graphic file (type png)
-<use experiments/lenet5_aug_64/confusion_matrix.png>
-Package pdftex.def Info: experiments/lenet5_aug_64/confusion_matrix.png  used on input line 475.
-(pdftex.def)             Requested size: 216.0pt x 215.2368pt.
-[12 </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_aug_64/accuracy.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_aug_64/loss.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_aug_64/confusion_matrix.png>]
-<experiments/lenet5_aug_128/accuracy.png, id=96, 708.6475pt x 538.01pt>
-File: experiments/lenet5_aug_128/accuracy.png Graphic file (type png)
-<use experiments/lenet5_aug_128/accuracy.png>
-Package pdftex.def Info: experiments/lenet5_aug_128/accuracy.png  used on input line 500.
-(pdftex.def)             Requested size: 220.65291pt x 167.52022pt.
+<experiments/lenet5_aug_64/loss.png, id=89, 715.67375pt x 538.01pt>
+File: experiments/lenet5_aug_64/loss.png Graphic file (type png)
+<use experiments/lenet5_aug_64/loss.png>
+Package pdftex.def Info: experiments/lenet5_aug_64/loss.png  used on input line 473.
+(pdftex.def)             Requested size: 220.65291pt x 165.87013pt.
 
-Overfull \hbox (20.06046pt too wide) in paragraph at lines 500--501
+Overfull \hbox (20.06046pt too wide) in paragraph at lines 473--474
  [][] 
  []
 
-<experiments/lenet5_aug_128/loss.png, id=97, 709.65125pt x 538.01pt>
-File: experiments/lenet5_aug_128/loss.png Graphic file (type png)
-<use experiments/lenet5_aug_128/loss.png>
-Package pdftex.def Info: experiments/lenet5_aug_128/loss.png  used on input line 505.
-(pdftex.def)             Requested size: 220.65291pt x 167.28214pt.
+<experiments/lenet5_aug_64/confusion_matrix.png, id=90, 571.13374pt x 569.12625pt>
+File: experiments/lenet5_aug_64/confusion_matrix.png Graphic file (type png)
+<use experiments/lenet5_aug_64/confusion_matrix.png>
+Package pdftex.def Info: experiments/lenet5_aug_64/confusion_matrix.png  used on input line 480.
+(pdftex.def)             Requested size: 216.0pt x 215.2368pt.
+[12 </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_aug_64/accuracy.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_aug_64/loss.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_aug_64/confusion_matrix.png>]
+<experiments/lenet5_aug_128/accuracy.png, id=97, 708.6475pt x 538.01pt>
+File: experiments/lenet5_aug_128/accuracy.png Graphic file (type png)
+<use experiments/lenet5_aug_128/accuracy.png>
+Package pdftex.def Info: experiments/lenet5_aug_128/accuracy.png  used on input line 505.
+(pdftex.def)             Requested size: 220.65291pt x 167.52022pt.
 
 Overfull \hbox (20.06046pt too wide) in paragraph at lines 505--506
  [][] 
  []
 
-<experiments/lenet5_aug_128/confusion_matrix.png, id=98, 571.13374pt x 565.11125pt>
-File: experiments/lenet5_aug_128/confusion_matrix.png Graphic file (type png)
-<use experiments/lenet5_aug_128/confusion_matrix.png>
-Package pdftex.def Info: experiments/lenet5_aug_128/confusion_matrix.png  used on input line 512.
-(pdftex.def)             Requested size: 216.0pt x 213.71837pt.
-[13 </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_aug_128/accuracy.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_aug_128/loss.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_aug_128/confusion_matrix.png>]
-<experiments/default_aug_32/accuracy.png, id=106, 708.6475pt x 538.01pt>
-File: experiments/default_aug_32/accuracy.png Graphic file (type png)
-<use experiments/default_aug_32/accuracy.png>
-Package pdftex.def Info: experiments/default_aug_32/accuracy.png  used on input line 541.
-(pdftex.def)             Requested size: 220.65291pt x 167.52022pt.
+<experiments/lenet5_aug_128/loss.png, id=98, 709.65125pt x 538.01pt>
+File: experiments/lenet5_aug_128/loss.png Graphic file (type png)
+<use experiments/lenet5_aug_128/loss.png>
+Package pdftex.def Info: experiments/lenet5_aug_128/loss.png  used on input line 510.
+(pdftex.def)             Requested size: 220.65291pt x 167.28214pt.
 
-Overfull \hbox (20.06046pt too wide) in paragraph at lines 541--542
+Overfull \hbox (20.06046pt too wide) in paragraph at lines 510--511
  [][] 
  []
 
-<experiments/default_aug_32/loss.png, id=107, 715.67375pt x 538.01pt>
-File: experiments/default_aug_32/loss.png Graphic file (type png)
-<use experiments/default_aug_32/loss.png>
-Package pdftex.def Info: experiments/default_aug_32/loss.png  used on input line 546.
-(pdftex.def)             Requested size: 220.65291pt x 165.87013pt.
+<experiments/lenet5_aug_128/confusion_matrix.png, id=99, 571.13374pt x 565.11125pt>
+File: experiments/lenet5_aug_128/confusion_matrix.png Graphic file (type png)
+<use experiments/lenet5_aug_128/confusion_matrix.png>
+Package pdftex.def Info: experiments/lenet5_aug_128/confusion_matrix.png  used on input line 517.
+(pdftex.def)             Requested size: 216.0pt x 213.71837pt.
+[13 </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_aug_128/accuracy.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_aug_128/loss.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/lenet5_aug_128/confusion_matrix.png>]
+<experiments/default_aug_32/accuracy.png, id=107, 708.6475pt x 538.01pt>
+File: experiments/default_aug_32/accuracy.png Graphic file (type png)
+<use experiments/default_aug_32/accuracy.png>
+Package pdftex.def Info: experiments/default_aug_32/accuracy.png  used on input line 546.
+(pdftex.def)             Requested size: 220.65291pt x 167.52022pt.
 
 Overfull \hbox (20.06046pt too wide) in paragraph at lines 546--547
  [][] 
  []
 
-<experiments/default_aug_32/confusion_matrix.png, id=108, 571.13374pt x 565.11125pt>
-File: experiments/default_aug_32/confusion_matrix.png Graphic file (type png)
-<use experiments/default_aug_32/confusion_matrix.png>
-Package pdftex.def Info: experiments/default_aug_32/confusion_matrix.png  used on input line 553.
-(pdftex.def)             Requested size: 216.0pt x 213.71837pt.
-[14 </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_aug_32/accuracy.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_aug_32/loss.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_aug_32/confusion_matrix.png>]
-<experiments/default_aug_64/accuracy.png, id=115, 708.6475pt x 538.01pt>
-File: experiments/default_aug_64/accuracy.png Graphic file (type png)
-<use experiments/default_aug_64/accuracy.png>
-Package pdftex.def Info: experiments/default_aug_64/accuracy.png  used on input line 578.
-(pdftex.def)             Requested size: 220.65291pt x 167.52022pt.
+<experiments/default_aug_32/loss.png, id=108, 715.67375pt x 538.01pt>
+File: experiments/default_aug_32/loss.png Graphic file (type png)
+<use experiments/default_aug_32/loss.png>
+Package pdftex.def Info: experiments/default_aug_32/loss.png  used on input line 551.
+(pdftex.def)             Requested size: 220.65291pt x 165.87013pt.
 
-Overfull \hbox (20.06046pt too wide) in paragraph at lines 578--579
+Overfull \hbox (20.06046pt too wide) in paragraph at lines 551--552
  [][] 
  []
 
-<experiments/default_aug_64/loss.png, id=116, 708.6475pt x 538.01pt>
-File: experiments/default_aug_64/loss.png Graphic file (type png)
-<use experiments/default_aug_64/loss.png>
-Package pdftex.def Info: experiments/default_aug_64/loss.png  used on input line 583.
+<experiments/default_aug_32/confusion_matrix.png, id=109, 571.13374pt x 565.11125pt>
+File: experiments/default_aug_32/confusion_matrix.png Graphic file (type png)
+<use experiments/default_aug_32/confusion_matrix.png>
+Package pdftex.def Info: experiments/default_aug_32/confusion_matrix.png  used on input line 558.
+(pdftex.def)             Requested size: 216.0pt x 213.71837pt.
+[14 </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_aug_32/accuracy.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_aug_32/loss.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_aug_32/confusion_matrix.png>]
+<experiments/default_aug_64/accuracy.png, id=116, 708.6475pt x 538.01pt>
+File: experiments/default_aug_64/accuracy.png Graphic file (type png)
+<use experiments/default_aug_64/accuracy.png>
+Package pdftex.def Info: experiments/default_aug_64/accuracy.png  used on input line 583.
 (pdftex.def)             Requested size: 220.65291pt x 167.52022pt.
 
 Overfull \hbox (20.06046pt too wide) in paragraph at lines 583--584
  [][] 
  []
 
-<experiments/default_aug_64/confusion_matrix.png, id=117, 571.13374pt x 565.11125pt>
+<experiments/default_aug_64/loss.png, id=117, 708.6475pt x 538.01pt>
+File: experiments/default_aug_64/loss.png Graphic file (type png)
+<use experiments/default_aug_64/loss.png>
+Package pdftex.def Info: experiments/default_aug_64/loss.png  used on input line 588.
+(pdftex.def)             Requested size: 220.65291pt x 167.52022pt.
+
+Overfull \hbox (20.06046pt too wide) in paragraph at lines 588--589
+ [][] 
+ []
+
+<experiments/default_aug_64/confusion_matrix.png, id=118, 571.13374pt x 565.11125pt>
 File: experiments/default_aug_64/confusion_matrix.png Graphic file (type png)
 <use experiments/default_aug_64/confusion_matrix.png>
-Package pdftex.def Info: experiments/default_aug_64/confusion_matrix.png  used on input line 590.
+Package pdftex.def Info: experiments/default_aug_64/confusion_matrix.png  used on input line 595.
 (pdftex.def)             Requested size: 216.0pt x 213.71837pt.
 [15 </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_aug_64/accuracy.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_aug_64/loss.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/default_aug_64/confusion_matrix.png>]
 File: experiments/lenet5_aug_128/accuracy.png Graphic file (type png)
 <use experiments/lenet5_aug_128/accuracy.png>
-Package pdftex.def Info: experiments/lenet5_aug_128/accuracy.png  used on input line 615.
+Package pdftex.def Info: experiments/lenet5_aug_128/accuracy.png  used on input line 620.
 (pdftex.def)             Requested size: 220.65291pt x 167.52022pt.
-
-Overfull \hbox (20.06046pt too wide) in paragraph at lines 615--616
- [][] 
- []
-
-File: experiments/lenet5_aug_128/loss.png Graphic file (type png)
-<use experiments/lenet5_aug_128/loss.png>
-Package pdftex.def Info: experiments/lenet5_aug_128/loss.png  used on input line 620.
-(pdftex.def)             Requested size: 220.65291pt x 167.28214pt.
 
 Overfull \hbox (20.06046pt too wide) in paragraph at lines 620--621
  [][] 
  []
 
+File: experiments/lenet5_aug_128/loss.png Graphic file (type png)
+<use experiments/lenet5_aug_128/loss.png>
+Package pdftex.def Info: experiments/lenet5_aug_128/loss.png  used on input line 625.
+(pdftex.def)             Requested size: 220.65291pt x 167.28214pt.
+
+Overfull \hbox (20.06046pt too wide) in paragraph at lines 625--626
+ [][] 
+ []
+
 File: experiments/lenet5_aug_128/confusion_matrix.png Graphic file (type png)
 <use experiments/lenet5_aug_128/confusion_matrix.png>
-Package pdftex.def Info: experiments/lenet5_aug_128/confusion_matrix.png  used on input line 627.
+Package pdftex.def Info: experiments/lenet5_aug_128/confusion_matrix.png  used on input line 632.
 (pdftex.def)             Requested size: 216.0pt x 213.71837pt.
-[16] [17] (/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.aux)
+[16]
+<experiments/svm_aug/confusion_matrix.png, id=128, 571.13374pt x 565.11125pt>
+File: experiments/svm_aug/confusion_matrix.png Graphic file (type png)
+<use experiments/svm_aug/confusion_matrix.png>
+Package pdftex.def Info: experiments/svm_aug/confusion_matrix.png  used on input line 669.
+(pdftex.def)             Requested size: 220.65291pt x 218.323pt.
+
+Overfull \hbox (20.06046pt too wide) in paragraph at lines 669--670
+ [][] 
+ []
+
+<experiments/svm_noaug/confusion_matrix.png, id=129, 571.13374pt x 565.11125pt>
+File: experiments/svm_noaug/confusion_matrix.png Graphic file (type png)
+<use experiments/svm_noaug/confusion_matrix.png>
+Package pdftex.def Info: experiments/svm_noaug/confusion_matrix.png  used on input line 674.
+(pdftex.def)             Requested size: 220.65291pt x 218.323pt.
+
+Overfull \hbox (20.06046pt too wide) in paragraph at lines 674--675
+ [][] 
+ []
+
+[17 </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/svm_aug/confusion_matrix.png> </Users/diogocezar/phd/phd-machine-learning/lab3/report/experiments/svm_noaug/confusion_matrix.png>]
+<images/image_months_wrong.png, id=135, 2193.19376pt x 200.75pt>
+File: images/image_months_wrong.png Graphic file (type png)
+<use images/image_months_wrong.png>
+Package pdftex.def Info: images/image_months_wrong.png  used on input line 727.
+(pdftex.def)             Requested size: 420.0pt x 38.44308pt.
+
+Underfull \hbox (badness 1199) in paragraph at lines 732--733
+[][]\OT1/ptm/m/n/12 E poss[]^^Pvel no-tar que o me-lhor re-sul-tado foi ob-tido pelo ex-pe-ri-mento \OT1/ptm/m/it/12 de-
+ []
+
+[18 </Users/diogocezar/phd/phd-machine-learning/lab3/report/images/image_months_wrong.png (PNG copy)>]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 749.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 749.
+ [19] (/Users/diogocezar/phd/phd-machine-learning/lab3/report/report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6203 strings out of 492649
- 96085 string characters out of 6129621
- 308394 words of memory out of 5000000
- 9986 multiletter control sequences out of 15000+600000
- 19305 words of font info for 42 fonts, out of 8000000 for 9000
+ 6245 strings out of 492649
+ 97112 string characters out of 6129621
+ 280444 words of memory out of 5000000
+ 10020 multiletter control sequences out of 15000+600000
+ 20989 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,12n,40p,894b,1598s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on /Users/diogocezar/phd/phd-machine-learning/lab3/report/report.pdf (17 pages, 963314 bytes).
+ 43i,12n,40p,894b,1602s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on /Users/diogocezar/phd/phd-machine-learning/lab3/report/report.pdf (19 pages, 1052300 bytes).
 PDF statistics:
- 149 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
+ 169 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 176 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 191 words of extra memory for PDF output out of 10000 (max. 10000000)
 
